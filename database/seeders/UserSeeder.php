@@ -15,7 +15,9 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $users=[
-            array('nom' => 'admin','prenom' => 'admin','email' => 'cordaid@gmail.com','email_verified_at' => now(),'password' => bcrypt('password'),'telephone' => '78704994','role'=>'Admin', 'remember_token' => Str::random(10)),
+            array('nom' => 'admin','prenom' => 'admin', 'ine'=>'N00290420121','email' => 'admin@gmail.com','email_verified_at' => now(),'password' => bcrypt('password'),'telephone' => '56882237','role'=>'Admin', 'remember_token' => Str::random(10)),
+            array('nom' => 'user','prenom' => 'user', 'ine'=>'N00280420131','email' => 'user@gmail.com','email_verified_at' => now(),'password' => bcrypt('password'),'telephone' => '55885737','role'=>'User', 'remember_token' => Str::random(10)),
+            array('nom' => 'delegue','prenom' => 'delegue', 'ine'=>'N00210420191','email' => 'delegue@gmail.com','email_verified_at' => now(),'password' => bcrypt('password'),'telephone' => '58884237','role'=>'Delegue', 'remember_token' => Str::random(10)),
             ];
 
         foreach ($users as $user) {

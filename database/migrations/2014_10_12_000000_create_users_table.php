@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('telephone');
+            $table->string('ine')->unique();
             $table->string('email')->unique();
-            $table->enum('role',['Admin','RSCI','CI'])->default('Admin');
+            $table->enum('role',['Admin','Delegue','User'])->default('Admin');
             $table->string('photo')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
