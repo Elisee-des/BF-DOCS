@@ -33,7 +33,7 @@ class AuthController extends BaseController
         }
         if (auth()->attempt($loginData)) {
             $accessToken = auth()->user()->createToken('authToken')->accessToken;
-            return $this->sendResponse(['infos_user' => Auth::user(), 'access_token' => $accessToken], 'Avec succès');
+            return $this->sendResponse(['infos_user' => Auth::user(), 'access_token' => $accessToken], 'Utilisateur connecté succès');
         } else {
             return $this->sendError('Unauthorised. Invalid credentials.', 'Le nom d\'utilisateur ou le mot de passe est incorrecte', 401);
         }

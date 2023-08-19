@@ -49,4 +49,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function faitiere()
+    {
+        return $this->belongsTo(Faitiere::class);
+    }
 }
