@@ -6,18 +6,19 @@ use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Universite extends Model
+class Departement extends Model
 {
     use HasFactory, Uuids;
     
-    protected $table='universites';
+    protected $table='departements';
 
     protected $fillable = [
         'nom',
+        'universite_id',
     ];
 
-    public function departements()
+    public function universite()
     {
-        return $this->hasMany(Departement::class);
+        return $this->belongsTo(Universite::class);
     }
 }

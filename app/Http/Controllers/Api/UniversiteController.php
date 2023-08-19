@@ -117,7 +117,7 @@ class UniversiteController extends BaseController
 
     public function universites()
     {
-        $universites = Universite::orderBy('created_at', 'desc')->get();
+        $universites = Universite::with('departements')->get();
         return $universites;
     }
 }

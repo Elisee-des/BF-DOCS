@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\DepartementController;
 use App\Http\Controllers\Api\UniversiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,5 @@ Route::post('connexion',[AuthController::class,'login'])->middleware(['api-login
 
 Route::middleware(['auth:api'])->group(function () {
     Route::ApiResource('universites',UniversiteController::class);
+    Route::ApiResource('departements',DepartementController::class);
 });

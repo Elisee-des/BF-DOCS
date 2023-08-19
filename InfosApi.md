@@ -8,3 +8,19 @@ Important: l'api de la sorte: """localhost:8000/api/login""" ou encore """lhttp:
 
 -/connexion -> pour la connexion
 -/inscription -> pour l'inscription
+
+**UNIVERSITE**
+-GET: localhost:8000/api/univeristes                            la liste des universite
+-POST: localhost:8000/api/univeristes                           Ajout d'une universite
+-GET: localhost:8000/api/univeristes/uuid                       l'univeristé en question
+-PUT: localhost:8000/api/univeristes/uuid                       Editer d'une universite
+-DELETE : localhost:8000/api/univeristes/uuid                   Suppression d'une universite
+
+**DEPARTEMENT**
+-GET: localhost:8000/api/departements                            la liste des departement
+-POST: localhost:8000/api/departements                           Ajout d'une departement
+-GET: localhost:8000/api/departements/uuid                       le departement en question
+-PUT: localhost:8000/api/departements/uuid                       Editer d'une departement
+-DELETE : localhost:8000/api/departements/uuid                   Suppression d'une departement
+
+
