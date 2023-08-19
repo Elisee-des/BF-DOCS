@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             UniversiteSeeder::class,
             DepartementSeeder::class,
             FiliereSeeder::class,
+            LicenceSeeder::class,
         ]);
       
     }

@@ -46,22 +46,6 @@ class FiliereController extends BaseController
             $filiere->nom = $request->nom;
             $filiere->abreviation = $request->abreviation;
             $filiere->departement_id = $idD;
-
-            if ($request->logo != null) {
-
-                $photo_64 = $request->logo; //your base64 encoded data
-                // $extension = explode('/', explode(':', substr($pdf_64, 0, strpos($pdf_64, ';')))[1])[1];   // .jpg .png .pdf
-                $replace = substr($photo_64, 0, strpos($photo_64, ',') + 1);
-                $file = str_replace($replace, '', $photo_64);
-                $myImage = str_replace(' ', '+', $file);
-                $filename = Str::slug($request->nom . $request->abreviation) . '.png';
-
-                Storage::disk('public')->put('uploads/filieres/images/' . $filename, base64_decode($myImage));
-                $path = 'uploads/filieres/images/' . $filename;
-
-                $filiere->logo = $path;
-            }
-
             $filiere->save();
 
             return $this->sendResponse(
@@ -76,13 +60,13 @@ class FiliereController extends BaseController
     /**
      * Display the specified resource.
      */
-    public function show($idD)
+    public function filieresDetail($idF)
     {
         try {
-            $departement = Departement::findOrFail($idD);
+            $filiere = Filiere::with('licences')->findOrFail($idF);
 
-            if ($departement) {
-                return $this->sendResponse(['departement' => $departement], 'Detail de l\'departement');
+            if ($filiere) {
+                return $this->sendResponse(['filiere' => $filiere], 'Detail de l\'departement');
             } else {
                 return $this->sendError('Cet departement n\'existe pas', 401);
             }
@@ -94,7 +78,7 @@ class FiliereController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function filieresEdition(Request $request, $idF, $idD)
+    public function filieresEdition(Request $request, $idD, $idF)
     {
         try {
             $filiere = Filiere::findOrFail($idF);
@@ -113,22 +97,6 @@ class FiliereController extends BaseController
                 $filiere->nom = $request->nom;
                 $filiere->abreviation = $request->abreviation;
                 $filiere->departement_id = $idD;
-
-                if ($request->logo != null) {
-
-                    $photo_64 = $request->logo; //your base64 encoded data
-                    // $extension = explode('/', explode(':', substr($pdf_64, 0, strpos($pdf_64, ';')))[1])[1];   // .jpg .png .pdf
-                    $replace = substr($photo_64, 0, strpos($photo_64, ',') + 1);
-                    $file = str_replace($replace, '', $photo_64);
-                    $myImage = str_replace(' ', '+', $file);
-                    $filename = Str::slug($request->nom . $request->abreviation) . '.png';
-
-                    Storage::disk('public')->put('uploads/filieres/images/' . $filename, base64_decode($myImage));
-                    $path = 'uploads/filieres/images/' . $filename;
-
-                    $filiere->logo = $path;
-                }
-
                 $filiere->save();
 
                 return $this->sendResponse(
@@ -152,10 +120,6 @@ class FiliereController extends BaseController
             $filiere = Filiere::findOrFail($idF);
 
             if ($filiere) {
-                $path = $filiere->logo;
-                if (Storage::disk('public')->exists($path)) {
-                    Storage::disk('public')->delete($path);
-                }
                 $filiere->delete();
 
                 return $this->sendResponse(['filieres' => Filiere::where('departement_id', $idD)->get()], 'filiere supprimer avec succes. Retour de la liste des filieres');
@@ -169,7 +133,7 @@ class FiliereController extends BaseController
 
     public function filieres()
     {
-        $filieres = Filiere::orderBy('created_at', 'desc')->get();
+        $filieres = Filiere::with('licences')->get();
         return $filieres;
     }
 }

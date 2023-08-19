@@ -93,7 +93,7 @@ class DepartementController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function departementsEdition(Request $request, $idD, $idU)
+    public function departementsEdition(Request $request, $idU, $idD)
     {
         try {
             $departement = Departement::findOrFail($idD);
@@ -145,7 +145,7 @@ class DepartementController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function departementsSuppression($idD, $idU)
+    public function departementsSuppression($idU, $idD)
     {
         try {
             $departement = Departement::findOrFail($idD);

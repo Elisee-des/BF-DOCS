@@ -10,46 +10,47 @@ Important: l'api de la sorte: """localhost:8000/api/login""" ou encore """lhttp:
 -/inscription -> pour l'inscription
 
 **UNIVERSITES**
--GET: localhost:8000/api/univeristes            la liste des universite
--POST: localhost:8000/api/univeristes           Ajout d'une universite
--GET: localhost:8000/api/univeristes/uuid       l'univeristé en question
--PUT: localhost:8000/api/univeristes/uuid       Editer d'une universite
--DELETE : localhost:8000/api/univeristes/uuid   Suppression d'une universite
+-GET: localhost:8000/api/admin/univeristes            la liste des universite
+-POST: localhost:8000/api/admin/univeristes           Ajout d'une universite
+-GET: localhost:8000/api/admin/univeristes/idU       l'univeristé en question
+-PUT: localhost:8000/api/admin/univeristes/idU       Editer d'une universite
+-DELETE : localhost:8000/api/admin/univeristes/idU   Suppression d'une universite
 
 **DEPARTEMENTS**->*en fonction des universites*
--GET: localhost:8000/api/departements/uuidU             la liste des departements
--POST: localhost:8000/api/departements/uuidU            Ajout d'une departement
--GET: localhost:8000/api/departements/uuidU             le departement en question
--PUT: localhost:8000/api/departements/uuidD/uuidU       Editer d'une departement
--DELETE : localhost:8000/api/departements/uuidD/uuidU   Suppression d'un departement
+-GET: localhost:8000/api/admin/departements               touts des departements
+-GET: localhost:8000/api/admin/departements/idU               la liste des departements
+-POST: localhost:8000/api/admin/departements/ajout/idU              Ajout d'une departement
+-GET: localhost:8000/api/admin/departements/detail/idU               le departement en question
+-PUT: localhost:8000/api/admin/departements/idU/idD           Editer d'une departement
+-DELETE : localhost:8000/api/admin/departements/idU/idD       Suppression d'un departement
 
-**FILIERES**
--GET: localhost:8000/api/filieres           la liste des filieres
--POST: localhost:8000/api/filieres          Ajout d'une filiere
--GET: localhost:8000/api/filieres/uuid      la filiere en question
--PUT: localhost:8000/api/filieres/uuid      Editer d'une filiere
--DELETE : localhost:8000/api/filieres/uuid  Suppression d'une filiere
+**FILIERES**->*en fonction des depaartements*
+-GET: localhost:8000/api/admin/filieres/idD                   la liste des filieres
+-POST: localhost:8000/api/admin/filieres/idD                  Ajout d'une filiere
+-GET: localhost:8000/api/admin/filieres/idD/idF               la filiere en question
+-PUT: localhost:8000/api/admin/filieres/idD/idF               Editer d'une filiere
+-DELETE : localhost:8000/api/admin/filieres/idD/idF           Suppression d'une filiere
 
-**LICENCES**
--GET: localhost:8000/api/licences           la liste des licences
--POST: localhost:8000/api/licences          Ajout d'une licence
--GET: localhost:8000/api/licences/uuid      la licence en question
--PUT: localhost:8000/api/licences/uuid      Editer d'une licence
--DELETE : localhost:8000/api/licences/uuid  Suppression d'une licence
+**LICENCES**->*En fonction des filieres*
+-GET: localhost:8000/api/admin/licences/idF                   la liste des licences
+-POST: localhost:8000/api/admin/licences/idF                  Ajout d'une licence
+-GET: localhost:8000/api/admin/licences/idF/idL                la licence en question
+-PUT: localhost:8000/api/admin/licences/idF/idL                Editer d'une licence
+-DELETE : localhost:8000/api/admin/licences/idF/idL            Suppression d'une licence
 
 
-**ANNEES**
--GET: localhost:8000/api/annees             la liste des annees
--POST: localhost:8000/api/annees            Ajout d'une annee
--GET: localhost:8000/api/annees/uuid        l'annee en question
--PUT: localhost:8000/api/annees/uuid        Editer d'une annee
--DELETE : localhost:8000/api/annees/uuid    Suppression d'une annee
+**ANNEES**->*En foncetion des licences*
+-GET: localhost:8000/api/admin/annees             la liste des annees
+-POST: localhost:8000/api/admin/annees            Ajout d'une annee
+-GET: localhost:8000/api/admin/annees/id        l'annee en question
+-PUT: localhost:8000/api/admin/annees/id        Editer d'une annee
+-DELETE : localhost:8000/api/admin/annees/id    Suppression d'une annee
 
-**MODULES**
--GET: localhost:8000/api/modules             la liste des modules
--POST: localhost:8000/api/modules            Ajout d'une module
--GET: localhost:8000/api/modules/uuid        le module en question
--PUT: localhost:8000/api/modules/uuid        Editer d'un module
--DELETE : localhost:8000/api/modules/uuid    Suppression d'un module
+**MODULES**->*En fonction des annees*
+-GET: localhost:8000/api/admin/modules             la liste des modules
+-POST: localhost:8000/api/admin/modules            Ajout d'une module
+-GET: localhost:8000/api/admin/modules/uuid        le module en question
+-PUT: localhost:8000/api/admin/modules/uuid        Editer d'un module
+-DELETE : localhost:8000/api/admin/modules/uuid    Suppression d'un module
 
 
