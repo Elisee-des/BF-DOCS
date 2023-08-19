@@ -15,14 +15,17 @@ class UniversiteSeeder extends Seeder
     {
         Universite::create([
             'nom' => 'Universite Norbert Zongo',
+            'abreviation' => 'UNZ',
         ]);
 
         Universite::create([
-            'nom' => 'Universite Joseph Zi Zongo',
+            'nom' => 'Universite Joseph Ki Zongo',
+            'abreviation' => 'UJKZ',
         ]);
 
         Universite::create([
             'nom' => 'Universite Thoma Sankara',
+            'abreviation' => 'UTS',
         ]);
 
     }

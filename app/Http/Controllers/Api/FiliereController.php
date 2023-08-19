@@ -4,28 +4,33 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\BaseController;
 use App\Http\Controllers\Controller;
-use App\Models\Universite;
+use App\Models\Departement;
+use App\Models\Filiere;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-class UniversiteController extends BaseController
+class FiliereController extends BaseController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return $this->sendResponse(['universites' => $this->universites()], 'Liste des universites');
+        return $this->sendResponse(['filieres' => $this->filieres()], 'Liste des filieres');
+    }
+
+    public function filieresListe($idD)
+    {
+        return $this->sendResponse(['filieres' => Filiere::where('departement_id', $idD)->get()], 'Liste des filieres');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function filieresAjout(Request $request, $idD)
     {
         try {
             $validator = Validator::make($request->all(), [
@@ -37,9 +42,10 @@ class UniversiteController extends BaseController
                 return $this->sendError('Erreur de validation des champs.', $validator->errors(), 400);
             }
 
-            $universite = new Universite();
-            $universite->nom = $request->nom;
-            $universite->abreviation = $request->abreviation;
+            $filiere = new Filiere();
+            $filiere->nom = $request->nom;
+            $filiere->abreviation = $request->abreviation;
+            $filiere->departement_id = $idD;
 
             if ($request->logo != null) {
 
@@ -50,17 +56,17 @@ class UniversiteController extends BaseController
                 $myImage = str_replace(' ', '+', $file);
                 $filename = Str::slug($request->nom . $request->abreviation) . '.png';
 
-                Storage::disk('public')->put('uploads/universites/images/' . $filename, base64_decode($myImage));
-                $path = 'uploads/universites/images/' . $filename;
+                Storage::disk('public')->put('uploads/filieres/images/' . $filename, base64_decode($myImage));
+                $path = 'uploads/filieres/images/' . $filename;
 
-                $universite->logo = $path;
+                $filiere->logo = $path;
             }
 
-            $universite->save();
+            $filiere->save();
 
             return $this->sendResponse(
-                ['universites' => $this->universites()],
-                'Une universite a été ajouté avec success. Retour de la liste des universites'
+                ['filieres' => Filiere::where('departement_id', $idD)->get()],
+                'Une filiere a été ajouté avec success. Retour de la liste des filieres'
             );
         } catch (Exception $e) {
             return response()->json($e);
@@ -70,15 +76,15 @@ class UniversiteController extends BaseController
     /**
      * Display the specified resource.
      */
-    public function show($idU)
+    public function show($idD)
     {
         try {
-            $universite = Universite::findOrFail($idU);
+            $departement = Departement::findOrFail($idD);
 
-            if ($universite) {
-                return $this->sendResponse(['region' => $universite], 'Detail de l\'universite');
+            if ($departement) {
+                return $this->sendResponse(['departement' => $departement], 'Detail de l\'departement');
             } else {
-                return $this->sendError('Cette universite n\'existe pas', 401);
+                return $this->sendError('Cet departement n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -88,10 +94,12 @@ class UniversiteController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Universite $universite)
+    public function filieresEdition(Request $request, $idF, $idD)
     {
         try {
-            if ($universite) {
+            $filiere = Filiere::findOrFail($idF);
+
+            if ($filiere) {
 
                 $validator = Validator::make($request->all(), [
                     'nom' => 'required',
@@ -102,8 +110,9 @@ class UniversiteController extends BaseController
                     return $this->sendError('Erreur de validation des champs.', $validator->errors(), 400);
                 }
 
-                $universite->nom = $request->nom;
-                $universite->abreviation = $request->abreviation;
+                $filiere->nom = $request->nom;
+                $filiere->abreviation = $request->abreviation;
+                $filiere->departement_id = $idD;
 
                 if ($request->logo != null) {
 
@@ -113,21 +122,21 @@ class UniversiteController extends BaseController
                     $file = str_replace($replace, '', $photo_64);
                     $myImage = str_replace(' ', '+', $file);
                     $filename = Str::slug($request->nom . $request->abreviation) . '.png';
-                    
-                    Storage::disk('public')->put('uploads/universites/images/' . $filename, base64_decode($myImage));
-                    $path = 'uploads/universites/images/' . $filename;
 
-                    $universite->logo = $path;
+                    Storage::disk('public')->put('uploads/filieres/images/' . $filename, base64_decode($myImage));
+                    $path = 'uploads/filieres/images/' . $filename;
+
+                    $filiere->logo = $path;
                 }
 
-                $universite->save();
+                $filiere->save();
 
                 return $this->sendResponse(
-                    ['universites' => $this->universites()],
-                    'universite edité avec succes. Retour de la liste des universite'
+                    ['filieres' => Filiere::where('departement_id', $idD)->get()],
+                    'filiere edité avec succes. Retour de la liste des filieres'
                 );
             } else {
-                return $this->sendError('Cette universite n\'existe pas', 401);
+                return $this->sendError('Cette filieres n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -137,32 +146,30 @@ class UniversiteController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($idU)
+    public function filieresSuppression($idF, $idD)
     {
         try {
-            $universite = Universite::findOrFail($idU);
+            $filiere = Filiere::findOrFail($idF);
 
-            if ($universite) {
-
-                $path = $universite->logo;
-                
+            if ($filiere) {
+                $path = $filiere->logo;
                 if (Storage::disk('public')->exists($path)) {
                     Storage::disk('public')->delete($path);
                 }
-                $universite->delete();
+                $filiere->delete();
 
-                return $this->sendResponse(['universites' => $this->universites()], 'universite supprimer avec succes. Retour de la liste des universites');
+                return $this->sendResponse(['filieres' => Filiere::where('departement_id', $idD)->get()], 'filiere supprimer avec succes. Retour de la liste des filieres');
             } else {
-                return $this->sendError('Cette universite n\'existe pas', 401);
+                return $this->sendError('Cette filiere n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
         }
     }
 
-    public function universites()
+    public function filieres()
     {
-        $universites = Universite::with('departements')->get();
-        return $universites;
+        $filieres = Filiere::orderBy('created_at', 'desc')->get();
+        return $filieres;
     }
 }

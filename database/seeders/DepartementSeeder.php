@@ -19,22 +19,26 @@ class DepartementSeeder extends Seeder
         $idUAncien = Universite::oldest()->first()->id;
 
         Departement::create([
-            'nom' => 'ST',
+            'nom' => 'Science Technologie',
+            'abreviation' => 'UNZ',
             'universite_id' => $idURecent,
         ]);
 
         Departement::create([
-            'nom' => 'LSH',
+            'nom' => 'Literrateur Science Historique',
+            'abreviation' => 'UNZ',
             'universite_id' => $idURecent,
         ]);
 
         Departement::create([
-            'nom' => 'LSH',
+            'nom' => 'Literrateur Science Historique',
+            'abreviation' => 'UNZ',
             'universite_id' => $idUAncien,
         ]);
 
         Departement::create([
-            'nom' => 'SEA',
+            'nom' => 'Science Exate Appliquer',
+            'abreviation' => 'UNZ',
             'universite_id' => $idUAncien,
         ]);
     }
