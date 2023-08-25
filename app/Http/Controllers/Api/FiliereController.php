@@ -63,7 +63,7 @@ class FiliereController extends BaseController
     public function filieresDetail($idF)
     {
         try {
-            $filiere = Filiere::with('licences')->findOrFail($idF);
+            $filiere = Filiere::with(['licences', 'departement'])->findOrFail($idF);
 
             if ($filiere) {
                 return $this->sendResponse(['filiere' => $filiere], 'Detail de l\'departement');
@@ -133,7 +133,7 @@ class FiliereController extends BaseController
 
     public function filieres()
     {
-        $filieres = Filiere::with('licences')->get();
+        $filieres = Filiere::with(['licences', 'departement'])->orderBy('created_at', 'desc')->get();
         return $filieres;
     }
 }

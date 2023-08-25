@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DepartementController;
 use App\Http\Controllers\Api\FiliereController;
 use App\Http\Controllers\Api\LicenceController;
+use App\Http\Controllers\Api\Private\MasterController;
 use App\Http\Controllers\Api\UniversiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,8 +46,18 @@ Route::middleware(['auth:api'])->group(function () {
         #Licence# #idF=idFiliere# #idF=idLicence#
         Route::ApiResource('licences', LicenceController::class);
         Route::get('licences/liste/{idF}', [LicenceController::class, 'licencesListe']);
+        Route::get('licences/detail/{idF}', [LicenceController::class, 'licencesDetail']);
         Route::post('licences/ajout/{idF}', [LicenceController::class, 'licencesAjout']);
         Route::put('licences/edition/{idF}/{idL}', [LicenceController::class, 'licencesEdition']);
         Route::delete('licences/suppression/{idF}/{idL}', [LicenceController::class, 'licencesSuppression']);
+
+        #Master# #idM=idMaster# #idD=idDepartement#
+        Route::ApiResource('masters', MasterController::class);
+        Route::get('masters/liste/{idD}', [MasterController::class, 'mastersListe']);
+        Route::get('masters/detail/{idD}', [MasterController::class, 'mastersDetail']);
+        Route::post('masters/ajout/{idD}', [MasterController::class, 'mastersAjout']);
+        Route::put('masters/edition/{idD}/{idM}', [MasterController::class, 'mastersEdition']);
+        Route::delete('masters/suppression/{idD}/{idM}', [MasterController::class, 'mastersSuppression']);
+
     });
 });

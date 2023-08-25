@@ -57,20 +57,20 @@ class LicenceController extends BaseController
     /**
      * Display the specified resource.
      */
-    // public function show($idD)
-    // {
-    //     try {
-    //         $departement = Departement::findOrFail($idD);
+    public function licencesDetail($idL)
+    {
+        try {
+            $licence = Licence::with(['filiere'])->findOrFail($idL);
 
-    //         if ($departement) {
-    //             return $this->sendResponse(['departement' => $departement], 'Detail de l\'departement');
-    //         } else {
-    //             return $this->sendError('Cet departement n\'existe pas', 401);
-    //         }
-    //     } catch (Exception $e) {
-    //         return response()->json($e);
-    //     }
-    // }
+            if ($licence) {
+                return $this->sendResponse(['licence' => $licence], 'Detail de la licence');
+            } else {
+                return $this->sendError('Cette licence n\'existe pas', 401);
+            }
+        } catch (Exception $e) {
+            return response()->json($e);
+        }
+    }
 
     /**
      * Update the specified resource in storage.
@@ -130,7 +130,7 @@ class LicenceController extends BaseController
 
     public function licences()
     {
-        $licences = Licence::orderBy('created_at', 'desc')->get();
+        $licences = Licence::with(['filiere'])->orderBy('created_at', 'desc')->get();
         return $licences;
     }
 }

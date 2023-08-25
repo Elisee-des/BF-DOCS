@@ -73,7 +73,7 @@ class UniversiteController extends BaseController
     public function show($idU)
     {
         try {
-            $universite = Universite::findOrFail($idU);
+            $universite = Universite::with('departements')->findOrFail($idU);
 
             if ($universite) {
                 return $this->sendResponse(['region' => $universite], 'Detail de l\'universite');
@@ -162,7 +162,7 @@ class UniversiteController extends BaseController
 
     public function universites()
     {
-        $universites = Universite::with('departements')->get();
+        $universites = Universite::with('departements')->orderBy('created_at', 'desc')->get();
         return $universites;
     }
 }

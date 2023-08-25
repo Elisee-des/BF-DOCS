@@ -28,4 +28,9 @@ class Departement extends Model
     {
         return $this->hasMany(Filiere::class);
     }
+
+    public function masters()
+    {
+        return $this->hasMany(Master::class);
+    }
 }

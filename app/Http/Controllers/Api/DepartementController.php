@@ -79,7 +79,7 @@ class DepartementController extends BaseController
     public function departementsDetail($idD)
     {
         try {
-            $departement = Departement::with('filieres')->findOrFail($idD);
+            $departement = Departement::with(['filieres', 'masters', 'universite'])->findOrFail($idD);
             if ($departement) {
                 return $this->sendResponse(['departement' => $departement], 'Detail de l\'departement');
             } else {
@@ -169,7 +169,7 @@ class DepartementController extends BaseController
 
     public function departements()
     {
-        $departements = Departement::with('filieres')->get();
+        $departements = Departement::with(['filieres', 'masters', 'universite'])->orderBy('created_at', 'desc')->get();
         return $departements;
     }
 }
