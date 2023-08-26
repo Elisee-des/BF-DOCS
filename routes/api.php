@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\DepartementController;
 use App\Http\Controllers\Api\FiliereController;
 use App\Http\Controllers\Api\LicenceController;
 use App\Http\Controllers\Api\Private\MasterController;
+use App\Http\Controllers\Api\Private\OptionController;
 use App\Http\Controllers\Api\UniversiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,5 +60,12 @@ Route::middleware(['auth:api'])->group(function () {
         Route::put('masters/edition/{idD}/{idM}', [MasterController::class, 'mastersEdition']);
         Route::delete('masters/suppression/{idD}/{idM}', [MasterController::class, 'mastersSuppression']);
 
+        #Option# #idL=idLicence# #idO=idOption#
+        Route::ApiResource('options', OptionController::class);
+        Route::get('options/liste/{idL}', [OptionController::class, 'optionsListe']);
+        Route::get('options/detail/{idO}', [OptionController::class, 'optionsDetail']);
+        Route::post('options/ajout/{idL}', [OptionController::class, 'optionsAjout']);
+        Route::put('options/edition/{idL}/{idO}', [OptionController::class, 'optionsEdition']);
+        Route::delete('options/suppression/{idL}/{idO}', [OptionController::class, 'optionsSuppression']);
     });
 });

@@ -6,25 +6,25 @@ use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Licence extends Model
+class Option extends Model
 {
     use HasFactory, Uuids;
 
-    protected $table='licences';
+    protected $table='options';
 
     protected $fillable = [
-        'filiere_id',
+        'licence_id',
         'nom',
         'abreviation',
     ];
-
-    public function filiere()
+    
+    public function licence()
     {
-        return $this->belongsTo(Filiere::class);
+        return $this->belongsTo(Licence::class);
     }
 
-    public function options()
+    public function annees()
     {
-        return $this->hasMany(Option::class);
+        return $this->hasMany(Annee::class);
     }
 }

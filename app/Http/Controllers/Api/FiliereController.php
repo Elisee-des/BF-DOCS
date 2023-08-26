@@ -114,7 +114,7 @@ class FiliereController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function filieresSuppression($idF, $idD)
+    public function filieresSuppression($idD, $idF)
     {
         try {
             $filiere = Filiere::findOrFail($idF);

@@ -14,11 +14,17 @@ class Annee extends Model
 
     protected $fillable = [
         'master_id',
+        'option_id',
         'nom',
     ];
 
     public function master()
     {
         return $this->belongsTo(Master::class);
+    }
+
+    public function option()
+    {
+        return $this->belongsTo(Option::class);
     }
 }

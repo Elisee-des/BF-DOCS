@@ -21,7 +21,7 @@ class MasterController extends BaseController
 
     public function mastersListe($idD)
     {
-        return $this->sendResponse(['masters' => Master::where('departement_id', $idD)->get()], 'Liste des masters');
+        return $this->sendResponse(['masters' => Master::with(['annees', 'departement'])->where('departement_id', $idD)->get()], 'Liste des masters');
     }
 
     /**
@@ -46,7 +46,7 @@ class MasterController extends BaseController
             $master->save();
 
             return $this->sendResponse(
-                ['masters' => Master::where('departement_id', $idD)->get()],
+                ['masters' => Master::with(['annees', 'departement'])->where('departement_id', $idD)->get()],
                 'Un master a été ajouté avec success.'
             );
         } catch (Exception $e) {
@@ -60,7 +60,7 @@ class MasterController extends BaseController
     public function mastersDetail($idM)
     {
         try {
-            $master = Master::with('annees')->findOrFail($idM);
+            $master = Master::with(['annees', 'departement'])->findOrFail($idM);
 
             if ($master) {
                 return $this->sendResponse(['Master' => $master], 'Detail du master');
@@ -97,7 +97,7 @@ class MasterController extends BaseController
                 $master->save();
 
                 return $this->sendResponse(
-                    ['masters' => Master::where('departement_id', $idD)->get()],
+                    ['masters' => Master::with(['annees', 'departement'])->where('departement_id', $idD)->get()],
                     'Master edité avec succes.'
                 );
             } else {
@@ -119,7 +119,7 @@ class MasterController extends BaseController
             if ($master) {
                 $master->delete();
 
-                return $this->sendResponse(['masters' => Master::with('annees')->where('departement_id', $idD)->get()], 'Master supprimer avec succes.');
+                return $this->sendResponse(['masters' => Master::with(['annees', 'departement'])->where('departement_id', $idD)->get()], 'Master supprimer avec succes.');
             } else {
                 return $this->sendError('Ce master n\'existe pas', 401);
             }
@@ -130,7 +130,7 @@ class MasterController extends BaseController
 
     public function masters()
     {
-        $masters = Master::with('annees')->get();
+        $masters = Master::with(['annees', 'departement'])->orderBy('created_at', 'desc')->get();
         return $masters;
     }
 }

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             FiliereSeeder::class,
             MasterSeeder::class,
             LicenceSeeder::class,
+            OptionSeeder::class,
         ]);
     }
 }
