@@ -27,4 +27,9 @@ class Annee extends Model
     {
         return $this->belongsTo(Option::class);
     }
+
+    public function modules()
+    {
+        return $this->hasMany(Module::class);
+    }
 }

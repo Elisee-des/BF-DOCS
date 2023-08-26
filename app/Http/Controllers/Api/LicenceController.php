@@ -21,7 +21,7 @@ class LicenceController extends BaseController
 
     public function licencesListe($idF)
     {
-        return $this->sendResponse(['licences' => Licence::where('filiere_id', $idF)->get()], 'Liste des filieres');
+        return $this->sendResponse(['licences' => Licence::with(['filiere', 'options'])->where('filiere_id', $idF)->get()], 'Liste des filieres');
     }
 
     /**
@@ -46,8 +46,8 @@ class LicenceController extends BaseController
             $licence->save();
 
             return $this->sendResponse(
-                ['licences' => Licence::where('filiere_id', $idF)->get()],
-                'Une licence a été ajouté avec success. Retour de la liste des licences'
+                ['licences' => Licence::with(['filiere', 'options'])->where('filiere_id', $idF)->get()],
+                'Licence ajoutée avec succès.'
             );
         } catch (Exception $e) {
             return response()->json($e);
@@ -60,7 +60,7 @@ class LicenceController extends BaseController
     public function licencesDetail($idL)
     {
         try {
-            $licence = Licence::with(['filiere'])->findOrFail($idL);
+            $licence = Licence::with(['filiere', 'options'])->findOrFail($idL);
 
             if ($licence) {
                 return $this->sendResponse(['licence' => $licence], 'Detail de la licence');
@@ -97,8 +97,8 @@ class LicenceController extends BaseController
                 $licence->save();
 
                 return $this->sendResponse(
-                    ['licences' => Licence::where('filiere_id', $idF)->get()],
-                    'licence edité avec succes. Retour de la liste des licences'
+                    ['licences' => Licence::with(['filiere', 'options'])->where('filiere_id', $idF)->get()],
+                    'Licence editée avec succès.'
                 );
             } else {
                 return $this->sendError('Cette licence n\'existe pas', 401);
@@ -116,10 +116,14 @@ class LicenceController extends BaseController
         try {
             $licence = Licence::findOrFail($idL);
 
+            if ($licence->options->count() != 0) {
+                return $this->sendError('Impossible de Supprimer car elle est liée a des options. Veuillez supprimer tous ses options puis réssayez.');
+            }
+
             if ($licence) {
                 $licence->delete();
 
-                return $this->sendResponse(['licences' => Licence::where('filiere_id', $idF)->get()], 'licence supprimer avec succes. Retour de la liste des licences');
+                return $this->sendResponse(['licences' => Licence::with(['filiere', 'options'])->where('filiere_id', $idF)->get()], 'Licence supprimée avec succès.');
             } else {
                 return $this->sendError('Cette licence n\'existe pas', 401);
             }
@@ -130,7 +134,7 @@ class LicenceController extends BaseController
 
     public function licences()
     {
-        $licences = Licence::with(['filiere'])->orderBy('created_at', 'desc')->get();
+        $licences = Licence::with(['filiere', 'options'])->orderBy('created_at', 'desc')->get();
         return $licences;
     }
 }

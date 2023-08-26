@@ -24,7 +24,7 @@ class DepartementController extends BaseController
 
     public function departementsListe($idU)
     {
-        return $this->sendResponse(['departements' => Departement::where('universite_id', $idU)->get()], 'Liste des departements');
+        return $this->sendResponse(['departements' => Departement::with(['filieres', 'masters', 'universite'])->where('universite_id', $idU)->get()], 'Liste des départements');
     }
 
     /**
@@ -65,8 +65,8 @@ class DepartementController extends BaseController
             $departement->save();
 
             return $this->sendResponse(
-                ['departements' => Departement::where('universite_id', $idU)->get()],
-                'Un departement a été ajouté avec success. Retour de la liste des departements'
+                ['departements' => Departement::with(['filieres', 'masters', 'universite'])->where('universite_id', $idU)->get()],
+                'Un département a été ajouté avec success.'
             );
         } catch (Exception $e) {
             return response()->json($e);
@@ -81,9 +81,9 @@ class DepartementController extends BaseController
         try {
             $departement = Departement::with(['filieres', 'masters', 'universite'])->findOrFail($idD);
             if ($departement) {
-                return $this->sendResponse(['departement' => $departement], 'Detail de l\'departement');
+                return $this->sendResponse(['departement' => $departement], 'Detail de l\'département');
             } else {
-                return $this->sendError('Cet departement n\'existe pas', 401);
+                return $this->sendError('Ce département n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -131,11 +131,11 @@ class DepartementController extends BaseController
                 $departement->save();
 
                 return $this->sendResponse(
-                    ['departements' => Departement::where('universite_id', $idU)->get()],
-                    'departement edité avec succes. Retour de la liste des departements'
+                    ['departements' => Departement::with(['filieres', 'masters', 'universite'])->where('universite_id', $idU)->get()],
+                    'Département edité avec succès.'
                 );
             } else {
-                return $this->sendError('Cet departement n\'existe pas', 401);
+                return $this->sendError('Ce département n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -150,6 +150,10 @@ class DepartementController extends BaseController
         try {
             $departement = Departement::findOrFail($idD);
 
+            if ($departement->filieres->count() != 0 || $departement->masters->count() != 0) {
+                return $this->sendError('Impossible de Supprimer car il est lié a des masters ou des options. Veuillez supprimer tous ses options et masters puis réssayez.');
+            }
+
             if ($departement) {
                 $path = $departement->logo;
                 
@@ -158,9 +162,9 @@ class DepartementController extends BaseController
                 }
                 $departement->delete();
 
-                return $this->sendResponse(['departements' => Departement::where('universite_id', $idU)->get()], 'departement supprimer avec succes. Retour de la liste des departements');
+                return $this->sendResponse(['departements' => Departement::with(['filieres', 'masters', 'universite'])->where('universite_id', $idU)->get()], 'Département supprimé avec succès.');
             } else {
-                return $this->sendError('Cet departement n\'existe pas', 401);
+                return $this->sendError('Cet département n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);

@@ -47,7 +47,7 @@ class OptionController extends BaseController
 
             return $this->sendResponse(
                 ['options' => Option::with(['licence', 'annees'])->where('licence_id', $idL)->get()],
-                'Une option a été ajouté avec success.'
+                'Option ajoutée avec succès.'
             );
         } catch (Exception $e) {
             return response()->json($e);
@@ -98,7 +98,7 @@ class OptionController extends BaseController
 
                 return $this->sendResponse(
                     ['options' => Option::with(['licence', 'annees'])->where('licence_id', $idL)->get()],
-                    'Option edité avec succes.'
+                    'Option editée avec succès.'
                 );
             } else {
                 return $this->sendError('Cette option n\'existe pas', 401);
@@ -116,10 +116,14 @@ class OptionController extends BaseController
         try {
             $option = Option::findOrFail($idO);
 
+            if ($option->annees->count() != 0) {
+                return $this->sendError('Impossible de Supprimer car elle est liée a des années. Veuillez supprimer ses années puis réssayez.');
+            }
+
             if ($option) {
                 $option->delete();
 
-                return $this->sendResponse(['options' => Option::with(['licence', 'annees'])->where('licence_id', $idL)->get()], 'Licence supprimer avec succes.');
+                return $this->sendResponse(['options' => Option::with(['licence', 'annees'])->where('licence_id', $idL)->get()], 'Licence supprimée avec succès.');
             } else {
                 return $this->sendError('Cette option n\'existe pas', 401);
             }

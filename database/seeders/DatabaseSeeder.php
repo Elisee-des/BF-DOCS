@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             MasterSeeder::class,
             LicenceSeeder::class,
             OptionSeeder::class,
+            AnneeSeeder::class,
         ]);
     }
 }

@@ -19,7 +19,7 @@ class UniversiteController extends BaseController
      */
     public function index()
     {
-        return $this->sendResponse(['universites' => $this->universites()], 'Liste des universites');
+        return $this->sendResponse(['universites' => $this->universites()], 'Liste des universités');
     }
 
     /**
@@ -60,7 +60,7 @@ class UniversiteController extends BaseController
 
             return $this->sendResponse(
                 ['universites' => $this->universites()],
-                'Une universite a été ajouté avec success. Retour de la liste des universites'
+                'Université ajoutée avec succès.'
             );
         } catch (Exception $e) {
             return response()->json($e);
@@ -76,9 +76,9 @@ class UniversiteController extends BaseController
             $universite = Universite::with('departements')->findOrFail($idU);
 
             if ($universite) {
-                return $this->sendResponse(['region' => $universite], 'Detail de l\'universite');
+                return $this->sendResponse(['region' => $universite], 'Detail de l\'université');
             } else {
-                return $this->sendError('Cette universite n\'existe pas', 401);
+                return $this->sendError('Cette université n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -124,7 +124,7 @@ class UniversiteController extends BaseController
 
                 return $this->sendResponse(
                     ['universites' => $this->universites()],
-                    'universite edité avec succes. Retour de la liste des universite'
+                    'Université editée avec succès.'
                 );
             } else {
                 return $this->sendError('Cette universite n\'existe pas', 401);
@@ -141,9 +141,11 @@ class UniversiteController extends BaseController
     {
         try {
             $universite = Universite::findOrFail($idU);
+            if ($universite->departements->count() != 0) {
+                return $this->sendError('Impossible de Supprimer car elle est liée a des departements. Veuillez supprimer tous ses departements puis réssayez.');
+            }
 
             if ($universite) {
-
                 $path = $universite->logo;
                 
                 if (Storage::disk('public')->exists($path)) {
@@ -151,9 +153,9 @@ class UniversiteController extends BaseController
                 }
                 $universite->delete();
 
-                return $this->sendResponse(['universites' => $this->universites()], 'universite supprimer avec succes. Retour de la liste des universites');
+                return $this->sendResponse(['universites' => $this->universites()], 'Université supprimée avec succès.');
             } else {
-                return $this->sendError('Cette universite n\'existe pas', 401);
+                return $this->sendError('Cette université n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);

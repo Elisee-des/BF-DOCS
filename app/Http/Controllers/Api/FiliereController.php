@@ -19,12 +19,12 @@ class FiliereController extends BaseController
      */
     public function index()
     {
-        return $this->sendResponse(['filieres' => $this->filieres()], 'Liste des filieres');
+        return $this->sendResponse(['filieres' => $this->filieres()], 'Liste des filières');
     }
 
     public function filieresListe($idD)
     {
-        return $this->sendResponse(['filieres' => Filiere::where('departement_id', $idD)->get()], 'Liste des filieres');
+        return $this->sendResponse(['filieres' => Filiere::with(['licences', 'departement'])->where('departement_id', $idD)->get()], 'Liste des filières');
     }
 
     /**
@@ -49,8 +49,8 @@ class FiliereController extends BaseController
             $filiere->save();
 
             return $this->sendResponse(
-                ['filieres' => Filiere::where('departement_id', $idD)->get()],
-                'Une filiere a été ajouté avec success. Retour de la liste des filieres'
+                ['filieres' => Filiere::with(['licences', 'departement'])->where('departement_id', $idD)->get()],
+                'Filière ajoutée avec succès.'
             );
         } catch (Exception $e) {
             return response()->json($e);
@@ -66,9 +66,9 @@ class FiliereController extends BaseController
             $filiere = Filiere::with(['licences', 'departement'])->findOrFail($idF);
 
             if ($filiere) {
-                return $this->sendResponse(['filiere' => $filiere], 'Detail de l\'departement');
+                return $this->sendResponse(['filiere' => $filiere], 'Detail de la filière');
             } else {
-                return $this->sendError('Cet departement n\'existe pas', 401);
+                return $this->sendError('Cette filière n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -100,11 +100,11 @@ class FiliereController extends BaseController
                 $filiere->save();
 
                 return $this->sendResponse(
-                    ['filieres' => Filiere::where('departement_id', $idD)->get()],
-                    'filiere edité avec succes. Retour de la liste des filieres'
+                    ['filieres' => Filiere::with(['licences', 'departement'])->where('departement_id', $idD)->get()],
+                    'Filière editée avec succès.'
                 );
             } else {
-                return $this->sendError('Cette filieres n\'existe pas', 401);
+                return $this->sendError('Cette filières n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -119,12 +119,16 @@ class FiliereController extends BaseController
         try {
             $filiere = Filiere::findOrFail($idF);
 
+            if ($filiere->licences->count() != 0) {
+                return $this->sendError('Impossible de Supprimer car elle est liée a des licences. Veuillez supprimer tous ses licences puis réssayez.');
+            }
+
             if ($filiere) {
                 $filiere->delete();
 
-                return $this->sendResponse(['filieres' => Filiere::where('departement_id', $idD)->get()], 'filiere supprimer avec succes. Retour de la liste des filieres');
+                return $this->sendResponse(['filieres' => Filiere::where('departement_id', $idD)->get()], 'Filière supprimée avec succès.');
             } else {
-                return $this->sendError('Cette filiere n\'existe pas', 401);
+                return $this->sendError('Cette filière n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);

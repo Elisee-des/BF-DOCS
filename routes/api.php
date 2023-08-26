@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DepartementController;
 use App\Http\Controllers\Api\FiliereController;
 use App\Http\Controllers\Api\LicenceController;
+use App\Http\Controllers\Api\Private\AnneeController;
 use App\Http\Controllers\Api\Private\MasterController;
 use App\Http\Controllers\Api\Private\OptionController;
 use App\Http\Controllers\Api\UniversiteController;
@@ -67,5 +68,16 @@ Route::middleware(['auth:api'])->group(function () {
         Route::post('options/ajout/{idL}', [OptionController::class, 'optionsAjout']);
         Route::put('options/edition/{idL}/{idO}', [OptionController::class, 'optionsEdition']);
         Route::delete('options/suppression/{idL}/{idO}', [OptionController::class, 'optionsSuppression']);
+        
+        #Annee# #idA=idAnnee# #idO=idOption# #idM=idMaster#
+        Route::ApiResource('annees', AnneeController::class);
+        Route::get('annees-master/{idL}', [AnneeController::class, 'anneesMasterListe']);
+        Route::get('annees-option/{idO}', [AnneeController::class, 'anneesOptionListe']);
+        Route::post('annees-master/ajout/{idM}', [AnneeController::class, 'anneesMasterAjout']);
+        Route::post('annees-option/ajout/{idO}', [AnneeController::class, 'anneesOptionAjout']);
+        Route::put('annees-master/edition/{idM}/{idA}', [AnneeController::class, 'anneesMasterEdition']);
+        Route::put('annees-option/edition/{idO}/{idA}', [AnneeController::class, 'anneesOptionEdition']);
+        Route::delete('annees-master/suppression/{idM}/{idA}', [AnneeController::class, 'anneesMasterSuppression']);
+        Route::delete('annees-option/suppression/{idO}/{idA}', [AnneeController::class, 'anneesOptionSuppression']);
     });
 });
