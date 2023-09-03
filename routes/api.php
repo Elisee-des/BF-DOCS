@@ -5,7 +5,10 @@ use App\Http\Controllers\Api\DepartementController;
 use App\Http\Controllers\Api\FiliereController;
 use App\Http\Controllers\Api\LicenceController;
 use App\Http\Controllers\Api\Private\AnneeController;
+use App\Http\Controllers\Api\Private\ExamenNormalController;
 use App\Http\Controllers\Api\Private\MasterController;
+use App\Http\Controllers\Api\Private\MatiereController;
+use App\Http\Controllers\Api\Private\ModulesController;
 use App\Http\Controllers\Api\Private\OptionController;
 use App\Http\Controllers\Api\UniversiteController;
 use Illuminate\Support\Facades\Route;
@@ -68,7 +71,7 @@ Route::middleware(['auth:api'])->group(function () {
         Route::post('options/ajout/{idL}', [OptionController::class, 'optionsAjout']);
         Route::put('options/edition/{idL}/{idO}', [OptionController::class, 'optionsEdition']);
         Route::delete('options/suppression/{idL}/{idO}', [OptionController::class, 'optionsSuppression']);
-        
+
         #Annee# #idA=idAnnee# #idO=idOption# #idM=idMaster#
         Route::ApiResource('annees', AnneeController::class);
         Route::get('annees-master/{idL}', [AnneeController::class, 'anneesMasterListe']);
@@ -79,5 +82,21 @@ Route::middleware(['auth:api'])->group(function () {
         Route::put('annees-option/edition/{idO}/{idA}', [AnneeController::class, 'anneesOptionEdition']);
         Route::delete('annees-master/suppression/{idM}/{idA}', [AnneeController::class, 'anneesMasterSuppression']);
         Route::delete('annees-option/suppression/{idO}/{idA}', [AnneeController::class, 'anneesOptionSuppression']);
+
+        #Matiere# #idM=Matiere# #idA=idAnnee#
+        Route::ApiResource('matieres', MatiereController::class);
+        Route::get('matieres/liste/{idA}', [MatiereController::class, 'matieresListe']);
+        Route::post('matieres/ajout/{idA}', [MatiereController::class, 'matieresAjout']);
+        Route::put('matieres/edition/{idA}/{idM}', [MatiereController::class, 'matieresEdition']);
+        Route::get('matieres/detail/{idA}', [MatiereController::class, 'matieresDetail']);
+        Route::delete('matieres/suppression/{idA}/{idM}', [MatiereController::class, 'matieresSuppression']);
+
+
+        #ExamenNormal# #idEN=idExamenNormal# #idMo=idModule#
+        Route::ApiResource('examen-session-normals', ExamenNormalController::class);
+        Route::get('examen-session-normals/liste/{idMo}', [ExamenNormalController::class, 'anneesMasterListe']);
+        Route::post('examen-session-normals/ajout/{idMo}', [ExamenNormalController::class, 'anneesOptionAjout']);
+        Route::put('examen-session-normals/edition/{idMo}/{idEN}', [ExamenNormalController::class, 'anneesOptionEdition']);
+        Route::delete('examen-session-normals/suppression/{idMo}/{idEN}', [ExamenNormalController::class, 'anneesOptionSuppression']);
     });
 });

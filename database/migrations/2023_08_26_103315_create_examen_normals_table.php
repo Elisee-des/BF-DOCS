@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('examen_normals', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string("nom");
-            $table->foreignUuid('annee_id')->references('id')->on('annees');
+            $table->string('nom');
+            $table->foreignUuid('module_id')->references('id')->on('modules');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('examen_normals');
     }
 };

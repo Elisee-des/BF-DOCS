@@ -116,6 +116,10 @@ class MasterController extends BaseController
         try {
             $master = Master::findOrFail($idM);
 
+            if ($master->annees->count() != 0) {
+                return $this->sendError('Impossible de Supprimer car il est lié a des anneés. Veuillez supprimer tous ses années puis réssayez.');
+            }
+
             if ($master) {
                 $master->delete();
 

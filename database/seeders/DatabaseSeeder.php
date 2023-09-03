@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             LicenceSeeder::class,
             OptionSeeder::class,
             AnneeSeeder::class,
+            ModuleSeeder::class,
         ]);
     }
 }

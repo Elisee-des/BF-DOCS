@@ -21,4 +21,9 @@ class Module extends Model
     {
         return $this->belongsTo(Annee::class);
     }
+
+    public function examen_normals()
+    {
+        return $this->hasMany(ExamenNormal::class);
+    }
 }
