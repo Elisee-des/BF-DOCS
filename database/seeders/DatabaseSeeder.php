@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             OptionSeeder::class,
             AnneeSeeder::class,
             ModuleSeeder::class,
+            ExamenSessionNormalSeeder::class,
         ]);
     }
 }

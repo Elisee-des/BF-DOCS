@@ -15,6 +15,9 @@ class ExamenNormal extends Model
     protected $fillable = [
         'module_id',
         'nom',
+        'taille_fichier',
+        'remarque',
+        'fichier',
     ];
 
     public function module()

@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('examen_normals', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('nom');
+            $table->string('taille_fichier')->nullable();
+            $table->string('remarque')->nullable();
+            $table->string('fichier')->nullable();
             $table->foreignUuid('module_id')->references('id')->on('modules');
             $table->timestamps();
         });

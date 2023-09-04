@@ -94,9 +94,9 @@ Route::middleware(['auth:api'])->group(function () {
 
         #ExamenNormal# #idEN=idExamenNormal# #idMo=idModule#
         Route::ApiResource('examen-session-normals', ExamenNormalController::class);
-        Route::get('examen-session-normals/liste/{idMo}', [ExamenNormalController::class, 'anneesMasterListe']);
-        Route::post('examen-session-normals/ajout/{idMo}', [ExamenNormalController::class, 'anneesOptionAjout']);
-        Route::put('examen-session-normals/edition/{idMo}/{idEN}', [ExamenNormalController::class, 'anneesOptionEdition']);
-        Route::delete('examen-session-normals/suppression/{idMo}/{idEN}', [ExamenNormalController::class, 'anneesOptionSuppression']);
+        Route::get('examen-session-normals/liste/{idMo}', [ExamenNormalController::class, 'examenSessionNormalListe']);
+        Route::post('examen-session-normals/ajout/{idMo}', [ExamenNormalController::class, 'examenSessionNormalnAjout']);
+        Route::put('examen-session-normals/edition/{idMo}/{idEN}', [ExamenNormalController::class, 'examenSessionNormalEdition']);
+        Route::delete('examen-session-normals/suppression/{idMo}/{idEN}', [ExamenNormalController::class, 'examenSessionNormalSuppression']);
     });
 });
