@@ -9,18 +9,7 @@ const Header = () => {
         >
             <div className="container">
                 <a className="navbar-brand" href="index.html">
-                    <img
-                        src="assets/images/logo-dark.png"
-                        className="card-logo card-logo-dark"
-                        alt="logo dark"
-                        height="17"
-                    />
-                    <img
-                        src="assets/images/logo-light.png"
-                        className="card-logo card-logo-light"
-                        alt="logo light"
-                        height="17"
-                    />
+                <span className="text-success fs-20 fw-bolder">U-DOC</span>
                 </a>
                 <button
                     className="navbar-toggler py-0 fs-20 text-body"
@@ -44,7 +33,7 @@ const Header = () => {
                     >
                         <li className="nav-item">
                             <a className="nav-link active" href="#hero">
-                                Home
+                                Accueil
                             </a>
                         </li>
                         <li className="nav-item">

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../../layouts/public/Header";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     return (
@@ -11,124 +12,147 @@ const HomePage = () => {
                         <div className="col-lg-8 col-sm-10">
                             <div className="text-center mt-lg-5 pt-5">
                                 <h1 className="display-6 fw-semibold mb-3 lh-base">
-                                    The better way to manage your website with
-                                    <span className="text-success">
-                                        Velzon
-                                    </span>
+                                    <span className="text-success">U-DOC</span>:
+                                    Votre Portail pour la Réussite Académique
                                 </h1>
                                 <p className="lead text-muted lh-base">
-                                    Velzon is a fully responsive, multipurpose
-                                    and premium Bootstrap 5 Admin & Dashboard
-                                    Template built in multiple frameworks.
+                                    Bienvenue sur U-DOC, la plateforme éducative
+                                    de choix pour les étudiants du Burkina Faso.
+                                    Que vous soyez étudiant à l'Université
+                                    Norbert Zongo de Koudougou, à l'Université
+                                    Joseph Ki-Zerbo, ou dans une autre
+                                    université prestigieuse, U-DOC est votre
+                                    guichet unique pour tout ce dont vous avez
+                                    besoin.
                                 </p>
 
                                 <div className="d-flex gap-2 justify-content-center mt-4">
-                                    <a
-                                        href="auth-signup-basic.html"
+                                    <Link
+                                        to="/inscription"
                                         className="btn btn-primary"
                                     >
-                                        Get Started
+                                        Commencer
                                         <i className="ri-arrow-right-line align-middle ms-1"></i>
-                                    </a>
-                                    <a
-                                        href="pages-pricing.html"
+                                    </Link>
+                                    <Link
+                                        href="/documents"
                                         className="btn btn-danger"
                                     >
-                                        View Plans
+                                        Documents
                                         <i className="ri-eye-line align-middle ms-1"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 
                             <div className="mt-4 mt-sm-5 pt-sm-5 mb-sm-n5 demo-carousel">
-                                <div className="demo-img-patten-top d-none d-sm-block">
-                                    <img
-                                        src="assets/images/landing/img-pattern.png"
-                                        className="d-block img-fluid"
-                                        alt="..."
-                                    />
-                                </div>
-                                <div className="demo-img-patten-bottom d-none d-sm-block">
-                                    <img
-                                        src="assets/images/landing/img-pattern.png"
-                                        className="d-block img-fluid"
-                                        alt="..."
-                                    />
-                                </div>
-                                <div
-                                    className="carousel slide carousel-fade"
-                                    data-bs-ride="carousel"
-                                >
-                                    <div className="carousel-inner shadow-lg p-2 bg-white rounded">
+                                <div className="card-body">
+                                    <div className="live-preview">
                                         <div
-                                            className="carousel-item active"
-                                            data-bs-interval="2000"
+                                            id="carouselExampleCaption"
+                                            className="carousel slide"
+                                            data-bs-ride="carousel"
                                         >
-                                            <img
-                                                src="assets/images/demos/default.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div
-                                            className="carousel-item"
-                                            data-bs-interval="2000"
-                                        >
-                                            <img
-                                                src="assets/images/demos/saas.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div
-                                            className="carousel-item"
-                                            data-bs-interval="2000"
-                                        >
-                                            <img
-                                                src="assets/images/demos/material.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div
-                                            className="carousel-item"
-                                            data-bs-interval="2000"
-                                        >
-                                            <img
-                                                src="assets/images/demos/minimal.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div
-                                            className="carousel-item"
-                                            data-bs-interval="2000"
-                                        >
-                                            <img
-                                                src="assets/images/demos/creative.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div
-                                            className="carousel-item"
-                                            data-bs-interval="2000"
-                                        >
-                                            <img
-                                                src="assets/images/demos/modern.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div
-                                            className="carousel-item"
-                                            data-bs-interval="2000"
-                                        >
-                                            <img
-                                                src="assets/images/demos/interactive.png"
-                                                className="d-block w-100"
-                                                alt="..."
-                                            />
+                                            <div
+                                                className="carousel-inner"
+                                                role="listbox"
+                                            >
+                                                <div className="carousel-item">
+                                                    <img
+                                                        src="assets/images/small/img-7.jpg"
+                                                        alt=""
+                                                        className="d-block img-fluid mx-auto w-10"
+                                                    />
+                                                    <div className="carousel-caption text-white-50">
+                                                        <h5 className="text-white">
+                                                            Sunrise above a
+                                                            beach
+                                                        </h5>
+                                                        <p>
+                                                            You've probably
+                                                            heard that opposites
+                                                            attract. The same is
+                                                            true for fonts.
+                                                            Don't be afraid to
+                                                            combine font styles
+                                                            that are different
+                                                            but complementary.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div className="carousel-item active">
+                                                    <img
+                                                        src="assets/images/small/img-2.jpg"
+                                                        alt=""
+                                                        className="d-block img-fluid mx-auto"
+                                                    />
+                                                    <div className="carousel-caption text-white-50">
+                                                        <h5 className="text-white">
+                                                            Working from home
+                                                            little spot
+                                                        </h5>
+                                                        <p>
+                                                            Consistency piques
+                                                            people’s interest is
+                                                            that it has become
+                                                            more and more
+                                                            popular over the
+                                                            years, which is
+                                                            excellent.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div className="carousel-item">
+                                                    <img
+                                                        src="assets/images/small/img-9.jpg"
+                                                        alt=""
+                                                        className="d-block img-fluid mx-auto"
+                                                    />
+                                                    <div className="carousel-caption text-white-50">
+                                                        <h5 className="text-white">
+                                                            Dramatic clouds at
+                                                            the Golden Gate
+                                                            Bridge
+                                                        </h5>
+                                                        <p>
+                                                            Increase or decrease
+                                                            the letter spacing
+                                                            depending on the
+                                                            situation and try,
+                                                            try again until it
+                                                            looks right, and
+                                                            each letter.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a
+                                                className="carousel-control-prev"
+                                                href="#carouselExampleCaption"
+                                                role="button"
+                                                data-bs-slide="prev"
+                                            >
+                                                <span
+                                                    className="carousel-control-prev-icon"
+                                                    aria-hidden="true"
+                                                ></span>
+                                                <span className="sr-only">
+                                                    Previous
+                                                </span>
+                                            </a>
+                                            <a
+                                                className="carousel-control-next"
+                                                href="#carouselExampleCaption"
+                                                role="button"
+                                                data-bs-slide="next"
+                                            >
+                                                <span
+                                                    className="carousel-control-next-icon"
+                                                    aria-hidden="true"
+                                                ></span>
+                                                <span className="sr-only">
+                                                    Next
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,100 +174,16 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <div className="pt-5 mt-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="text-center mt-5">
-                                <h5 className="fs-20">
-                                    Trusted
-                                    <span className="text-primary text-decoration-underline">
-                                        by
-                                    </span>
-                                    the world's best
-                                </h5>
-
-                                <div
-                                    className="swiper trusted-client-slider mt-sm-5 mt-4 mb-sm-5 mb-4"
-                                    dir="ltr"
-                                >
-                                    <div className="swiper-wrapper">
-                                        <div className="swiper-slide">
-                                            <div className="client-images">
-                                                <img
-                                                    src="assets/images/clients/amazon.svg"
-                                                    alt="client-img"
-                                                    className="mx-auto img-fluid d-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="client-images">
-                                                <img
-                                                    src="assets/images/clients/walmart.svg"
-                                                    alt="client-img"
-                                                    className="mx-auto img-fluid d-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="client-images">
-                                                <img
-                                                    src="assets/images/clients/lenovo.svg"
-                                                    alt="client-img"
-                                                    className="mx-auto img-fluid d-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="client-images">
-                                                <img
-                                                    src="assets/images/clients/paypal.svg"
-                                                    alt="client-img"
-                                                    className="mx-auto img-fluid d-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="client-images">
-                                                <img
-                                                    src="assets/images/clients/shopify.svg"
-                                                    alt="client-img"
-                                                    className="mx-auto img-fluid d-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="client-images">
-                                                <img
-                                                    src="assets/images/clients/verizon.svg"
-                                                    alt="client-img"
-                                                    className="mx-auto img-fluid d-block"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <section className="section" id="services">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
                             <div className="text-center mb-5">
                                 <h1 className="mb-3 ff-secondary fw-semibold lh-base">
-                                    A Digital web design studio creating modern
-                                    & engaging online
+                                Explorez notre monde académique
                                 </h1>
                                 <p className="text-muted">
-                                    To achieve this, it would be necessary to
-                                    have uniform grammar, pronunciation and more
-                                    common words. If several languages coalesce
-                                    the grammar
+                                    Nous mettons gratuitement a votre disposition des examens, des corrections des docteurs, des années passées.
                                 </p>
                             </div>
                         </div>
@@ -260,7 +200,7 @@ const HomePage = () => {
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
-                                    <h5 className="fs-18">Creative Design</h5>
+                                    <h5 className="fs-18">Une Bibliothèque Complète</h5>
                                     <p className="text-muted my-3 ff-secondary">
                                         The creative design includes designs
                                         that are unique, effective and
