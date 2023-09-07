@@ -8,21 +8,22 @@ const Footer = () => {
                     <div className="col-lg-4 mt-4">
                         <div>
                             <div>
-                                <img
-                                    src="assets/images/logo-light.png"
-                                    alt="logo light"
-                                    height="17"
-                                />
+                                <a className="navbar-brand" href="index.html">
+                                    <span className="text-success fs-20 fw-bolder">
+                                        U-DOC
+                                    </span>
+                                </a>
                             </div>
                             <div className="mt-4 fs-13">
                                 <p>
-                                    Premium Multipurpose Admin & Dashboard
-                                    Template
+                                    Notre mission est de rendre l'apprentissage
+                                    plus accessible, collaboratif et engageant
+                                    pour chaque étudiant. Rejoignez-nous dès
+                                    aujourd'hui et découvrez une nouvelle
+                                    dimension dans votre parcours académique.
                                 </p>
                                 <p className="ff-secondary">
-                                    You can build any type of web application
-                                    like eCommerce, CRM, CMS, Project management
-                                    apps, Admin Panels, etc using Velzon.
+                                    U-DOC - La Connaissance à Votre Portée !
                                 </p>
                             </div>
                         </div>
@@ -31,57 +32,52 @@ const Footer = () => {
                     <div className="col-lg-7 ms-lg-auto">
                         <div className="row">
                             <div className="col-sm-4 mt-4">
-                                <h5 className="text-white mb-0">Company</h5>
+                                <h5 className="text-white mb-0">U-DOC</h5>
                                 <div className="text-muted mt-3">
                                     <ul className="list-unstyled ff-secondary footer-list">
                                         <li>
-                                            <a href="pages-profile.html">
-                                                About Us
+                                            <a href="#">
+                                                A propos de nous
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="pages-gallery.html">
-                                                Gallery
+                                            <a href="#">
+                                                Galleries
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="apps-projects-overview.html">
-                                                Projects
+                                            <a href="#">
+                                                Réseau social
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="pages-timeline.html">
-                                                Timeline
+                                            <a href="#">
+                                                Documents
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-sm-4 mt-4">
-                                <h5 className="text-white mb-0">Apps Pages</h5>
+                                <h5 className="text-white mb-0">Authentification</h5>
                                 <div className="text-muted mt-3">
                                     <ul className="list-unstyled ff-secondary footer-list">
                                         <li>
-                                            <a href="pages-pricing.html">
-                                                Calendar
+                                            <a href="#">
+                                                Inscription
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="apps-mailbox.html">
-                                                Mailbox
+                                            <a href="#">
+                                                Connexion
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="apps-chat.html">Chat</a>
+                                            <a href="apps-chat.html">Mot de passe oublié</a>
                                         </li>
                                         <li>
                                             <a href="apps-crm-deals.html">
-                                                Deals
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="apps-tasks-kanban.html">
-                                                Kanban Board
+                                                Besion d'aide
                                             </a>
                                         </li>
                                     </ul>
@@ -92,11 +88,11 @@ const Footer = () => {
                                 <div className="text-muted mt-3">
                                     <ul className="list-unstyled ff-secondary footer-list">
                                         <li>
-                                            <a href="pages-faqs.html">FAQ</a>
+                                            <a href="#">FAQ (Questions-Reponses)</a>
                                         </li>
                                         <li>
-                                            <a href="pages-faqs.html">
-                                                Contact
+                                            <a href="#">
+                                                Contactez-nous
                                             </a>
                                         </li>
                                     </ul>
@@ -114,7 +110,7 @@ const Footer = () => {
                                     {" "}
                                     document.write(new Date().getFullYear()){" "}
                                 </script>{" "}
-                                © Velzon - Themesbrand
+                                © U-DOC - Debut de fonctionnement le 31 decembre 2023
                             </p>
                         </div>
                     </div>
@@ -131,13 +127,6 @@ const Footer = () => {
                                 <li className="list-inline-item">
                                     <a href="#" className="avatar-xs d-block">
                                         <div className="avatar-title rounded-circle">
-                                            <i className="ri-github-fill"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li className="list-inline-item">
-                                    <a href="#" className="avatar-xs d-block">
-                                        <div className="avatar-title rounded-circle">
                                             <i className="ri-linkedin-fill"></i>
                                         </div>
                                     </a>
@@ -145,14 +134,7 @@ const Footer = () => {
                                 <li className="list-inline-item">
                                     <a href="#" className="avatar-xs d-block">
                                         <div className="avatar-title rounded-circle">
-                                            <i className="ri-google-fill"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li className="list-inline-item">
-                                    <a href="#" className="avatar-xs d-block">
-                                        <div className="avatar-title rounded-circle">
-                                            <i className="ri-dribbble-line"></i>
+                                            <i className="ri-telegram-fill"></i>
                                         </div>
                                     </a>
                                 </li>

@@ -39,7 +39,7 @@ const HomePage = () => {
                                         className="btn btn-danger"
                                     >
                                         Documents
-                                        <i className="ri-eye-line align-middle ms-1"></i>
+                                        <i className="bx bxs-file-pdf align-middle ms-1"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -195,23 +195,15 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-pencil-ruler-2-line fs-36"></i>
+                                            <i className="ri-stack-fill fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">Une Bibliothèque Complète</h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        The creative design includes designs
-                                        that are unique, effective and
-                                        memorable.
+                                    Notre collection s'étend sur des années d'examens, de corrections, de modules de cours, et bien plus encore. Couvrant les années de 2016 à aujourd'hui, elle englobe les sessions normales et de rattrapages
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -220,23 +212,15 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-palette-line fs-36"></i>
+                                            <i className="bx bxs-file-pdf fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
-                                    <h5 className="fs-18">Unlimited Colors</h5>
+                                    <h5 className="fs-18">Visualisez Avant de Télécharger</h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        The collection of rules and guidelines
-                                        which designers use to communicate with
-                                        users through appealing.
+                                    Avant de télécharger un examen ou une correction au format PDF, profitez de la possibilité de les prévisualiser sur notre plateforme. Vous savez ainsi précisément ce que vous obtiendrez.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -245,25 +229,18 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-lightbulb-flash-line fs-36"></i>
+                                            <i className="bx bx-user fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">
-                                        Strategy Solutions
+                                    Inscription Gratuite 
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        Business development firm that provides
-                                        strategic planning, market research
-                                        services and project.
+                                    Créez un compte U-DOC gratuitement en quelques instants. Commencez à explorer notre collection dès maintenant. Pour un accès complet, il vous suffit de mettre à jour votre compte.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -272,23 +249,16 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-customer-service-line fs-36"></i>
+                                            <i className="ri-earth-line fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
-                                    <h5 className="fs-18">Awesome Support</h5>
+                                    <h5 className="fs-18">Un Réseau Social Pour Étudiant</h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        Awesome Support is the most versatile
-                                        and feature-rich support plugin for all
-                                        version.
+                                    Exprimez-vous en publiant des articles sur notre réseau social pour étudiant. Échangez avec d'autres étudiants, posez des questions, partagez des astuces et des conseils. Bâtissez un réseau académique solide.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -297,25 +267,17 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-stack-line fs-36"></i>
+                                            <i className="ri-lock-2-fill fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">
-                                        Truly Multipurpose
+                                    Sécurité Maximale
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        You usually get a broad range of options
-                                        to play with. This enables you to use a
-                                        single theme across multiple.
+                                    Nous prenons la sécurité de vos données et de votre compte très au sérieux. Vous pouvez explorer notre plateforme en toute confiance.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -324,23 +286,15 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-settings-2-line fs-36"></i>
+                                            <i className="ri-team-fill fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
-                                    <h5 className="fs-18">Easy to customize</h5>
+                                    <h5 className="fs-18">Une Communauté Dynamique</h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        Personalise your own website, no matter
-                                        what theme and what customization
-                                        options.
+                                    Rejoignez une communauté active composée de milliers d'étudiants comme vous. Partagez vos expériences, collaborez sur des projets, élargissez votre réseau académique.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -356,19 +310,12 @@ const HomePage = () => {
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">
-                                        Responsive & Clean Design
+                                    Une Plateforme Approuvée et Légale
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        Responsive design is a graphic user
-                                        interface (GUI) design approach used to
-                                        create content.
+                                    U-DOC a reçu l'autorisation gouvernementale pour stocker et partager ces documents, ce qui garantit la légalité et la conformité de notre service.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -377,25 +324,18 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-google-fill fs-36"></i>
+                                            <i className="ri-group-line fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">
-                                        Google Font Collection
+                                    L'Équipe U-DOC à Votre Service
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        Google Fonts is a collection of 915
-                                        fonts, all available to use for free on
-                                        your website.
+                                    Derrière U-DOC se trouve une équipe dévouée et des chefs de promotion engagés qui veillent à ce que notre collection soit toujours à jour. Nous nous efforçons de répondre à vos besoins académiques en temps réel.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -404,81 +344,78 @@ const HomePage = () => {
                                 <div className="flex-shrink-0 me-3">
                                     <div className="avatar-sm icon-effect">
                                         <div className="avatar-title bg-transparent text-success rounded-circle">
-                                            <i className="ri-briefcase-5-line fs-36"></i>
+                                            <i className="ri-china-railway-line fs-36"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">
-                                        Top Industry Specialists
+                                    Découvrez Bien Plus que Votre Université
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                        An industrial specialist works with
-                                        industrial operations to ensure that
-                                        manufacturing facilities work.
+                                    En plus des ressources de votre propre université, explorez une multitude de documents provenant d'autres établissements publics et privés. U-DOC vous offre une perspective plus large de l'apprentissage.
                                     </p>
-                                    <div>
-                                        <a href="#" className="fs-13 fw-medium">
-                                            Learn More
-                                            <i className="ri-arrow-right-s-line align-bottom"></i>
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section bg-light py-5" id="features">
-                <div className="container">
-                    <div className="row align-items-center gy-4">
-                        <div className="col-lg-6 col-sm-7 mx-auto">
-                            <div>
-                                <img
-                                    src="assets/images/landing/features/img-1.png"
-                                    alt=""
-                                    className="img-fluid mx-auto"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="text-muted">
-                                <div className="avatar-sm icon-effect mb-4">
-                                    <div className="avatar-title bg-transparent rounded-circle text-success h1">
-                                        <i className="ri-collage-line fs-36"></i>
+                        <div className="col-lg-4">
+                            <div className="d-flex p-3">
+                                <div className="flex-shrink-0 me-3">
+                                    <div className="avatar-sm icon-effect">
+                                        <div className="avatar-title bg-transparent text-success rounded-circle">
+                                            <i className="ri-user-shared-line fs-36"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <h3 className="mb-3 fs-20">
-                                    Huge collection of widgets
-                                </h3>
-                                <p className="mb-4 ff-secondary fs-16">
-                                    Collection widgets specialize in displaying
-                                    many elements of the same type, such as a
-                                    collection of pictures from a collection of
-                                    articles from a news app or a collection of
-                                    messages from a communication app.
-                                </p>
-
-                                <div className="row pt-3">
-                                    <div className="col-3">
-                                        <div className="text-center">
-                                            <h4>5</h4>
-                                            <p>Dashboards</p>
+                                <div className="flex-grow-1">
+                                    <h5 className="fs-18">
+                                    Connectez-vous avec Vos Collègues d'Études
+                                    </h5>
+                                    <p className="text-muted my-3 ff-secondary">
+                                    Échangez avec des étudiants et étudiantes venant des quatre coins du Burkina Faso. Établissez des liens, partagez des conseils, collaborez sur des projets et développez des amitiés durables.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <div className="d-flex p-3">
+                                <div className="flex-shrink-0 me-3">
+                                    <div className="avatar-sm icon-effect">
+                                        <div className="avatar-title bg-transparent text-success rounded-circle">
+                                            <i className="ri-loader-line fs-36"></i>
                                         </div>
                                     </div>
-                                    <div className="col-3">
-                                        <div className="text-center">
-                                            <h4>150+</h4>
-                                            <p>Pages</p>
+                                </div>
+                                <div className="flex-grow-1">
+                                    <h5 className="fs-18">
+                                    Vos Besoins, Notre Priorité
+                                    </h5>
+                                    <p className="text-muted my-3 ff-secondary">
+                                    Chez U-DOC, nous comprenons que chaque étudiant est unique. C'est pourquoi nous offrons des fonctionnalités telles qu'un moteur de recherche ultra rapide, une collaboration étudiante, pour répondre à vos besoins spécifiques et bien d'autres.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <div className="d-flex p-3">
+                                <div className="flex-shrink-0 me-3">
+                                    <div className="avatar-sm icon-effect">
+                                        <div className="avatar-title bg-transparent text-success rounded-circle">
+                                            <i className="ri-community-fill fs-36"></i>
                                         </div>
                                     </div>
-                                    <div className="col-4">
-                                        <div className="text-center">
-                                            <h4>7+</h4>
-                                            <p>Functional Apps</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div className="flex-grow-1">
+                                    <h5 className="fs-18">
+                                    Album d'image des universités
+                                    </h5>
+                                    <p className="text-muted my-3 ff-secondary">
+                                    Vous trouvez dans cette plateforme des albums d'images de nos prestigieuses universités. <a href="#">Cliquez-ici</a> vour voir nos sublimes universités.
+                                    </p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -493,21 +430,29 @@ const HomePage = () => {
                         <div className="col-sm">
                             <div>
                                 <h4 className="text-white mb-0 fw-semibold">
-                                    Build your web App/SaaS with Velzon
-                                    dashboard
+                                    Inscrivez-vous maintenant ou connectez-vous pour profiter des avantages offertes par U-DOC.
                                 </h4>
                             </div>
                         </div>
                         <div className="col-sm-auto">
                             <div>
-                                <a
-                                    href="https://1.envato.market/velzon-admin"
+                                <Link
+                                    to="/inscription"
                                     target="_blank"
-                                    className="btn bg-gradient btn-danger"
+                                    className="btn bg-gradient btn-success m-1"
                                 >
-                                    <i className="ri-shopping-cart-2-line align-middle me-1"></i>
-                                    Buy Now
-                                </a>
+                                    <i className="bx bx-run align-middle me-1"></i>
+                                    Je m'inscris
+                                </Link>
+
+                                <Link
+                                    to="/connexion"
+                                    target="_blank"
+                                    className="btn bg-gradient btn-info"
+                                >
+                                    <i className="ri-user-shared-line align-middle me-1"></i>
+                                    connexion
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -520,17 +465,13 @@ const HomePage = () => {
                         <div className="col-lg-6 order-2 order-lg-1">
                             <div className="text-muted">
                                 <h5 className="fs-12 text-uppercase text-success">
-                                    Design
+                                    Documents
                                 </h5>
                                 <h4 className="mb-3">
-                                    Well Designed Dashboards
+                                    U-DOC pour télécharger des documents universitaires
                                 </h4>
                                 <p className="mb-4 ff-secondary">
-                                    Quality Dashboards (QD) is a
-                                    condition-specific, actionable web-based
-                                    application for quality reporting and
-                                    population management that is integrated
-                                    into the Electronic Health Record (EHR).
+                                    Nous mettons à la disposition des etudiantes et etudiantes des documents(sujets et corrigés) des années passées. Nous donc des:
                                 </p>
 
                                 <div className="row">
@@ -546,7 +487,7 @@ const HomePage = () => {
                                                 </div>
                                                 <div className="flex-grow-1">
                                                     <h5 className="fs-14 mb-0">
-                                                        Ecommerce
+                                                        Examens des sessions normals
                                                     </h5>
                                                 </div>
                                             </div>
@@ -560,21 +501,7 @@ const HomePage = () => {
                                                 </div>
                                                 <div className="flex-grow-1">
                                                     <h5 className="fs-14 mb-0">
-                                                        Analytics
-                                                    </h5>
-                                                </div>
-                                            </div>
-                                            <div className="d-flex align-items-center">
-                                                <div className="flex-shrink-0 me-2">
-                                                    <div className="avatar-xs icon-effect">
-                                                        <div className="avatar-title bg-transparent text-success rounded-circle h2">
-                                                            <i className="ri-check-fill"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="flex-grow-1">
-                                                    <h5 className="fs-14 mb-0">
-                                                        CRM
+                                                        Examens des sessions de rattrapages
                                                     </h5>
                                                 </div>
                                             </div>
@@ -592,7 +519,7 @@ const HomePage = () => {
                                                 </div>
                                                 <div className="flex-grow-1">
                                                     <h5 className="fs-14 mb-0">
-                                                        Crypto
+                                                        Corrigés des sessions normals
                                                     </h5>
                                                 </div>
                                             </div>
@@ -606,22 +533,12 @@ const HomePage = () => {
                                                 </div>
                                                 <div className="flex-grow-1">
                                                     <h5 className="fs-14 mb-0">
-                                                        Projects
+                                                        Corrigés des sessions de rattrages
                                                     </h5>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="mt-4">
-                                    <a
-                                        href="index.html"
-                                        className="btn btn-primary"
-                                    >
-                                        Learn More
-                                        <i className="ri-arrow-right-line align-middle ms-1"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -649,14 +566,11 @@ const HomePage = () => {
                         <div className="col-lg-6">
                             <div className="text-muted ps-lg-5">
                                 <h5 className="fs-12 text-uppercase text-success">
-                                    structure
+                                    U-Book
                                 </h5>
-                                <h4 className="mb-3">Well Documented</h4>
+                                <h4 className="mb-3">U-DOC possède un reseau social.</h4>
                                 <p className="mb-4">
-                                    used to describe something that is known
-                                    about or known to be true because there are
-                                    many documents that describe it, prove it,
-                                    etc.
+                                    Notre réseau social est similaire a facebook. Vous aurez la possibilité de faire des publications, discuter avec les milliers d'etudiants et etudiantes.
                                 </p>
 
                                 <div className="vstack gap-2">
@@ -670,7 +584,7 @@ const HomePage = () => {
                                         </div>
                                         <div className="flex-grow-1">
                                             <p className="mb-0">
-                                                Dynamic Conetnt
+                                                Publiez
                                             </p>
                                         </div>
                                     </div>
@@ -684,7 +598,7 @@ const HomePage = () => {
                                         </div>
                                         <div className="flex-grow-1">
                                             <p className="mb-0">
-                                                Setup plugin's information.
+                                                Commentez
                                             </p>
                                         </div>
                                     </div>
@@ -698,447 +612,22 @@ const HomePage = () => {
                                         </div>
                                         <div className="flex-grow-1">
                                             <p className="mb-0">
-                                                Themes customization information
+                                                Likez
                                             </p>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section bg-light" id="plans">
-                <div className="bg-overlay bg-overlay-pattern"></div>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8">
-                            <div className="text-center mb-5">
-                                <h3 className="mb-3 fw-semibold">
-                                    Choose the plan that's right for you
-                                </h3>
-                                <p className="text-muted mb-4">
-                                    Simple pricing. No hidden fees. Advanced
-                                    features for you business.
-                                </p>
-
-                                <div className="d-flex justify-content-center align-items-center">
-                                    <div>
-                                        <h5 className="fs-14 mb-0">Month</h5>
-                                    </div>
-                                    <div className="form-check form-switch fs-20 ms-3">
-                                        <input
-                                            className="form-check-input"
-                                            type="checkbox"
-                                            id="plan-switch"
-                                        />
-                                        <label
-                                            className="form-check-label"
-                                            htmlFor="plan-switch"
-                                        ></label>
-                                    </div>
-                                    <div>
-                                        <h5 className="fs-14 mb-0">
-                                            Annual
-                                            <span className="badge badge-soft-success">
-                                                Save 20%
-                                            </span>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row gy-4">
-                        <div className="col-lg-4">
-                            <div className="card plan-box mb-0">
-                                <div className="card-body p-4 m-2">
-                                    <div className="d-flex align-items-center">
-                                        <div className="flex-grow-1">
-                                            <h5 className="mb-1 fw-semibold">
-                                                Basic Plan
-                                            </h5>
-                                            <p className="text-muted mb-0">
-                                                For Startup
-                                            </p>
-                                        </div>
-                                        <div className="avatar-sm">
-                                            <div className="avatar-title bg-light rounded-circle text-primary">
-                                                <i className="ri-book-mark-line fs-20"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="py-4 text-center">
-                                        <h1 className="month">
-                                            <sup>
-                                                <small>$</small>
-                                            </sup>
-                                            <span className="ff-secondary fw-bold">
-                                                19
-                                            </span>
-                                            <span className="fs-13 text-muted">
-                                                /Month
-                                            </span>
-                                        </h1>
-                                        <h1 className="annual">
-                                            <sup>
-                                                <small>$</small>
-                                            </sup>
-                                            <span className="ff-secondary fw-bold">
-                                                171
-                                            </span>
-                                            <span className="fs-13 text-muted">
-                                                /Year
-                                            </span>
-                                        </h1>
-                                    </div>
-
-                                    <div>
-                                        <ul className="list-unstyled text-muted vstack gap-3 ff-secondary">
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Upto <b>3</b> Projects
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Upto <b>299</b>
-                                                        Customers
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Scalable Bandwidth
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>5</b> FTP Login
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-danger me-1">
-                                                        <i className="ri-close-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>24/7</b> Support
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-danger me-1">
-                                                        <i className="ri-close-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b> Storage
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-danger me-1">
-                                                        <i className="ri-close-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Domain
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div className="mt-4">
-                                            <a
-                                                href="#"
-                                                className="btn btn-soft-success w-100"
-                                            >
-                                                Get Started
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="card plan-box mb-0 ribbon-box right">
-                                <div className="card-body p-4 m-2">
-                                    <div className="ribbon-two ribbon-two-danger">
-                                        <span>Popular</span>
                                     </div>
                                     <div className="d-flex align-items-center">
-                                        <div className="flex-grow-1">
-                                            <h5 className="mb-1 fw-semibold">
-                                                Pro Business
-                                            </h5>
-                                            <p className="text-muted mb-0">
-                                                Professional plans
-                                            </p>
-                                        </div>
-                                        <div className="avatar-sm">
-                                            <div className="avatar-title bg-light rounded-circle text-primary">
-                                                <i className="ri-medal-fill fs-20"></i>
+                                        <div className="flex-shrink-0 me-2">
+                                            <div className="avatar-xs icon-effect">
+                                                <div className="avatar-title bg-transparent text-success rounded-circle h2">
+                                                    <i className="ri-check-fill"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="py-4 text-center">
-                                        <h1 className="month">
-                                            <sup>
-                                                <small>$</small>
-                                            </sup>
-                                            <span className="ff-secondary fw-bold">
-                                                29
-                                            </span>
-                                            <span className="fs-13 text-muted">
-                                                /Month
-                                            </span>
-                                        </h1>
-                                        <h1 className="annual">
-                                            <sup>
-                                                <small>$</small>
-                                            </sup>
-                                            <span className="ff-secondary fw-bold">
-                                                261
-                                            </span>
-                                            <span className="fs-13 text-muted">
-                                                /Year
-                                            </span>
-                                        </h1>
-                                    </div>
-
-                                    <div>
-                                        <ul className="list-unstyled text-muted vstack gap-3 ff-secondary">
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Upto <b>15</b> Projects
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b>
-                                                        Customers
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Scalable Bandwidth
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>12</b> FTP Login
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>24/7</b> Support
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-danger me-1">
-                                                        <i className="ri-close-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b> Storage
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-danger me-1">
-                                                        <i className="ri-close-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Domain
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div className="mt-4">
-                                            <a
-                                                href="#"
-                                                className="btn btn-soft-success w-100"
-                                            >
-                                                Get Started
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="card plan-box mb-0">
-                                <div className="card-body p-4 m-2">
-                                    <div className="d-flex align-items-center">
                                         <div className="flex-grow-1">
-                                            <h5 className="mb-1 fw-semibold">
-                                                Platinum Plan
-                                            </h5>
-                                            <p className="text-muted mb-0">
-                                                Enterprise Businesses
+                                            <p className="mb-0">
+                                                Discutez
                                             </p>
-                                        </div>
-                                        <div className="avatar-sm">
-                                            <div className="avatar-title bg-light rounded-circle text-primary">
-                                                <i className="ri-stack-fill fs-20"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="py-4 text-center">
-                                        <h1 className="month">
-                                            <sup>
-                                                <small>$</small>
-                                            </sup>
-                                            <span className="ff-secondary fw-bold">
-                                                39
-                                            </span>
-                                            <span className="fs-13 text-muted">
-                                                /Month
-                                            </span>
-                                        </h1>
-                                        <h1 className="annual">
-                                            <sup>
-                                                <small>$</small>
-                                            </sup>
-                                            <span className="ff-secondary fw-bold">
-                                                351
-                                            </span>
-                                            <span className="fs-13 text-muted">
-                                                /Year
-                                            </span>
-                                        </h1>
-                                    </div>
-
-                                    <div>
-                                        <ul className="list-unstyled text-muted vstack gap-3 ff-secondary">
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b>
-                                                        Projects
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b>
-                                                        Customers
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Scalable Bandwidth
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b> FTP
-                                                        Login
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>24/7</b> Support
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        <b>Unlimited</b> Storage
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex">
-                                                    <div className="flex-shrink-0 text-success me-1">
-                                                        <i className="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                    </div>
-                                                    <div className="flex-grow-1">
-                                                        Domain
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div className="mt-4">
-                                            <a
-                                                href="#"
-                                                className="btn btn-soft-success w-100"
-                                            >
-                                                Get Started
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1154,12 +643,10 @@ const HomePage = () => {
                         <div className="col-lg-8">
                             <div className="text-center mb-5">
                                 <h3 className="mb-3 fw-semibold">
-                                    Frequently Asked Questions
+                                    Reponses aux questions fréquements posées
                                 </h3>
                                 <p className="text-muted mb-4 ff-secondary">
-                                    If you can not find answer to your question
-                                    in our FAQ, you can always contact us or
-                                    email us. We will answer you shortly!
+                                    Si vous ne trouvez pas les reponses à une de vos questions, veuillez soit nous ecrire, soit nous contactez par email ou par appel. <a href="#">Cliquez-ici</a> pour voir a qui demandé de l'aide.
                                 </p>
 
                                 <div className="">
@@ -1168,14 +655,7 @@ const HomePage = () => {
                                         className="btn btn-primary btn-label rounded-pill"
                                     >
                                         <i className="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i>
-                                        Email Us
-                                    </button>
-                                    <button
-                                        type="button"
-                                        className="btn btn-info btn-label rounded-pill"
-                                    >
-                                        <i className="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i>
-                                        Send Us Tweet
+                                        Envoyez-nous un email
                                     </button>
                                 </div>
                             </div>
@@ -1190,7 +670,7 @@ const HomePage = () => {
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="mb-0 fw-semibold">
-                                        General Questions
+                                        Questions générals
                                     </h5>
                                 </div>
                             </div>
@@ -1211,8 +691,7 @@ const HomePage = () => {
                                             aria-expanded="true"
                                             aria-controls="genques-collapseOne"
                                         >
-                                            What is the purpose of using themes
-                                            ?
+                                            Pourquoi U-DOC ?
                                         </button>
                                     </h2>
                                     <div
@@ -1222,14 +701,7 @@ const HomePage = () => {
                                         data-bs-parent="#genques-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            A theme is a set of colors, fonts,
-                                            effects, and more that can be
-                                            applied to your entire presentation
-                                            to give it a consistent,
-                                            professional look. You've already
-                                            been using a theme, even if you
-                                            didn't know it: the default Office
-                                            theme, which consists.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iste eum sapiente optio quia eius totam explicabo, mollitia non velit cum consequuntur dolorem architecto ducimus. Minima tenetur modi id iste, incidunt sunt, magni fugiat porro saepe nisi reprehenderit! Unde ipsa, molestiae omnis perferendis at harum.
                                         </div>
                                     </div>
                                 </div>
@@ -1246,8 +718,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="genques-collapseTwo"
                                         >
-                                            Can a theme have more than one
-                                            theme?
+                                            Quel est l'objectif de U-DOC ?
                                         </button>
                                     </h2>
                                     <div
@@ -1257,14 +728,7 @@ const HomePage = () => {
                                         data-bs-parent="#genques-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            A story can have as many themes as
-                                            the reader can identify based on
-                                            recurring patterns and parallels
-                                            within the story itself. In looking
-                                            at ways to separate themes into a
-                                            hierarchy, we might find it useful
-                                            to follow the example of a single
-                                            book.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fuga placeat molestiae aut! Nihil maiores tempore laudantium eveniet totam, non dolorem necessitatibus minima impedit magni atque recusandae, ad omnis quibusdam fuga dolorum id delectus sit. Repellat, aspernatur odit debitis, rerum dolorum deserunt autem eveniet dolore soluta molestias maxime deleniti repudiandae.
                                         </div>
                                     </div>
                                 </div>
@@ -1281,7 +745,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="genques-collapseThree"
                                         >
-                                            What are theme features?
+                                            Avez-vous la permissions de publiez ces documents ?
                                         </button>
                                     </h2>
                                     <div
@@ -1291,13 +755,7 @@ const HomePage = () => {
                                         data-bs-parent="#genques-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            Theme features is a set of specific
-                                            functionality that may be enabled by
-                                            theme authors. Themes must register
-                                            each individual Theme Feature that
-                                            the author wishes to support. Theme
-                                            support functions should be called
-                                            in the theme's functions.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptas sunt, nostrum nam laboriosam amet itaque. Quos labore reprehenderit architecto fuga minima nesciunt, accusantium amet at. Eos sapiente officia minus ratione at? Fugiat, nobis voluptatibus deleniti delectus illum minima aperiam, repudiandae molestiae sapiente, ipsa sint soluta mollitia ipsum modi? Laudantium nihil praesentium aspernatur, facilis asperiores non quas hic provident ipsa.
                                         </div>
                                     </div>
                                 </div>
@@ -1314,7 +772,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="genques-collapseFour"
                                         >
-                                            What is simple theme?
+                                            Peux-t-on se faire de l'argent avec U-DOC ?
                                         </button>
                                     </h2>
                                     <div
@@ -1324,15 +782,10 @@ const HomePage = () => {
                                         data-bs-parent="#genques-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            Simple is a free WordPress theme, by
-                                            Themify, built exactly what it is
-                                            named for: simplicity. Immediately
-                                            upgrade the quality of your
-                                            WordPress site with the simple theme
-                                            To use the built-in Chrome theme
-                                            editor.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dignissimos laborum modi autem quibusdam neque maiores, ab totam eius quos praesentium harum et tempora aliquam nobis, corrupti assumenda? Tenetur, voluptas!
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1343,7 +796,7 @@ const HomePage = () => {
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="mb-0 fw-semibold">
-                                        Privacy &amp; Security
+                                        Privé &amp; Securité
                                     </h5>
                                 </div>
                             </div>
@@ -1365,7 +818,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="privacy-collapseOne"
                                         >
-                                            Does Word have night mode?
+                                            Mes données sont-t-elles securisés?
                                         </button>
                                     </h2>
                                     <div
@@ -1375,13 +828,7 @@ const HomePage = () => {
                                         data-bs-parent="#privacy-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            You can run Microsoft Word in dark
-                                            mode, which uses a dark color
-                                            palette to help reduce eye strain in
-                                            low light settings. You can choose
-                                            to make the document white or black
-                                            using the Switch Modes button in the
-                                            ribbon's View tab.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At molestias corporis deserunt id architecto autem perferendis libero ratione voluptatem ipsam!
                                         </div>
                                     </div>
                                 </div>
@@ -1398,7 +845,8 @@ const HomePage = () => {
                                             aria-expanded="true"
                                             aria-controls="privacy-collapseTwo"
                                         >
-                                            Is theme an opinion?
+                                            
+                                            Comment changé mon mot de passe ?
                                         </button>
                                     </h2>
                                     <div
@@ -1408,13 +856,7 @@ const HomePage = () => {
                                         data-bs-parent="#privacy-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            A theme is an opinion the author
-                                            expresses on the subject, for
-                                            instance, the author's
-                                            dissatisfaction with the narrow
-                                            confines of French bourgeois
-                                            marriage during that period theme is
-                                            an idea that a writer repeats.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, labore dolorum? Suscipit inventore expedita praesentium ut corrupti quisquam saepe libero repellendus nobis at cumque, quibusdam ducimus ipsam culpa eligendi natus provident ipsa mollitia similique modi ullam animi amet quasi facere? Numquam, recusandae necessitatibus ab magnam ratione ducimus delectus animi vitae.
                                         </div>
                                     </div>
                                 </div>
@@ -1431,7 +873,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="privacy-collapseThree"
                                         >
-                                            How do you develop a theme?
+                                            Combien de temps existera mon compte ?
                                         </button>
                                     </h2>
                                     <div
@@ -1441,14 +883,7 @@ const HomePage = () => {
                                         data-bs-parent="#privacy-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            A short story, novella, or novel
-                                            presents a narrative to its reader.
-                                            Perhaps that narrative involves
-                                            mystery, terror, romance, comedy, or
-                                            all of the above. These works of
-                                            fiction may also contain memorable
-                                            characters, vivid world-building,
-                                            literary devices.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sit temporibus voluptas deserunt, dolore repudiandae facere, neque, incidunt adipisci quos autem excepturi facilis placeat cumque illo officiis. Eos, provident sunt!
                                         </div>
                                     </div>
                                 </div>
@@ -1465,7 +900,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="privacy-collapseFour"
                                         >
-                                            Do stories need themes?
+                                            Peux-t-on creé plusieurs compte?
                                         </button>
                                     </h2>
                                     <div
@@ -1475,14 +910,7 @@ const HomePage = () => {
                                         data-bs-parent="#privacy-accordion"
                                     >
                                         <div className="accordion-body ff-secondary">
-                                            A story can have as many themes as
-                                            the reader can identify based on
-                                            recurring patterns and parallels
-                                            within the story itself. In looking
-                                            at ways to separate themes into a
-                                            hierarchy, we might find it useful
-                                            to follow the example of a single
-                                            book.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos amet iure cum nemo alias corrupti quae non possimus totam minima tempora assumenda deleniti voluptate ipsam repellendus enim porro, velit quisquam!
                                         </div>
                                     </div>
                                 </div>
@@ -1502,8 +930,8 @@ const HomePage = () => {
                                     <i className="ri-double-quotes-l text-success display-3"></i>
                                 </div>
                                 <h4 className="text-white mb-5">
-                                    <span className="text-success">19k</span>+
-                                    Satisfied clients
+                                    <span className="text-success">Plus de 40k</span>+
+                                    Etudiants(e) satisfaits
                                 </h4>
 
                                 <div
@@ -1515,82 +943,9 @@ const HomePage = () => {
                                             <div className="row justify-content-center">
                                                 <div className="col-10">
                                                     <div className="text-white-50">
-                                                        <p className="fs-20 ff-secondary mb-4">
-                                                            " I am givng 5
-                                                            stars. Theme is
-                                                            great and everyone
-                                                            one stuff everything
-                                                            in theme. Future
-                                                            request should not
-                                                            affect current state
-                                                            of theme. "
+                                                        <p className="fs-20 ff-secondary mb-1">
+                                                            " Le contenu est exatement celui des docteurs. Les correcetions sont bien detailées et bien expliqués. C'est du beau travail.merci a l'equipe "
                                                         </p>
-
-                                                        <div>
-                                                            <h5 className="text-white">
-                                                                gregoriusus
-                                                            </h5>
-                                                            <p>- Skote User</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="row justify-content-center">
-                                                <div className="col-10">
-                                                    <div className="text-white-50">
-                                                        <p className="fs-20 ff-secondary mb-4">
-                                                            " Awesome support.
-                                                            Had few issues while
-                                                            setting up because
-                                                            of my device, the
-                                                            support team helped
-                                                            me fix them up in a
-                                                            day. Everything
-                                                            looks clean and
-                                                            good. Highly
-                                                            recommended! "
-                                                        </p>
-
-                                                        <div>
-                                                            <h5 className="text-white">
-                                                                GeekyGreenOwl
-                                                            </h5>
-                                                            <p>- Skote User</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="row justify-content-center">
-                                                <div className="col-10">
-                                                    <div className="text-white-50">
-                                                        <p className="fs-20 ff-secondary mb-4">
-                                                            " Amazing template,
-                                                            Redux store and
-                                                            components is nicely
-                                                            designed. It's a
-                                                            great start point
-                                                            for an admin based
-                                                            project. Clean Code
-                                                            and good
-                                                            documentation.
-                                                            Template is
-                                                            completely in React
-                                                            and absolutely no
-                                                            usage of jQuery "
-                                                        </p>
-
-                                                        <div>
-                                                            <h5 className="text-white">
-                                                                sreeks456
-                                                            </h5>
-                                                            <p>
-                                                                - Veltrix User
-                                                            </p>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1616,12 +971,12 @@ const HomePage = () => {
                                         className="counter-value"
                                         data-target="100"
                                     >
-                                        0
+                                        15
                                     </span>
                                     +
                                 </h2>
                                 <div className="text-muted">
-                                    Projects Completed
+                                    Total universités
                                 </div>
                             </div>
                         </div>
@@ -1633,10 +988,10 @@ const HomePage = () => {
                                         className="counter-value"
                                         data-target="24"
                                     >
-                                        0
+                                        5k+
                                     </span>
                                 </h2>
-                                <div className="text-muted">Win Awards</div>
+                                <div className="text-muted">Total documents</div>
                             </div>
                         </div>
 
@@ -1647,12 +1002,12 @@ const HomePage = () => {
                                         className="counter-value"
                                         data-target="20.3"
                                     >
-                                        0
+                                        30
                                     </span>
                                     k
                                 </h2>
                                 <div className="text-muted">
-                                    Satisfied Clients
+                                    Total specialité
                                 </div>
                             </div>
                         </div>
@@ -1663,10 +1018,10 @@ const HomePage = () => {
                                         className="counter-value"
                                         data-target="50"
                                     >
-                                        0
+                                        40K+
                                     </span>
                                 </h2>
-                                <div className="text-muted">Employees</div>
+                                <div className="text-muted">Etudiants(e)</div>
                             </div>
                         </div>
                     </div>
@@ -1679,14 +1034,10 @@ const HomePage = () => {
                         <div className="col-lg-8">
                             <div className="text-center mb-5">
                                 <h3 className="mb-3 fw-semibold">
-                                    Our Work Process
+                                    Bon à savoir
                                 </h3>
                                 <p className="text-muted mb-4 ff-secondary">
-                                    In an ideal world this website wouldn’t
-                                    exist, a client would acknowledge the
-                                    importance of having web copy before the
-                                    Proin vitae ipsum vel ex finibus semper
-                                    design starts.
+                                    Comment fonctionne les publications des documents sur notre plateforme ?
                                 </p>
                             </div>
                         </div>
@@ -1708,10 +1059,9 @@ const HomePage = () => {
                                     </div>
                                 </div>
 
-                                <h5>Tell us what you need</h5>
+                                <h5>Récoltes des documents</h5>
                                 <p className="text-muted ff-secondary">
-                                    The profession and the employer and your
-                                    desire to make your mark.
+                                    Les documents sont recoltés généralement par les chefs de promotion ou des etudiants(e)
                                 </p>
                             </div>
                         </div>
@@ -1730,10 +1080,9 @@ const HomePage = () => {
                                     </div>
                                 </div>
 
-                                <h5>Get free quotes</h5>
+                                <h5>La révus</h5>
                                 <p className="text-muted ff-secondary">
-                                    The most important aspect of beauty was,
-                                    therefore, an inherent part.
+                                    Ces documents recoltés sont verifiés pour s'assurer de la pertinance du contenu.
                                 </p>
                             </div>
                         </div>
@@ -1745,306 +1094,10 @@ const HomePage = () => {
                                     </div>
                                 </div>
 
-                                <h5>Deliver high quality product</h5>
+                                <h5>La publication</h5>
                                 <p className="text-muted ff-secondary">
-                                    We quickly learn to fear and thus
-                                    automatically avoid potentially.
+                                    Apres la révus, ces documents sont publier soit par les modarateurs, soit par les chefs de promotions
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section bg-light" id="team">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8">
-                            <div className="text-center mb-5">
-                                <h3 className="mb-3 fw-semibold">
-                                    Our
-                                    <span className="text-danger">Team</span>
-                                </h3>
-                                <p className="text-muted mb-4 ff-secondary">
-                                    To achieve this, it would be necessary to
-                                    have uniform grammar, pronunciation and more
-                                    common words. If several languages coalesce
-                                    the grammar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-2.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Nancy Martino
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        Team Leader
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-10.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Henry Baird
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        Full Stack Developer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-3.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Frank Hook
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        Project Manager
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-8.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Donald Palmer
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        UI/UX Designer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-5.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Erica Kernan
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        Web Designer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-4.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Alexis Clarke
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        Backend Developer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-6.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Marie Ward
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        Full Stack Developer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="card">
-                                <div className="card-body text-center p-4">
-                                    <div className="avatar-xl mx-auto mb-4 position-relative">
-                                        <img
-                                            src="assets/images/users/avatar-7.jpg"
-                                            alt=""
-                                            className="img-fluid rounded-circle"
-                                        />
-                                        <a
-                                            href="apps-mailbox.html"
-                                            className="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
-                                        >
-                                            <div className="avatar-title bg-transparent">
-                                                <i className="ri-mail-fill align-bottom"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h5 className="mb-1">
-                                        <a
-                                            href="pages-profile.html"
-                                            className="text-body"
-                                        >
-                                            Jack Gough
-                                        </a>
-                                    </h5>
-                                    <p className="text-muted mb-0 ff-secondary">
-                                        React Js Developer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="text-center mt-2">
-                                <a
-                                    href="pages-team.html"
-                                    className="btn btn-primary"
-                                >
-                                    View All Members
-                                    <i className="ri-arrow-right-line ms-1 align-bottom"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -2057,19 +1110,16 @@ const HomePage = () => {
                         <div className="col-lg-8">
                             <div className="text-center mb-5">
                                 <h3 className="mb-3 fw-semibold">
-                                    Get In Touch
+                                    Contactez-nous
                                 </h3>
                                 <p className="text-muted mb-4 ff-secondary">
-                                    We thrive when coming up with innovative
-                                    ideas but also understand that a smart
-                                    concept should be supported with faucibus
-                                    sapien odio measurable results.
+                                    Laissez-nous un message en renseignant vos informations. Nous vous repondrons le plus tô possible
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="row gy-4">
-                        <div className="col-lg-4">
+                        {/* <div className="col-lg-4">
                             <div>
                                 <div className="mt-4">
                                     <h5 className="fs-13 text-muted text-uppercase">
@@ -2098,9 +1148,9 @@ const HomePage = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-8">
-                            <div>
+                            <div className="card p-3">
                                 <form>
                                     <div className="row">
                                         <div className="col-lg-6">
@@ -2109,14 +1159,14 @@ const HomePage = () => {
                                                     htmlFor="name"
                                                     className="form-label fs-13"
                                                 >
-                                                    Name
+                                                    Nom Prénom
                                                 </label>
                                                 <input
                                                     name="name"
                                                     id="name"
                                                     type="text"
                                                     className="form-control bg-light border-light"
-                                                    placeholder="Your name*"
+                                                    placeholder="Votre nom et prénom*"
                                                 />
                                             </div>
                                         </div>
@@ -2133,7 +1183,7 @@ const HomePage = () => {
                                                     id="email"
                                                     type="email"
                                                     className="form-control bg-light border-light"
-                                                    placeholder="Your email*"
+                                                    placeholder="Votre email*"
                                                 />
                                             </div>
                                         </div>
@@ -2145,14 +1195,14 @@ const HomePage = () => {
                                                     htmlFor="subject"
                                                     className="form-label fs-13"
                                                 >
-                                                    Subject
+                                                    Sujet
                                                 </label>
                                                 <input
                                                     type="text"
                                                     className="form-control bg-light border-light"
                                                     id="subject"
                                                     name="subject"
-                                                    placeholder="Your Subject.."
+                                                    placeholder="Votre sujet.."
                                                 />
                                             </div>
                                         </div>
@@ -2171,7 +1221,7 @@ const HomePage = () => {
                                                     id="comments"
                                                     rows="3"
                                                     className="form-control bg-light border-light"
-                                                    placeholder="Your message..."
+                                                    placeholder="Votre message..."
                                                 ></textarea>
                                             </div>
                                         </div>
@@ -2183,7 +1233,7 @@ const HomePage = () => {
                                                 id="submit"
                                                 name="send"
                                                 className="submitBnt btn btn-primary"
-                                                value="Send Message"
+                                                value="Envoyez Mon Message"
                                             />
                                         </div>
                                     </div>
@@ -2201,21 +1251,29 @@ const HomePage = () => {
                         <div className="col-sm">
                             <div>
                                 <h4 className="text-white mb-0 fw-semibold">
-                                    Build your web App/SaaS with Velzon
-                                    dashboard
+                                    Inscrivez-vous maintenant ou connectez-vous pour profiter des avantages offertes par U-DOC.
                                 </h4>
                             </div>
                         </div>
                         <div className="col-sm-auto">
                             <div>
-                                <a
-                                    href="https://1.envato.market/velzon-admin"
+                                <Link
+                                    to="/inscription"
                                     target="_blank"
-                                    className="btn bg-gradient btn-danger"
+                                    className="btn bg-gradient btn-success m-1"
                                 >
-                                    <i className="ri-shopping-cart-2-line align-middle me-1"></i>
-                                    Buy Now
-                                </a>
+                                    <i className="bx bx-run align-middle me-1"></i>
+                                    Je m'inscris
+                                </Link>
+
+                                <Link
+                                    to="/connexion"
+                                    target="_blank"
+                                    className="btn bg-gradient btn-info"
+                                >
+                                    <i className="ri-user-shared-line align-middle me-1"></i>
+                                    Connexion
+                                </Link>
                             </div>
                         </div>
                     </div>

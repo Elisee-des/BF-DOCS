@@ -18,7 +18,7 @@ class ExamenSessionNormalSeeder extends Seeder
 
         ExamenNormal::create([
             'nom' => 'Session Normal',
-            'taile_fichier' => '300k',
+            'taille_fichier' => '300k',
             'remarque' => 'Pas de remarque',
             'fichier' => 'Null',
             'module_id' => $idURecent,
@@ -26,7 +26,7 @@ class ExamenSessionNormalSeeder extends Seeder
 
         ExamenNormal::create([
             'nom' => 'Session de Rattrapage',
-            'taile_fichier' => '2200k',
+            'taille_fichier' => '2200k',
             'remarque' => 'aucune',
             'fichier' => 'Null',
             'module_id' => $idUAncien,
@@ -34,7 +34,7 @@ class ExamenSessionNormalSeeder extends Seeder
 
         ExamenNormal::create([
             'nom' => 'Session de Rattrapage',
-            'taile_fichier' => '100k',
+            'taille_fichier' => '100k',
             'remarque' => 'Il y\'a une correction au niveau du sujet 2',
             'fichier' => 'Null',
             'module_id' => $idURecent,
