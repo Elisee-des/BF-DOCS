@@ -12,16 +12,16 @@ const HomePage = () => {
                         <div className="col-lg-8 col-sm-10">
                             <div className="text-center mt-lg-5 pt-5">
                                 <h1 className="display-6 fw-semibold mb-3 lh-base">
-                                    <span className="text-success">U-DOC</span>:
-                                    Votre Portail pour la Réussite Académique
+                                    <span className="text-success">BF-DOC</span>:
+                                    Votre Portail Pour La Réussite Académique
                                 </h1>
                                 <p className="lead text-muted lh-base">
-                                    Bienvenue sur U-DOC, la plateforme éducative
+                                    Bienvenue sur BF-DOC, la plateforme éducative
                                     de choix pour les étudiants du Burkina Faso.
                                     Que vous soyez étudiant à l'Université
                                     Norbert Zongo de Koudougou, à l'Université
                                     Joseph Ki-Zerbo, ou dans une autre
-                                    université prestigieuse, U-DOC est votre
+                                    université prestigieuse, BF-DOC est votre
                                     guichet unique pour tout ce dont vous avez
                                     besoin.
                                 </p>
@@ -58,69 +58,31 @@ const HomePage = () => {
                                             >
                                                 <div className="carousel-item">
                                                     <img
-                                                        src="assets/images/small/img-7.jpg"
+                                                        src="assets/images/ujkz.jpeg"
                                                         alt=""
                                                         className="d-block img-fluid mx-auto w-10"
                                                     />
                                                     <div className="carousel-caption text-white-50">
                                                         <h5 className="text-white">
-                                                            Sunrise above a
-                                                            beach
+                                                            Université Joseph Ki Zerbo
                                                         </h5>
                                                         <p>
-                                                            You've probably
-                                                            heard that opposites
-                                                            attract. The same is
-                                                            true for fonts.
-                                                            Don't be afraid to
-                                                            combine font styles
-                                                            that are different
-                                                            but complementary.
+                                                            La grande et prestigieuse UJKZ est l'université qui possède le plus grand nombre d'etudiant. Vivante, dynamique et attrayant.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div className="carousel-item active">
                                                     <img
-                                                        src="assets/images/small/img-2.jpg"
+                                                        src="assets/images/unz2.jpeg"
                                                         alt=""
                                                         className="d-block img-fluid mx-auto"
                                                     />
                                                     <div className="carousel-caption text-white-50">
                                                         <h5 className="text-white">
-                                                            Working from home
-                                                            little spot
+                                                            Université Norbert Zongo
                                                         </h5>
                                                         <p>
-                                                            Consistency piques
-                                                            people’s interest is
-                                                            that it has become
-                                                            more and more
-                                                            popular over the
-                                                            years, which is
-                                                            excellent.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div className="carousel-item">
-                                                    <img
-                                                        src="assets/images/small/img-9.jpg"
-                                                        alt=""
-                                                        className="d-block img-fluid mx-auto"
-                                                    />
-                                                    <div className="carousel-caption text-white-50">
-                                                        <h5 className="text-white">
-                                                            Dramatic clouds at
-                                                            the Golden Gate
-                                                            Bridge
-                                                        </h5>
-                                                        <p>
-                                                            Increase or decrease
-                                                            the letter spacing
-                                                            depending on the
-                                                            situation and try,
-                                                            try again until it
-                                                            looks right, and
-                                                            each letter.
+                                                            Elle est la plus grande université du burkina en terme de superfice. Elle possède une grande variété de filièere.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -238,7 +200,7 @@ const HomePage = () => {
                                     Inscription Gratuite 
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                    Créez un compte U-DOC gratuitement en quelques instants. Commencez à explorer notre collection dès maintenant. Pour un accès complet, il vous suffit de mettre à jour votre compte.
+                                    Créez un compte BF-DOC gratuitement en quelques instants. Commencez à explorer notre collection dès maintenant. Pour un accès complet, il vous suffit de mettre à jour votre compte.
                                     </p>
                                    
                                 </div>
@@ -313,7 +275,7 @@ const HomePage = () => {
                                     Une Plateforme Approuvée et Légale
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                    U-DOC a reçu l'autorisation gouvernementale pour stocker et partager ces documents, ce qui garantit la légalité et la conformité de notre service.
+                                    BF-DOC a reçu l'autorisation gouvernementale pour stocker et partager ces documents, ce qui garantit la légalité et la conformité de notre service.
                                     </p>
                                     
                                 </div>
@@ -330,10 +292,10 @@ const HomePage = () => {
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5 className="fs-18">
-                                    L'Équipe U-DOC à Votre Service
+                                    L'Équipe BF-DOC à Votre Service
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                    Derrière U-DOC se trouve une équipe dévouée et des chefs de promotion engagés qui veillent à ce que notre collection soit toujours à jour. Nous nous efforçons de répondre à vos besoins académiques en temps réel.
+                                    Derrière BF-DOC se trouve une équipe dévouée et des chefs de promotion engagés qui veillent à ce que notre collection soit toujours à jour. Nous nous efforçons de répondre à vos besoins académiques en temps réel.
                                     </p>
                                     
                                 </div>
@@ -353,7 +315,7 @@ const HomePage = () => {
                                     Découvrez Bien Plus que Votre Université
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                    En plus des ressources de votre propre université, explorez une multitude de documents provenant d'autres établissements publics et privés. U-DOC vous offre une perspective plus large de l'apprentissage.
+                                    En plus des ressources de votre propre université, explorez une multitude de documents provenant d'autres établissements publics et privés. BF-DOC vous offre une perspective plus large de l'apprentissage.
                                     </p>
                                     
                                 </div>
@@ -393,7 +355,7 @@ const HomePage = () => {
                                     Vos Besoins, Notre Priorité
                                     </h5>
                                     <p className="text-muted my-3 ff-secondary">
-                                    Chez U-DOC, nous comprenons que chaque étudiant est unique. C'est pourquoi nous offrons des fonctionnalités telles qu'un moteur de recherche ultra rapide, une collaboration étudiante, pour répondre à vos besoins spécifiques et bien d'autres.
+                                    Chez BF-DOC, nous comprenons que chaque étudiant est unique. C'est pourquoi nous offrons des fonctionnalités telles qu'un moteur de recherche ultra rapide, une collaboration étudiante, pour répondre à vos besoins spécifiques et bien d'autres.
                                     </p>
                                     
                                 </div>
@@ -430,7 +392,7 @@ const HomePage = () => {
                         <div className="col-sm">
                             <div>
                                 <h4 className="text-white mb-0 fw-semibold">
-                                    Inscrivez-vous maintenant ou connectez-vous pour profiter des avantages offertes par U-DOC.
+                                    Inscrivez-vous maintenant ou connectez-vous pour profiter des avantages offertes par BF-DOC.
                                 </h4>
                             </div>
                         </div>
@@ -438,7 +400,6 @@ const HomePage = () => {
                             <div>
                                 <Link
                                     to="/inscription"
-                                    target="_blank"
                                     className="btn bg-gradient btn-success m-1"
                                 >
                                     <i className="bx bx-run align-middle me-1"></i>
@@ -447,7 +408,6 @@ const HomePage = () => {
 
                                 <Link
                                     to="/connexion"
-                                    target="_blank"
                                     className="btn bg-gradient btn-info"
                                 >
                                     <i className="ri-user-shared-line align-middle me-1"></i>
@@ -468,7 +428,7 @@ const HomePage = () => {
                                     Documents
                                 </h5>
                                 <h4 className="mb-3">
-                                    U-DOC pour télécharger des documents universitaires
+                                    BF-DOC pour télécharger des documents universitaires
                                 </h4>
                                 <p className="mb-4 ff-secondary">
                                     Nous mettons à la disposition des etudiantes et etudiantes des documents(sujets et corrigés) des années passées. Nous donc des:
@@ -568,7 +528,7 @@ const HomePage = () => {
                                 <h5 className="fs-12 text-uppercase text-success">
                                     U-Book
                                 </h5>
-                                <h4 className="mb-3">U-DOC possède un reseau social.</h4>
+                                <h4 className="mb-3">BF-DOC possède un reseau social.</h4>
                                 <p className="mb-4">
                                     Notre réseau social est similaire a facebook. Vous aurez la possibilité de faire des publications, discuter avec les milliers d'etudiants et etudiantes.
                                 </p>
@@ -691,7 +651,7 @@ const HomePage = () => {
                                             aria-expanded="true"
                                             aria-controls="genques-collapseOne"
                                         >
-                                            Pourquoi U-DOC ?
+                                            Pourquoi BF-DOC ?
                                         </button>
                                     </h2>
                                     <div
@@ -718,7 +678,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="genques-collapseTwo"
                                         >
-                                            Quel est l'objectif de U-DOC ?
+                                            Quel est l'objectif de BF-DOC ?
                                         </button>
                                     </h2>
                                     <div
@@ -772,7 +732,7 @@ const HomePage = () => {
                                             aria-expanded="false"
                                             aria-controls="genques-collapseFour"
                                         >
-                                            Peux-t-on se faire de l'argent avec U-DOC ?
+                                            Peux-t-on se faire de l'argent avec BF-DOC ?
                                         </button>
                                     </h2>
                                     <div
@@ -1251,7 +1211,7 @@ const HomePage = () => {
                         <div className="col-sm">
                             <div>
                                 <h4 className="text-white mb-0 fw-semibold">
-                                    Inscrivez-vous maintenant ou connectez-vous pour profiter des avantages offertes par U-DOC.
+                                    Inscrivez-vous maintenant ou connectez-vous pour profiter des avantages offertes par BF-DOC.
                                 </h4>
                             </div>
                         </div>
@@ -1259,7 +1219,6 @@ const HomePage = () => {
                             <div>
                                 <Link
                                     to="/inscription"
-                                    target="_blank"
                                     className="btn bg-gradient btn-success m-1"
                                 >
                                     <i className="bx bx-run align-middle me-1"></i>
@@ -1268,7 +1227,6 @@ const HomePage = () => {
 
                                 <Link
                                     to="/connexion"
-                                    target="_blank"
                                     className="btn bg-gradient btn-info"
                                 >
                                     <i className="ri-user-shared-line align-middle me-1"></i>

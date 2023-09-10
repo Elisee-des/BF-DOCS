@@ -9,7 +9,7 @@ const Header = () => {
         >
             <div className="container">
                 <a className="navbar-brand" href="index.html">
-                <span className="text-success fs-20 fw-bolder">U-DOC</span>
+                <span className="text-success fs-20 fw-bolder">BF-DOC</span>
                 </a>
                 <button
                     className="navbar-toggler py-0 fs-20 text-body"
@@ -37,33 +37,18 @@ const Header = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#services">
-                                Services
-                            </a>
+                            <Link className="nav-link" to="/documents">
+                                Documents
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#features">
-                                Features
-                            </a>
+                            <Link className="nav-link" to="/universités">
+                                Universités
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#plans">
-                                Plans
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#reviews">
-                                Reviews
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#team">
-                                Team
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#contact">
-                                Contact
+                            <a className="nav-link" href="#">
+                                Blog
                             </a>
                         </li>
                     </ul>
