@@ -3,821 +3,143 @@ import React from "react";
 function UniversitesPage() {
     return (
         <>
-            <div class="page-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <ul
-                                                    class="list-inline categories-filter animation-nav"
-                                                    id="filter"
-                                                >
-                                                    <li class="list-inline-item">
-                                                        <a
-                                                            class="categories active"
-                                                            data-filter="*"
-                                                        >
-                                                            Tous
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a
-                                                            class="categories"
-                                                            data-filter=".project"
-                                                        >
-                                                            UNZ
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a
-                                                            class="categories"
-                                                            data-filter=".designing"
-                                                        >
-                                                            UJKZ
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a
-                                                            class="categories"
-                                                            data-filter=".photography"
-                                                        >
-                                                            UTS
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a
-                                                            class="categories"
-                                                            data-filter=".development"
-                                                        >
-                                                            UM
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="row gallery-wrapper">
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development"
-                                                    data-category="designing development"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-1.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-1.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Glasses
-                                                                        and
-                                                                        laptop
-                                                                        from
-                                                                        above
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Ron
-                                                                        Mackie
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            2.2K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1.3K
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 photography"
-                                                    data-category="photography"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-2.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-2.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Working
-                                                                        at a
-                                                                        coffee
-                                                                        shop
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Nancy
-                                                                        Martino
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            3.2K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1.1K
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project development"
-                                                    data-category="development"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-3.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-3.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Photo
-                                                                        was
-                                                                        taken in
-                                                                        Beach
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Elwood
-                                                                        Arter
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            2.1K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1K
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing"
-                                                    data-category="project designing"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-4.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-4.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Drawing
-                                                                        a sketch
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Jason
-                                                                        McQuaid
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            825
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            101
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing"
-                                                    data-category="project designing"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-5.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-5.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Working
-                                                                        from
-                                                                        home
-                                                                        little
-                                                                        spot
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Henry
-                                                                        Baird
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            632
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            95
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 photography"
-                                                    data-category="photography"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-6.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-6.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Project
-                                                                        discussion
-                                                                        with
-                                                                        team
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Erica
-                                                                        Kernan
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            3.4K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1.3k
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development"
-                                                    data-category="designing development"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-7.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-7.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Sunrise
-                                                                        above a
-                                                                        beach
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        James
-                                                                        Ballard
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            735
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            150
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 photography"
-                                                    data-category="photography"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-8.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-8.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Glasses
-                                                                        and
-                                                                        laptop
-                                                                        from
-                                                                        above
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Ruby
-                                                                        Griffin
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            1.5k
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            250
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development"
-                                                    data-category="designing development"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-9.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-9.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Dramatic
-                                                                        clouds
-                                                                        at the
-                                                                        Golden
-                                                                        Gate
-                                                                        Bridge
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Ron
-                                                                        Mackie
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            2.2K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1.3K
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing"
-                                                    data-category="project designing"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-10.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-10.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Fun day
-                                                                        at the
-                                                                        Hill
-                                                                        Station
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Henry
-                                                                        Baird
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            632
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            95
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 photography"
-                                                    data-category="photography"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-11.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-11.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        Cycling
-                                                                        in the
-                                                                        countryside
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Nancy
-                                                                        Martino
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            3.2K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1.1K
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="element-item col-xxl-3 col-xl-4 col-sm-6 photography"
-                                                    data-category="photography"
-                                                >
-                                                    <div class="gallery-box card">
-                                                        <div class="gallery-container">
-                                                            <a
-                                                                class="image-popup"
-                                                                href="assets/images/small/img-12.jpg"
-                                                                title=""
-                                                            >
-                                                                <img
-                                                                    class="gallery-img img-fluid mx-auto"
-                                                                    src="assets/images/small/img-12.jpg"
-                                                                    alt=""
-                                                                />
-                                                                <div class="gallery-overlay">
-                                                                    <h5 class="overlay-caption">
-                                                                        A mix of
-                                                                        friends
-                                                                        and
-                                                                        strangers
-                                                                        heading
-                                                                        off to
-                                                                        find an
-                                                                        adventure.
-                                                                    </h5>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="box-content">
-                                                            <div class="d-flex align-items-center mt-1">
-                                                                <div class="flex-grow-1 text-muted">
-                                                                    by
-                                                                    <a
-                                                                        href=""
-                                                                        class="text-body text-truncate"
-                                                                    >
-                                                                        Erica
-                                                                        Kernan
-                                                                    </a>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="d-flex gap-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                            3.4K
-                                                                        </button>
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0"
-                                                                        >
-                                                                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                            1.3k
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="text-center my-2">
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="text-success"
-                                                >
-                                                    <i class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i>
-                                                    Load More
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+        <div class="page-content">
+                     <div class="container-fluid">
+     
+     
+                         <div class="card">
+                             <div class="card-body">
+                                 <div class="row g-2">
+                                     <div class="col-lg-auto">
+                                         {/* <div class="hstack gap-2">
+                                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createboardModal"><i class="ri-add-line align-bottom me-1"></i> Create Board</button>
+                                         </div> */}
+                                     </div>
+                                     <div class="col-lg-3 col-auto">
+                                         <div class="search-box">
+                                             <input type="text" class="form-control search" id="search-task-options" placeholder="Chercher une université"/>
+                                             <i class="ri-search-line search-icon"></i>
+                                         </div>
+                                     </div>
+                                     <div class="col-auto ms-sm-auto">
+                                         <div class="avatar-group" id="newMembar">
+                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Nancy">
+                                                 <img src="assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             </a>
+                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Frank">
+                                                 <img src="assets/images/unz1.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             </a>
+                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Tonya">
+                                                 <img src="assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             </a>
+                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Thomas">
+                                                 <img src="assets/images/unz2.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             </a>
+                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Herbert">
+                                                 <img src="assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+     
+                         <div class="tasks-board mb-3" id="kanbanboard">
+                             <div class="tasks-list">
+                                 <div class="d-flex mb-3">
+                                     <div class="flex-grow-1">
+                                         <h6 class="fs-14 text-uppercase fw-semibold mb-0">UJKZ</h6>
+                                     </div>
+                                 </div>
+                                 <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                                     <div id="reviews-task" class="tasks">
+                                         <div class="card tasks-box">
+                                             <div class="card-body">
+                                                 <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Université Joseph Zi Zerbo</a></h6>
+                                                 <div class="tasks-img rounded" style={{backgroundImage: "url('assets/images/ujkz.jpeg')"}}></div>
+                                                 <div class="d-flex align-items-center">
+                                                     <div class="flex-grow-1">
+                                                         <span class="badge badge-soft-secondary">Ouagadougou</span>
+                                                         <span class="badge badge-soft-primary">Université public</span>
+                                                         <span class="badge badge-soft-info">Documentation(500)</span>
+                                                         <span class="badge badge-soft-danger">images(30)</span>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="card-footer border-top-dashed">
+                                                 <div class="d-flex">
+                                                     <div class="flex-grow-1">
+                                                         <span class="text-muted"><i class="ri-time-line align-bottom"></i> Date de création: 16/03/2021</span>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="progress progress-sm">
+                                                 <div class="progress-bar bg-success" role="progressbar" style={{width: "100%"}} aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                             </div>
+                                         </div>
+                                         <div class="card tasks-box">
+                                             <div class="card-body">
+                                                 <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Description</a></h6>
+                                                 <p class="text-muted">L'université Joseph Ki Zerbo est une prestigeuse université. Cette université regorge de...</p>
+                                             </div>
+                                             
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="my-3">
+                                     <button class="btn btn-soft-info w-100" data-bs-toggle="modal" data-bs-target="#creatertaskModal">Lire plus</button>
+                                 </div>
+                             </div>
+                             <div class="tasks-list">
+                                 <div class="d-flex mb-3">
+                                     <div class="flex-grow-1">
+                                         <h6 class="fs-14 text-uppercase fw-semibold mb-0">UNZ</h6>
+                                     </div>
+                                 </div>
+                                 <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                                     <div id="reviews-task" class="tasks">
+                                         <div class="card tasks-box">
+                                             <div class="card-body">
+                                                 <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Université Joseph Zi Zerbo</a></h6>
+                                                 <div class="tasks-img rounded" style={{backgroundImage: "url('assets/images/unz1.jpeg')"}}></div>
+                                                 <div class="d-flex align-items-center">
+                                                     <div class="flex-grow-1">
+                                                         <span class="badge badge-soft-secondary">Koudougou</span>
+                                                         <span class="badge badge-soft-primary p-1">Université public</span> 
+                                                         <span class="badge badge-soft-info">Documentation(200)</span>
+                                                         <span class="badge badge-soft-danger">images(20)</span>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="card-footer border-top-dashed">
+                                                 <div class="d-flex">
+                                                     <div class="flex-grow-1">
+                                                         <span class="text-muted"><i class="ri-time-line align-bottom"></i> Date de création: 16/02/2015</span>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="progress progress-sm">
+                                                 <div class="progress-bar bg-success" role="progressbar" style={{width: "100%"}} aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                             </div>
+                                         </div>
+                                         <div class="card tasks-box">
+                                             <div class="card-body">
+                                                 <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Description</a></h6>
+                                                 <p class="text-muted">L'université Norbert Zongo est une prestigeuse université. Cette université regorge de...</p>
+                                             </div>
+                                             
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="my-3">
+                                     <button class="btn btn-soft-info w-100" data-bs-toggle="modal" data-bs-target="#creatertaskModal">Lire plus</button>
+                                 </div>
+                             </div>
+                         </div>
+     
+                     </div>
+                 </div>
+         </>
     );
 }
 
