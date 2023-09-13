@@ -10,7 +10,7 @@ const Footer = () => {
                             <div>
                                 <a className="navbar-brand" href="index.html">
                                     <span className="text-success fs-20 fw-bolder">
-                                        BF-DOC
+                                        BF-DOCS
                                     </span>
                                 </a>
                             </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                                     dimension dans votre parcours académique.
                                 </p>
                                 <p className="ff-secondary">
-                                    BF-DOC - La Connaissance à Votre Portée !
+                                    BF-DOCS - La Connaissance à Votre Portée !
                                 </p>
                             </div>
                         </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                     <div className="col-lg-7 ms-lg-auto">
                         <div className="row">
                             <div className="col-sm-4 mt-4">
-                                <h5 className="text-white mb-0">BF-DOC</h5>
+                                <h5 className="text-white mb-0">BF-DOCS</h5>
                                 <div className="text-muted mt-3">
                                     <ul className="list-unstyled ff-secondary footer-list">
                                         <li>
@@ -110,7 +110,7 @@ const Footer = () => {
                                     {" "}
                                     document.write(new Date().getFullYear()){" "}
                                 </script>{" "}
-                                © BF-DOC - Debut de fonctionnement le 31 decembre 2023
+                                © BF-DOCS - Debut de fonctionnement le 31 decembre 2023
                             </p>
                         </div>
                     </div>

@@ -106,7 +106,7 @@ function UniversitesPage() {
                                                      <div class="flex-grow-1">
                                                          <span class="badge badge-soft-secondary">Koudougou</span>
                                                          <span class="badge badge-soft-primary p-1">Université public</span> 
-                                                         <span class="badge badge-soft-info">Documentation(200)</span>
+                                                         <span class="badge badge-soft-info">Documentations(200)</span>
                                                          <span class="badge badge-soft-danger">images(20)</span>
                                                      </div>
                                                  </div>

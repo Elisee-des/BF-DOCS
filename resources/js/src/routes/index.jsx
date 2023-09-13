@@ -5,14 +5,39 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 // const Dashboard = React.lazy(() => import("../pages/private/home"));
 // const RegisterPage = React.lazy(() => import("../pages/private/register"));
 import PublicLayout from "../layouts/public";
+import PrivateLayout from "../layouts/private";
 import Loader from "../components/loader";
-import { PublicRoutes } from "./allRoute";
+import { publicRoutes } from "./allRoute";
+import { privateRoutes } from "./allRoute";
 
 const MainRoutes = () => {
     return (
         <Routes>
+            <Route element={<PrivateLayout />}>
+                {privateRoutes.map((route, index) => {
+                    const ElementPage = route.component;
+                    return (
+                        <Route
+                            path={route.path}
+                            key={index}
+                            element={
+                                <React.Suspense
+                                    fallback={
+                                        <>
+                                            <Loader />
+                                        </>
+                                    }
+                                >
+                                    <ElementPage />
+                                </React.Suspense>
+                            }
+                        />
+                    );
+                })}
+            </Route>
+
             <Route element={<PublicLayout />}>
-                {PublicRoutes.map((route, index) => {
+                {publicRoutes.map((route, index) => {
                     const ElementPage = route.component;
                     return (
                         <Route

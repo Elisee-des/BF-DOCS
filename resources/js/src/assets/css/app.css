@@ -39,11 +39,11 @@ File: Main Css File
   font-weight: 700;
 }
 :root {
-  --vz-vertical-menu-bg: #fff;
-  --vz-vertical-menu-item-color: #6d7080;
+  --vz-vertical-menu-bg: #405189;;
+  --vz-vertical-menu-item-color: #fff;
   --vz-vertical-menu-item-hover-color: #405189;
   --vz-vertical-menu-item-active-color: #405189;
-  --vz-vertical-menu-sub-item-color: #7c7f90;
+  --vz-vertical-menu-sub-item-color: #fff;
   --vz-vertical-menu-sub-item-hover-color: #405189;
   --vz-vertical-menu-sub-item-active-color: #405189;
   --vz-vertical-menu-title-color: #919da9;

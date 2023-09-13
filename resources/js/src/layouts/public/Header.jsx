@@ -8,8 +8,8 @@ const Header = () => {
             id="navbar"
         >
             <div className="container">
-                <a className="navbar-brand" href="index.html">
-                <span className="text-success fs-20 fw-bolder">BF-DOC</span>
+                <a className="navbar-brand" href="/">
+                <span className="text-success fs-20 fw-bolder">BF-DOCS</span>
                 </a>
                 <button
                     className="navbar-toggler py-0 fs-20 text-body"
@@ -32,9 +32,9 @@ const Header = () => {
                         id="navbar-example"
                     >
                         <li className="nav-item">
-                            <a className="nav-link active" href="#hero">
+                            <Link className="nav-link active" to="/">
                                 Accueil
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/universités">

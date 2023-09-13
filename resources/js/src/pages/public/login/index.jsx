@@ -1,184 +1,161 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
     return (
         <React.Fragment>
-            <div class="auth-page-wrapper pt-5">
-                <div
-                    class="auth-one-bg-position auth-one-bg"
-                    id="auth-particles"
-                >
-                    <div class="bg-overlay"></div>
+            <div className="page-content">
+                <div className="auth-page-wrapper pt-5">
+                    <div
+                        className="auth-one-bg-position auth-one-bg"
+                        id="auth-particles"
+                    >
+                        <div className="bg-overlay"></div>
 
-                    <div class="shape">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            version="1.1"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 1440 120"
-                        >
-                            <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
-                        </svg>
+                        <div className="shape">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                version="1.1"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 1440 120"
+                            >
+                                <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
+                            </svg>
+                        </div>
                     </div>
-                </div>
 
-                <div class="auth-page-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="text-center mt-sm-5 mb-4 text-white-50">
-                                    <div>
-                                        <a
-                                            href="index.html"
-                                            class="d-inline-block auth-logo"
-                                        >
-                                            <img
-                                                src="assets/images/logo-light.png"
-                                                alt=""
-                                                height="20"
-                                            />
-                                        </a>
+                    <div className="auth-page-content">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="text-center mt-sm-5 mb-4 text-white-50">
+                                        <div>
+                                            <a
+                                                href="/"
+                                                className="d-inline-block auth-logo"
+                                            >
+                                                <a
+                                                    className="navbar-brand"
+                                                    href="/"
+                                                >
+                                                    <span className="text-success fs-20 fw-bolder">
+                                                        BF-DOCS
+                                                    </span>
+                                                </a>
+                                            </a>
+                                        </div>
+                                        <p className="mt-3 fs-15 fw-medium">
+                                            Votre Portail Pour La Réussite
+                                            Académique
+                                        </p>
                                     </div>
-                                    <p class="mt-3 fs-15 fw-medium">
-                                        Premium Admin & Dashboard Template
-                                    </p>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row justify-content-center">
-                            <div class="col-md-8 col-lg-6 col-xl-5">
-                                <div class="card mt-4">
-                                    <div class="card-body p-4">
-                                        <div class="text-center mt-2">
-                                            <h5 class="text-primary">
-                                                Welcome Back !
-                                            </h5>
-                                            <p class="text-muted">
-                                                Sign in to continue to Velzon.
-                                            </p>
-                                        </div>
-                                        <div class="p-2 mt-4">
-                                            <form action="index.html">
-                                                <div class="mb-3">
-                                                    <label
-                                                        for="username"
-                                                        class="form-label"
-                                                    >
-                                                        Username
-                                                    </label>
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="username"
-                                                        placeholder="Enter username"
-                                                    />
-                                                </div>
-
-                                                <div class="mb-3">
-                                                    <div class="float-end">
-                                                        <a
-                                                            href="auth-pass-reset-basic.html"
-                                                            class="text-muted"
+                            <div className="row justify-content-center">
+                                <div className="col-md-8 col-lg-6 col-xl-5">
+                                    <div className="card mt-4">
+                                        <div className="card-body p-4">
+                                            <div className="text-center mt-2">
+                                                <h5 className="text-primary">
+                                                    Bienvenue !!!
+                                                </h5>
+                                                <p className="text-muted">
+                                                    Veuillez entrer vos
+                                                    coordonnées pour continuer.
+                                                </p>
+                                            </div>
+                                            <div className="p-2 mt-4">
+                                                <form action="index.html">
+                                                    <div className="mb-3">
+                                                        <label
+                                                            htmlFor="username"
+                                                            className="form-label"
                                                         >
-                                                            Forgot password?
-                                                        </a>
-                                                    </div>
-                                                    <label
-                                                        class="form-label"
-                                                        for="password-input"
-                                                    >
-                                                        Password
-                                                    </label>
-                                                    <div class="position-relative auth-pass-inputgroup mb-3">
+                                                            Email
+                                                        </label>
                                                         <input
-                                                            type="password"
-                                                            class="form-control pe-5 password-input"
-                                                            placeholder="Enter password"
-                                                            id="password-input"
+                                                            type="text"
+                                                            className="form-control"
+                                                            id="username"
+                                                            placeholder="Entrez votre email"
                                                         />
-                                                        <button
-                                                            class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                            type="button"
-                                                            id="password-addon"
-                                                        >
-                                                            <i class="ri-eye-fill align-middle"></i>
-                                                        </button>
                                                     </div>
-                                                </div>
 
-                                                <div class="form-check">
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="checkbox"
-                                                        value=""
-                                                        id="auth-remember-check"
-                                                    />
-                                                    <label
-                                                        class="form-check-label"
-                                                        for="auth-remember-check"
-                                                    >
-                                                        Remember me
-                                                    </label>
-                                                </div>
-
-                                                <div class="mt-4">
-                                                    <button
-                                                        class="btn btn-success w-100"
-                                                        type="submit"
-                                                    >
-                                                        Sign In
-                                                    </button>
-                                                </div>
-
-                                                <div class="mt-4 text-center">
-                                                    <div class="signin-other-title">
-                                                        <h5 class="fs-13 mb-4 title">
-                                                            Sign In with
-                                                        </h5>
+                                                    <div className="mb-3">
+                                                        <div className="float-end">
+                                                            <a
+                                                                href="auth-pass-reset-basic.html"
+                                                                className="text-muted"
+                                                            >
+                                                                Mot de passe
+                                                                oublié ?
+                                                            </a>
+                                                        </div>
+                                                        <label
+                                                            className="form-label"
+                                                            htmlFor="password-input"
+                                                        >
+                                                            Mot de passe
+                                                        </label>
+                                                        <div className="position-relative auth-pass-inputgroup mb-3">
+                                                            <input
+                                                                type="password"
+                                                                className="form-control pe-5 password-input"
+                                                                placeholder="Entrez votre mot de passe"
+                                                                id="password-input"
+                                                            />
+                                                            <button
+                                                                className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                                type="button"
+                                                                id="password-addon"
+                                                            >
+                                                                <i className="ri-eye-fill align-middle"></i>
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        <button
-                                                            type="button"
-                                                            class="btn btn-primary btn-icon waves-effect waves-light"
+
+                                                    <div className="form-check">
+                                                        <input
+                                                            className="form-check-input"
+                                                            type="checkbox"
+                                                            value=""
+                                                            id="auth-remember-check"
+                                                        />
+                                                        <label
+                                                            className="form-check-label"
+                                                            htmlFor="auth-remember-check"
                                                         >
-                                                            <i class="ri-facebook-fill fs-16"></i>
-                                                        </button>
-                                                        <button
-                                                            type="button"
-                                                            class="btn btn-danger btn-icon waves-effect waves-light"
-                                                        >
-                                                            <i class="ri-google-fill fs-16"></i>
-                                                        </button>
-                                                        <button
-                                                            type="button"
-                                                            class="btn btn-dark btn-icon waves-effect waves-light"
-                                                        >
-                                                            <i class="ri-github-fill fs-16"></i>
-                                                        </button>
-                                                        <button
-                                                            type="button"
-                                                            class="btn btn-info btn-icon waves-effect waves-light"
-                                                        >
-                                                            <i class="ri-twitter-fill fs-16"></i>
-                                                        </button>
+                                                            Se rappeler de moi
+                                                        </label>
                                                     </div>
-                                                </div>
-                                            </form>
+
+                                                    <div className="mt-4">
+                                                        <Link
+                                                        to='/admin/tableau-de-bord'
+                                                            className="btn btn-success w-100"
+                                                            type="submit"
+
+                                                        >
+                                                            Connexion
+                                                        </Link>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="mt-4 text-center">
-                                    <p class="mb-0">
-                                        Don't have an account ?
-                                        <a
-                                            href="auth-signup-basic.html"
-                                            class="fw-semibold text-primary text-decoration-underline"
-                                        >
-                                            Signup
-                                        </a>
-                                    </p>
+                                    <div className="mt-4 text-center">
+                                        <p className="mb-0">
+                                            Je n'ai pas de compte ?
+                                            <a
+                                                href="auth-signup-basic.html"
+                                                className="fw-semibold text-primary text-decoration-underline"
+                                            >
+                                                M'inscrire
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
