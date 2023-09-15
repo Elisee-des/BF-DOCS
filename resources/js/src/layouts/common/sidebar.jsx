@@ -1,139 +1,75 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-function Sidebar() {
-    return (
-        <div className="app-menu navbar-menu">
-            <div className="navbar-brand-box">
-                <a href="index.html" className="logo logo-dark">
-                    <span className="logo-sm">
-                        <img
-                            src="../../assets/images/logo-sm.png"
-                            alt=""
-                            height="22"
-                        />
-                    </span>
-                    <span className="logo-lg">
-                        <img
-                            src="../../assets/images/logo-dark.png"
-                            alt=""
-                            height="17"
-                        />
-                    </span>
-                </a>
-                <a href="index.html" className="logo logo-light">
-                    <span className="logo-sm">
-                        <img
-                            src="../../assets/images/logo-sm.png"
-                            alt=""
-                            height="22"
-                        />
-                    </span>
-                    <span className="logo-lg">
-                        <img
-                            src="../../assets/images/logo-light.png"
-                            alt=""
-                            height="17"
-                        />
-                    </span>
-                </a>
-                <button
-                    type="button"
-                    className="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
-                    id="vertical-hover"
-                >
-                    <i className="ri-record-circle-line"></i>
-                </button>
-            </div>
-
-            <div id="scrollbar">
-                <div className="container-fluid">
-                    <div id="two-column-menu"></div>
-                    <ul className="navbar-nav" id="navbar-nav">
-                        
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link menu-link"
-                                to="/admin/tableau-de-bord"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarDashboards"
-                            >
-                                <i className="ri-home-3-fill"></i>
-                                <span data-key="t-dashboards">Tableau de bord</span>
-                            </Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebarParametre"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarParametre"
-                            >
-                                <i className="ri-settings-5-fill"></i>
-                                <span data-key="t-parametre">Documents</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebarParametre"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <a
-                                            href="layouts-horizontal.html"
-                                            target="_blank"
-                                            className="nav-link"
-                                            data-key="t-horizontal"
-                                        >
-                                            Horizontal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebarParametre"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarParametre"
-                            >
-                                <i className="ri-settings-5-fill"></i>
-                                <span data-key="t-parametre">Mon Profil</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebarParametre"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <a
-                                            href="layouts-horizontal.html"
-                                            target="_blank"
-                                            className="nav-link"
-                                            data-key="t-horizontal"
-                                        >
-                                            Horizontal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div className="sidebar-background"></div>
-        </div>
-    );
+import React, { useState } from "react";
+import {
+    AppstoreOutlined,
+    CalendarOutlined,
+    LinkOutlined,
+    MailOutlined,
+    SettingOutlined,
+} from "@ant-design/icons";
+import { Divider, Menu, Switch } from "antd";
+function getItem(label, key, icon, children) {
+    return {
+        key,
+        icon,
+        children,
+        label,
+    };
 }
-
+const items = [
+    getItem("Navigation One", "1", <MailOutlined />),
+    getItem("Navigation Two", "2", <CalendarOutlined />),
+    getItem("Navigation Two", "sub1", <AppstoreOutlined />, [
+        getItem("Option 3", "3"),
+        getItem("Option 4", "4"),
+        getItem("Submenu", "sub1-2", null, [
+            getItem("Option 5", "5"),
+            getItem("Option 6", "6"),
+        ]),
+    ]),
+    getItem("Navigation Three", "sub2", <SettingOutlined />, [
+        getItem("Option 7", "7"),
+        getItem("Option 8", "8"),
+        getItem("Option 9", "9"),
+        getItem("Option 10", "10"),
+    ]),
+    getItem(
+        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+            Ant Design
+        </a>,
+        "link",
+        <LinkOutlined />
+    ),
+];
+const Sidebar = () => {
+    const [mode, setMode] = useState("inline");
+    const [theme, setTheme] = useState("light");
+    const changeMode = (value) => {
+        setMode(value ? "vertical" : "inline");
+    };
+    const changeTheme = (value) => {
+        setTheme(value ? "light" : "dark");
+    };
+    return (
+        <>
+            <div className="app-menu navbar-menu"><br />
+                {/* <Switch onChange={changeMode} /> Change Mode
+                <Divider type="vertical" />
+                <Switch onChange={changeTheme} /> Change Style */}
+                <br />
+                <br />
+                <Menu
+                    style={{
+                        width: 248,
+                    }}
+                    defaultSelectedKeys={["1"]}
+                    defaultOpenKeys={["sub1"]}
+                    mode={mode}
+                    theme={theme}
+                    items={items}
+                />
+                <div className="sidebar-background"></div>
+            </div>
+        </>
+    );
+};
 export default Sidebar;
