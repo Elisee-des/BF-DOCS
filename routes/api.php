@@ -28,6 +28,7 @@ Route::post('inscription', [AuthController::class, 'register'])->middleware(['ap
 Route::post('connexion', [AuthController::class, 'login'])->middleware(['api-login', 'throttle']);
 
 Route::middleware(['auth:api'])->group(function () {
+    #ADMINISTION
     Route::prefix('admin')->group(function () {
         #UNIVERSITES#
         Route::ApiResource('universites', UniversiteController::class);
@@ -99,4 +100,6 @@ Route::middleware(['auth:api'])->group(function () {
         Route::put('examen-session-normals/edition/{idMo}/{idEN}', [ExamenNormalController::class, 'examenSessionNormalEdition']);
         Route::delete('examen-session-normals/suppression/{idMo}/{idEN}', [ExamenNormalController::class, 'examenSessionNormalSuppression']);
     });
+
+    
 });
