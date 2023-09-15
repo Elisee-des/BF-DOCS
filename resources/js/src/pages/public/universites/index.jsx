@@ -24,19 +24,19 @@ function UniversitesPage() {
                                      <div class="col-auto ms-sm-auto">
                                          <div class="avatar-group" id="newMembar">
                                              <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Nancy">
-                                                 <img src="assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                                 <img src="../../../../assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
                                              </a>
                                              <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Frank">
-                                                 <img src="assets/images/unz1.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                                 <img src="../../../../assets/images/unz1.jpeg" alt="" class="rounded-circle avatar-xs"/>
                                              </a>
                                              <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Tonya">
-                                                 <img src="assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                                 <img src="../../../../assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
                                              </a>
                                              <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Thomas">
-                                                 <img src="assets/images/unz2.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                                 <img src="../../../../assets/images/unz2.jpeg" alt="" class="rounded-circle avatar-xs"/>
                                              </a>
                                              <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Herbert">
-                                                 <img src="assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                                 <img src="../../../../assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
                                              </a>
                                          </div>
                                      </div>

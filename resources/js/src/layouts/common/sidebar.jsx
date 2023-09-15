@@ -50,9 +50,7 @@ function Sidebar() {
                 <div className="container-fluid">
                     <div id="two-column-menu"></div>
                     <ul className="navbar-nav" id="navbar-nav">
-                        <li className="menu-title">
-                            <span data-key="t-menu">Menu</span>
-                        </li>
+                        
                         <li className="nav-item">
                             <Link
                                 className="nav-link menu-link"
@@ -63,95 +61,25 @@ function Sidebar() {
                                 aria-controls="sidebarDashboards"
                             >
                                 <i className="ri-home-3-fill"></i>
-                                <span data-key="t-dashboards">Dashboards</span>
+                                <span data-key="t-dashboards">Tableau de bord</span>
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebaUniversite"
-                                // href="#sidebaUniversite"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebaUniversite"
-                            >
-                                <i className="ri-hotel-fill"></i>
-                                <span data-key="t-universite">Universités</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebaUniversite"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <Link
-                                            to="/admin/université/accueil"
-                                            className="nav-link"
-                                            data-key="t-accueil"
-                                        >
-                                            Accueil
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a
-                                            href="apps-calendar.html"
-                                            className="nav-link"
-                                            data-key="t-calendar"
-                                        >
-                                            Gestion
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
 
                         <li className="nav-item">
                             <a
                                 className="nav-link menu-link"
-                                href="#sidebarCaisse"
+                                href="#sidebarParametre"
                                 data-bs-toggle="collapse"
                                 role="button"
                                 aria-expanded="false"
-                                aria-controls="sidebarCaisse"
+                                aria-controls="sidebarParametre"
                             >
-                                <i className="las la-donate"></i>
-                                <span data-key="t-caisse">La Caisse</span>
+                                <i className="ri-settings-5-fill"></i>
+                                <span data-key="t-parametre">Documents</span>
                             </a>
                             <div
                                 className="collapse menu-dropdown"
-                                id="sidebarCaisse"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <a
-                                            href="layouts-horizontal.html"
-                                            target="_blank"
-                                            className="nav-link"
-                                            data-key="t-horizontal"
-                                        >
-                                            Horizontal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebarUtilisateur"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarUtilisateur"
-                            >
-                                <i className="ri-group-fill"></i>
-                                <span data-key="t-universite">Utilisateurs</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebarUtilisateur"
+                                id="sidebarParametre"
                             >
                                 <ul className="nav nav-sm flex-column">
                                     <li className="nav-item">
@@ -178,7 +106,7 @@ function Sidebar() {
                                 aria-controls="sidebarParametre"
                             >
                                 <i className="ri-settings-5-fill"></i>
-                                <span data-key="t-parametre">Paramètre</span>
+                                <span data-key="t-parametre">Mon Profil</span>
                             </a>
                             <div
                                 className="collapse menu-dropdown"
@@ -197,20 +125,6 @@ function Sidebar() {
                                     </li>
                                 </ul>
                             </div>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link menu-link"
-                                to="/universités/université-norbert-zongo"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarParametre"
-                            >
-                                <i className="ri-settings-5-fill"></i>
-                                <span data-key="t-parametre">UNZ</span>
-                            </Link>
                         </li>
 
                     </ul>
