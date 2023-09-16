@@ -77,6 +77,7 @@ class ExamenNormalController extends BaseController
                 $examen_normal->taille_fichier = $request->taille_fichier;
                 $examen_normal->remarque = $request->remarque;
                 $examen_normal->fichier = $request->fichier;
+                $examen_normal->user_id = $request->user_id;
                 $examen_normal->module_id = $idMo;
                 $examen_normal->save();
 

@@ -25,4 +25,5 @@ class CorrigeNormal extends Model
     {
         return $this->belongsTo(Module::class);
     }
+
 }

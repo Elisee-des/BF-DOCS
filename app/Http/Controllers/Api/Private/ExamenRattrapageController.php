@@ -19,7 +19,7 @@ class ExamenRattrapageController extends BaseController
         return $this->sendResponse(['examen_session_rattrapages' => $this->examen_session_rattrapages()], 'Liste des Examens de la seesion normal');
     }
 
-    public function examen_session_normal_liste($idM)
+    public function examen_session_rattrapage_liste($idM)
     {
         return $this->sendResponse(['examen_session_rattrapages' => ExamenRattrapage::with(['module'])->where('module_id', $idM)->get()], 'Liste des examens de la session normal');
     }
@@ -27,7 +27,7 @@ class ExamenRattrapageController extends BaseController
     /**
      * Store a newly created resource in storage.
      */
-    public function examen_session_normals_ajout(Request $request, $idMo)
+    public function examen_session_rattrapages_ajout(Request $request, $idMo)
     {
         try {
             $validator = Validator::make($request->all(), [
@@ -58,7 +58,7 @@ class ExamenRattrapageController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function examen_session_normal_edition(Request $request, $idMo, $idExRattrapage)
+    public function examen_session_rattrapage_edition(Request $request, $idMo, $idExRattrapage)
     {
         try {
             $examen_rattrapage = ExamenRattrapage::findOrFail($idExRattrapage);
@@ -67,7 +67,7 @@ class ExamenRattrapageController extends BaseController
 
                 $validator = Validator::make($request->all(), [
                     'nom' => 'required',
-                ]);
+            ]);
 
                 if ($validator->fails()) {
                     return $this->sendError('Erreur de validation des champs.', $validator->errors(), 400);
@@ -77,6 +77,7 @@ class ExamenRattrapageController extends BaseController
                 $examen_rattrapage->taille_fichier = $request->taille_fichier;
                 $examen_rattrapage->remarque = $request->remarque;
                 $examen_rattrapage->fichier = $request->fichier;
+                $examen_rattrapage->user_id = $request->user_id;
                 $examen_rattrapage->module_id = $idMo;
                 $examen_rattrapage->save();
 
@@ -92,7 +93,7 @@ class ExamenRattrapageController extends BaseController
         }
     }
 
-    public function examen_session_normal_suppression($idMo, $idERattrapage)
+    public function examen_session_rattrapage_suppression($idMo, $idERattrapage)
     {
         try {
             $examen_rattrapage = ExamenRattrapage::findOrFail($idERattrapage);

@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\DepartementController;
 use App\Http\Controllers\Api\FiliereController;
 use App\Http\Controllers\Api\LicenceController;
 use App\Http\Controllers\Api\Private\AnneeController;
+use App\Http\Controllers\Api\Private\CorrigeNormalController;
+use App\Http\Controllers\Api\Private\CorrigeRattrapageController;
 use App\Http\Controllers\Api\Private\ExamenNormalController;
 use App\Http\Controllers\Api\Private\ExamenRattrapageController;
 use App\Http\Controllers\Api\Private\MasterController;
@@ -93,7 +95,6 @@ Route::middleware(['auth:api'])->group(function () {
         Route::get('matieres/detail/{idA}', [MatiereController::class, 'matieresDetail']);
         Route::delete('matieres/suppression/{idA}/{idM}', [MatiereController::class, 'matieresSuppression']);
 
-
         #ExamenNormal# #idEN=idExamenNormal# #idMo=idModule#
         Route::ApiResource('examens-session-normals', ExamenNormalController::class);
         Route::get('examens-session-normals/liste/{idMo}', [ExamenNormalController::class, 'examenSessionNormalListe']);
@@ -103,10 +104,24 @@ Route::middleware(['auth:api'])->group(function () {
 
         #ExamenRattrapage# #idER=idExamenRattrapage# #idMo=idModule#
         Route::ApiResource('examens-session-de-rattrapages', ExamenRattrapageController::class);
-        Route::get('examens-session-de-rattrapage/liste/{idMo}', [ExamenRattrapageController::class, 'examen_session_normal_liste']);
-        Route::post('examens-session-de-rattrapage/ajout/{idMo}', [ExamenRattrapageController::class, 'examen_session_normals_ajout']);
-        Route::put('examens-session-de-rattrapage/edition/{idMo}/{idER}', [ExamenRattrapageController::class, 'examen_session_normal_edition']);
-        Route::delete('examens-session-de-rattrapage/suppression/{idMo}/{idER}', [ExamenRattrapageController::class, 'examen_session_normal_suppression']);
+        Route::get('examens-session-rattrapages/liste/{idMo}', [ExamenRattrapageController::class, 'examen_session_rattrapage_liste']);
+        Route::post('examens-session-rattrapages/ajout/{idMo}', [ExamenRattrapageController::class, 'examen_session_rattrapages_ajout']);
+        Route::put('examens-session-rattrapages/edition/{idMo}/{idER}', [ExamenRattrapageController::class, 'examen_session_rattrapage_edition']);
+        Route::delete('examens-session-rattrapages/suppression/{idMo}/{idER}', [ExamenRattrapageController::class, 'examen_session_rattrapage_suppression']);
+
+        #CorrigeNormal# #idCN=idCorrigeNormal# #idMo=idModule#
+        Route::ApiResource('corriges-session-normals', CorrigeNormalController::class);
+        Route::get('corriges-session-normals/liste/{idMo}', [CorrigeNormalController::class, 'corrige_session_normal_liste']);
+        Route::post('corriges-session-normals/ajout/{idMo}', [CorrigeNormalController::class, 'corrige_session_normals_ajout']);
+        Route::put('corriges-session-normals/edition/{idMo}/{idCN}', [CorrigeNormalController::class, 'corrige_session_normal_edition']);
+        Route::delete('corriges-session-normals/suppression/{idMo}/{idCN}', [CorrigeNormalController::class, 'corrige_session_normal_suppression']);
+
+        #CorrigeRattrapage# #idCR=idCorrigeRattrapage# #idMo=idModule#
+        Route::ApiResource('corriges-session-rattrapages', CorrigeRattrapageController::class);
+        Route::get('corriges-session-rattrapages/liste/{idMo}', [CorrigeRattrapageController::class, 'corrige_session_rattrapage_liste']);
+        Route::post('corriges-session-rattrapages/ajout/{idMo}', [CorrigeRattrapageController::class, 'corrige_session_rattrapages_ajout']);
+        Route::put('corriges-session-rattrapages/edition/{idMo}/{idCR}', [CorrigeRattrapageController::class, 'corrige_session_rattrapage_edition']);
+        Route::delete('corriges-session-rattrapages/suppression/{idMo}/{idCR}', [CorrigeRattrapageController::class, 'corrige_session_rattrapage_suppression']);
     });
 
 
