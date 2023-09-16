@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
             AnneeSeeder::class,
             ModuleSeeder::class,
             ExamenSessionNormalSeeder::class,
+            ExamenSessionRattrapageSeeder::class,
+            CorrigerSessionNormalSeeder::class,
+            CorrigerSessionRattrapageSeeder::class,
         ]);
     }
 }

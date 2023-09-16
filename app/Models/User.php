@@ -50,8 +50,24 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function faitiere()
+    public function examen_session_normals()
     {
-        return $this->belongsTo(Faitiere::class);
+        return $this->hasMany(ExamenNormal::class, 'user_id');
     }
+
+    public function examen_session_rattrapages()
+    {
+        return $this->hasMany(ExamenRattrapage::class, 'user_id');
+    }
+
+    public function corrige_session_normals()
+    {
+        return $this->hasMany(CorrigeNormal::class, 'user_id');
+    }
+
+    public function corrige_session_rattrapages()
+    {
+        return $this->hasMany(CorrigeRattrapage::class, 'user_id');
+    }
+    
 }

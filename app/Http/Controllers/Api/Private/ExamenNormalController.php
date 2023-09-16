@@ -100,7 +100,7 @@ class ExamenNormalController extends BaseController
             if ($examen_normal) {
                 $examen_normal->delete();
 
-                return $this->sendResponse(['examen_session_normals' => ExamenNormal::with(['master', 'modules'])->where('module_id', $idMo)->get()], 'Examen de session normal supprimé avec succès.');
+                return $this->sendResponse(['examen_session_normals' => ExamenNormal::with(['module'])->where('module_id', $idMo)->get()], 'Examen de session normal supprimé avec succès.');
             } else {
                 return $this->sendError('Cette examen de la session normal n\'existe pas', 401);
             }

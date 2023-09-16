@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('examen_normals', function (Blueprint $table) {
+        Schema::create('corrige_rattrapages', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('nom');
             $table->string('taille_fichier')->nullable();
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('examen_normals');
+        Schema::dropIfExists('corrige_rattrapages');
     }
 };

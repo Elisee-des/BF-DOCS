@@ -6,11 +6,11 @@ use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ExamenNormal extends Model
+class CorrigeRattrapage extends Model
 {
     use HasFactory, Uuids;
 
-    protected $table='examen_normals';
+    protected $table='corrige_rattrapages';
 
     protected $fillable = [
         'module_id',
@@ -26,3 +26,4 @@ class ExamenNormal extends Model
         return $this->belongsTo(Module::class);
     }
 }
+

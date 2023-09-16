@@ -6,11 +6,11 @@ use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ExamenNormal extends Model
+class ExamenRattrapage extends Model
 {
     use HasFactory, Uuids;
 
-    protected $table='examen_normals';
+    protected $table='examen_rattrapages';
 
     protected $fillable = [
         'module_id',

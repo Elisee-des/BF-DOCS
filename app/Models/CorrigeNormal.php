@@ -6,11 +6,11 @@ use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ExamenNormal extends Model
+class CorrigeNormal extends Model
 {
     use HasFactory, Uuids;
 
-    protected $table='examen_normals';
+    protected $table='corrige_normals';
 
     protected $fillable = [
         'module_id',

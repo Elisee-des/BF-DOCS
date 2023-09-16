@@ -26,4 +26,20 @@ class Module extends Model
     {
         return $this->hasMany(ExamenNormal::class);
     }
+
+    public function examens_session_rattrapages()
+    {
+        return $this->hasMany(ExamenRattrapage::class);
+    }
+
+    public function corriges_session_normals()
+    {
+        return $this->hasMany(CorrigeNormal::class);
+    }
+
+    public function corriges_session_rattrapages()
+    {
+        return $this->hasMany(CorrigeRattrapage::class);
+    }
+
 }
