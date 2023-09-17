@@ -40,6 +40,10 @@ class UniversiteController extends BaseController
             $universite = new Universite();
             $universite->nom = $request->nom;
             $universite->abreviation = $request->abreviation;
+            $universite->logo_cover = $request->logo_cover;
+            $universite->description = $request->description;
+            $universite->date_creation = $request->date_creation;
+            $universite->localisation = $request->localisation;
 
             if ($request->logo != null) {
 
@@ -104,6 +108,10 @@ class UniversiteController extends BaseController
 
                 $universite->nom = $request->nom;
                 $universite->abreviation = $request->abreviation;
+                $universite->logo_cover = $request->logo_cover;
+                $universite->description = $request->description;
+                $universite->date_creation = $request->date_creation;
+                $universite->localisation = $request->localisation;
 
                 if ($request->logo != null) {
 
@@ -127,7 +135,7 @@ class UniversiteController extends BaseController
                     'Université editée avec succès.'
                 );
             } else {
-                return $this->sendError('Cette universite n\'existe pas', 401);
+                return $this->sendError('Cette université n\'existe pas', 401);
             }
         } catch (Exception $e) {
             return response()->json($e);

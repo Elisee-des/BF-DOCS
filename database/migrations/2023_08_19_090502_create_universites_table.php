@@ -15,7 +15,11 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('nom');
             $table->string('abreviation')->nullable();
-            $table->string('logo')->nullable();
+            $table->string('date_creation')->nullable();
+            $table->mediumText('description')->nullable();
+            $table->mediumText('localisation')->nullable();
+            $table->mediumText('logo')->nullable();
+            $table->mediumText('logo_cover')->nullable();
             $table->timestamps();
         });
     }

@@ -124,5 +124,18 @@ Route::middleware(['auth:api'])->group(function () {
         Route::delete('corriges-session-rattrapages/suppression/{idMo}/{idCR}', [CorrigeRattrapageController::class, 'corrige_session_rattrapage_suppression']);
     });
 
+    Route::prefix('user')->group(function () {
+        #UNIVERSITES#
+        Route::ApiResource('universites', UniversiteController::class);
+
+        #DEPARTEMENTS# #idU=idUniversite# #idD=idDepartement#
+        Route::ApiResource('departements', DepartementController::class);
+        Route::get('departements/liste/{idU}', [DepartementController::class, 'departementsListe']);
+        Route::post('departements/ajout/{idU}', [DepartementController::class, 'departementsAjout']);
+        Route::get('departements/detail/{idU}', [DepartementController::class, 'departementsDetail']);
+        Route::put('departements/edition/{idU}/{idD}', [DepartementController::class, 'departementsEdition']);
+        Route::delete('departements/suppression/{idU}/{idD}', [DepartementController::class, 'departementsSuppression']);
+    });
+
 
 });

@@ -16,6 +16,10 @@ class Universite extends Model
         'nom',
         'logo',
         'abreviation',
+        'date_creation',
+        'description',
+        'localisation',
+        'logo_cover',
     ];
 
     public function departements()

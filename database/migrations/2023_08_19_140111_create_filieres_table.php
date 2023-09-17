@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('nom');
             $table->string('abreviation');
-            $table->string('logo')->nullable();
+            $table->mediumText('logo')->nullable();
             $table->foreignUuid('departement_id')->references('id')->on('departements');
             $table->timestamps();
         });
