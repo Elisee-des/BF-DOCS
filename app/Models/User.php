@@ -27,7 +27,12 @@ class User extends Authenticatable
         'photo',
         'email',
         'ine',
+        'departement',
+        'filiere',
+        'licence',
+        'promotion',
         'password',
+        'universite_id',
     ];
 
     /**
@@ -68,6 +73,11 @@ class User extends Authenticatable
     public function corrige_session_rattrapages()
     {
         return $this->hasMany(CorrigeRattrapage::class, 'user_id');
+    }
+
+    public function unniversite()
+    {
+        return $this->belongsTo(Universite::class);
     }
     
 }

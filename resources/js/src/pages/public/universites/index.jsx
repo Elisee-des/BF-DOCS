@@ -1,4 +1,12 @@
 import React from "react";
+import logo1 from "../../../assets/images/ujkz.jpeg";
+import logo2 from "../../../assets/images/unz1.jpeg";
+import logo3 from "../../../assets/images/ujkz.jpeg";
+import logo4 from "../../../assets/images/unz2.jpeg";
+import logo5 from "../../../assets/images/ujkz.jpeg";
+import imageUrl from  '../../../assets/images/ujkz.jpeg'; // Remplacez ceci par le chemin réel de votre image
+import imageUrl1 from  '../../../assets/images/unz1.jpeg'; // Remplacez ceci par le chemin réel de votre image
+
 
 function UniversitesPage() {
     return (
@@ -23,20 +31,20 @@ function UniversitesPage() {
                                      </div>
                                      <div class="col-auto ms-sm-auto">
                                          <div class="avatar-group" id="newMembar">
-                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Nancy">
-                                                 <img src="../../../../assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             <a href="#" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Nancy">
+                                                 <img src={logo1} alt="" class="rounded-circle avatar-xs"/>
                                              </a>
-                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Frank">
-                                                 <img src="../../../../assets/images/unz1.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             <a href="#" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Frank">
+                                                 <img src={logo2} alt="" class="rounded-circle avatar-xs"/>
                                              </a>
-                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Tonya">
-                                                 <img src="../../../../assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             <a href="#" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Tonya">
+                                                 <img src={logo3} alt="" class="rounded-circle avatar-xs"/>
                                              </a>
-                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Thomas">
-                                                 <img src="../../../../assets/images/unz2.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             <a href="#" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Thomas">
+                                                 <img src={logo4} alt="" class="rounded-circle avatar-xs"/>
                                              </a>
-                                             <a href="javascript: void(0);" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Herbert">
-                                                 <img src="../../../../assets/images/ujkz.jpeg" alt="" class="rounded-circle avatar-xs"/>
+                                             <a href="#" class="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Herbert">
+                                                 <img src={logo5} alt="" class="rounded-circle avatar-xs"/>
                                              </a>
                                          </div>
                                      </div>
@@ -56,7 +64,7 @@ function UniversitesPage() {
                                          <div class="card tasks-box">
                                              <div class="card-body">
                                                  <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Université Joseph Zi Zerbo</a></h6>
-                                                 <div class="tasks-img rounded" style={{backgroundImage: "url('assets/images/ujkz.jpeg')"}}></div>
+                                                 <div class="tasks-img rounded" style={{backgroundImage: `url(${imageUrl})`}}></div>
                                                  <div class="d-flex align-items-center">
                                                      <div class="flex-grow-1">
                                                          <span class="badge badge-soft-secondary">Ouagadougou</span>
@@ -100,8 +108,8 @@ function UniversitesPage() {
                                      <div id="reviews-task" class="tasks">
                                          <div class="card tasks-box">
                                              <div class="card-body">
-                                                 <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Université Joseph Zi Zerbo</a></h6>
-                                                 <div class="tasks-img rounded" style={{backgroundImage: "url('assets/images/unz1.jpeg')"}}></div>
+                                                 <h6 class="fs-15 text-truncate task-title"><a href="apps-tasks-details.html" class="d-block">Université Norbert Zongo</a></h6>
+                                                 <div class="tasks-img rounded" style={{backgroundImage: `url(${imageUrl1})`}}></div>
                                                  <div class="d-flex align-items-center">
                                                      <div class="flex-grow-1">
                                                          <span class="badge badge-soft-secondary">Koudougou</span>

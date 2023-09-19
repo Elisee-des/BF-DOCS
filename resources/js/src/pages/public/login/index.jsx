@@ -30,19 +30,14 @@ const LoginPage = () => {
                                 <div className="col-lg-12">
                                     <div className="text-center mt-sm-5 mb-4 text-white-50">
                                         <div>
-                                            <a
-                                                href="/"
+                                            <Link
+                                                to="/"
                                                 className="d-inline-block auth-logo"
                                             >
-                                                <a
-                                                    className="navbar-brand"
-                                                    href="/"
-                                                >
                                                     <span className="text-success fs-20 fw-bolder">
                                                         BF-DOCS
                                                     </span>
-                                                </a>
-                                            </a>
+                                            </Link>
                                         </div>
                                         <p className="mt-3 fs-15 fw-medium">
                                             Votre Portail Pour La Réussite
@@ -55,7 +50,7 @@ const LoginPage = () => {
                             <div className="row justify-content-center">
                                 <div className="col-md-8 col-lg-6 col-xl-5">
                                     <div className="card mt-4">
-                                        <div className="card-body p-4">
+                                        <div className="card-body p-1">
                                             <div className="text-center mt-2">
                                                 <h5 className="text-primary">
                                                     Bienvenue !!!
@@ -84,13 +79,13 @@ const LoginPage = () => {
 
                                                     <div className="mb-3">
                                                         <div className="float-end">
-                                                            <a
-                                                                href="auth-pass-reset-basic.html"
+                                                            <Link
+                                                                to="/mot-de-passe-oublié"
                                                                 className="text-muted"
                                                             >
                                                                 Mot de passe
                                                                 oublié ?
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                         <label
                                                             className="form-label"
@@ -149,10 +144,10 @@ const LoginPage = () => {
                                         <p className="mb-0">
                                             Je n'ai pas de compte ?
                                             <a
-                                                href="auth-signup-basic.html"
+                                                href="/inscription"
                                                 className="fw-semibold text-primary text-decoration-underline"
-                                            >
-                                                M'inscrire
+                                            >&nbsp;
+                                                Inscription
                                             </a>
                                         </p>
                                     </div>

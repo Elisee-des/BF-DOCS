@@ -10,6 +10,7 @@ const LoginPage = React.lazy(() => import("../pages/public/login"));
 const RegisterPage = React.lazy(() => import("../pages/public/register"));
 const UniversitesPage = React.lazy(() => import("../pages/public/universites"));
 const DocumentPage = React.lazy(() => import("../pages/public/documents"));
+const MotDePasseOublier = React.lazy(() => import("../pages/public/resetPassword"));
 
 // common //
 const CommonDashboardPage = React.lazy(() => import("../pages/common/dashbord"));
@@ -32,6 +33,12 @@ const publicRoutes = [
     },
 
     {
+        path: '/mot-de-passe-oublié',
+        component: MotDePasseOublier,
+        permissions: [],
+    },
+
+    {
         path: '/inscription',
         component: RegisterPage,
         permissions: [],
@@ -48,6 +55,7 @@ const publicRoutes = [
         component: DocumentPage,
         permissions: [],
     },
+
 
 ]
 

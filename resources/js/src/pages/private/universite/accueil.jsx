@@ -1,4 +1,7 @@
 import React from 'react'
+import img1 from "../../../assets/images/ujkz.jpeg";
+import img2 from "../../../assets/images/unz1.jpeg";
+import { Link } from 'react-router-dom';
 
 function AccueilPage() {
   return (
@@ -49,6 +52,7 @@ function AccueilPage() {
 
 <div className="row">
     <div className="col-xxl-3 col-sm-6 project-card">
+        <Link to='/universités/université-norbert-zongo'>
         <div className="card card-height-100">
             <div className="card-body">
                 <div className="d-flex flex-column h-100">
@@ -82,7 +86,7 @@ function AccueilPage() {
                         <div className="flex-shrink-0 me-3">
                             <div className="avatar-sm">
                                 <span className="avatar-title bg-soft-warning rounded p-2">
-                                    <img src="../images/brands/slack.png" alt="" className="img-fluid p-1"/>
+                                    <img src={img1} alt="" className="img-fluid"/>
                                 </span>
                             </div>
                         </div>
@@ -118,7 +122,6 @@ function AccueilPage() {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="card-footer bg-transparent border-top-dashed py-2">
                 <div className="d-flex align-items-center">
@@ -148,11 +151,13 @@ function AccueilPage() {
 
             </div>
         </div>
+        </Link>
     </div>
 
     <div className="col-xxl-3 col-sm-6 project-card">
         <div className="card card-height-100">
             <div className="card-body">
+                <Link to="/universités/université-norbert-zongo">
                 <div className="d-flex flex-column h-100">
                     <div className="d-flex">
                         <div className="flex-grow-1">
@@ -184,7 +189,7 @@ function AccueilPage() {
                         <div className="flex-shrink-0 me-3">
                             <div className="avatar-sm">
                                 <span className="avatar-title bg-soft-danger rounded p-2">
-                                    <img src="../images/brands/dribbble.png" alt="" className="img-fluid p-1"/>
+                                    <img src={img2} alt="" className="img-fluid"/>
                                 </span>
                             </div>
                         </div>
@@ -207,7 +212,7 @@ function AccueilPage() {
                         </div>
                     </div>
                 </div>
-
+                </Link>
             </div>
             <div className="card-footer bg-transparent border-top-dashed py-2">
                 <div className="d-flex align-items-center">

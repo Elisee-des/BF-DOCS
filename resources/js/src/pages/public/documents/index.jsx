@@ -1,4 +1,6 @@
 import React from 'react'
+import pdf1 from "../../../assets/images/pdf1.png";
+import pdf2 from "../../../assets/images/pdf2.png";
 
 function index() {
   return (
@@ -37,7 +39,7 @@ function index() {
                             <div className="card ribbon-box right overflow-hidden">
                                 <div className="card-body text-center p-4">
                                     <div className="ribbon ribbon-info ribbon-shape trending-ribbon"><i className="ri-flashlight-fill text-white align-bottom"></i> <span className="trending-ribbon-text">UNZ</span></div>
-                                    <img src="assets/images/companies/img-1.png" alt="" height="45"/>
+                                    <img src={pdf2} alt="" height="45"/>
                                     <h5 className="mb-1 mt-4"><a href="#" className="link-primary">Anglais</a></h5>
                                     <p className="text-muted mb-0">Session normal(<span className="link-danger">Corrigé</span>)</p>
                                     <p className="text-muted mb-0">Filière: Anglais (<span className="link-success">UNZ</span>)</p>
@@ -66,7 +68,7 @@ function index() {
                             <div className="card ribbon-box right overflow-hidden">
                                 <div className="card-body text-center p-4">
                                     <div className="ribbon ribbon-info ribbon-shape trending-ribbon"><i className="ri-flashlight-fill text-white align-bottom"></i> <span className="trending-ribbon-text">UNZ</span></div>
-                                    <img src="assets/images/companies/img-1.png" alt="" height="45"/>
+                                    <img src={pdf2} alt="" height="45"/>
                                     <h5 className="mb-1 mt-4"><a href="#" className="link-primary">Anglais</a></h5>
                                     <p className="text-muted mb-0">Session normal(<span className="link-danger">Examen</span>)</p>
                                     <p className="text-muted mb-0">Filière: Histoire Archeologie (<span className="link-success">UNZ</span>)</p>
@@ -95,7 +97,7 @@ function index() {
                             <div className="card ribbon-box right overflow-hidden">
                                 <div className="card-body text-center p-4">
                                     <div className="ribbon ribbon-info ribbon-shape trending-ribbon"><i className="ri-flashlight-fill text-white align-bottom"></i> <span className="trending-ribbon-text">UJKZ</span></div>
-                                    <img src="assets/images/companies/img-1.png" alt="" height="45"/>
+                                    <img src={pdf2} alt="" height="45"/>
                                     <h5 className="mb-1 mt-4"><a href="#" className="link-primary">Electrostatique</a></h5>
                                     <p className="text-muted mb-0">Session de rattrapage(<span className="link-danger">Examen</span>)</p>
                                     <p className="text-muted mb-0">Filière: Science Economique de Gestion (<span className="link-success">UJKZ</span>)</p>
@@ -124,7 +126,7 @@ function index() {
                             <div className="card ribbon-box right overflow-hidden">
                                 <div className="card-body text-center p-4">
                                     <div className="ribbon ribbon-info ribbon-shape trending-ribbon"><i className="ri-flashlight-fill text-white align-bottom"></i> <span className="trending-ribbon-text">UJKZ</span></div>
-                                    <img src="assets/images/companies/img-1.png" alt="" height="45"/>
+                                    <img src={pdf2} alt="" height="45"/>
                                     <h5 className="mb-1 mt-4"><a href="#" className="link-primary">Equilibre Chimique</a></h5>
                                     <p className="text-muted mb-0">Session normal(<span className="link-danger">Corrigé</span>)</p>
                                     <p className="text-muted mb-0">Filière: Science de la vie et de la terre (<span className="link-success">UJKZ</span>)</p>
@@ -153,7 +155,7 @@ function index() {
                             <div className="card ribbon-box right overflow-hidden">
                                 <div className="card-body text-center p-4">
                                     <div className="ribbon ribbon-info ribbon-shape trending-ribbon"><i className="ri-flashlight-fill text-white align-bottom"></i> <span className="trending-ribbon-text">UNZ</span></div>
-                                    <img src="assets/images/companies/img-1.png" alt="" height="45"/>
+                                    <img src={pdf2} alt="" height="45"/>
                                     <h5 className="mb-1 mt-4"><a href="#" className="link-primary">Statistique</a></h5>
                                     <p className="text-muted mb-0">Session normal(<span className="link-danger">Corrigé</span>)</p>
                                     <p className="text-muted mb-0">Filière: Maths Physique Chimique Informatique (<span className="link-success">UNZ</span>)</p>
@@ -182,7 +184,7 @@ function index() {
                             <div className="card ribbon-box right overflow-hidden">
                                 <div className="card-body text-center p-4">
                                     <div className="ribbon ribbon-info ribbon-shape trending-ribbon"><i className="ri-flashlight-fill text-white align-bottom"></i> <span className="trending-ribbon-text">UNZ</span></div>
-                                    <img src="assets/images/companies/img-1.png" alt="" height="45"/>
+                                    <img src={pdf2} alt="" height="45"/>
                                     <h5 className="mb-1 mt-4"><a href="#" className="link-primary">Literrature africaine</a></h5>
                                     <p className="text-muted mb-0">Session normal(<span className="link-danger">Examen</span>)</p>
                                     {/* <p className="text-muted mb-0">Université Joseph Ki Zerbo</p> */}

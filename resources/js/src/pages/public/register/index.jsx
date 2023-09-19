@@ -53,7 +53,7 @@ const RegsiterPage = () => {
                             <div className="row justify-content-center">
                                 <div className="col-md-8 col-lg-6 col-xl-5">
                                     <div className="card mt-4">
-                                        <div className="card-body p-4">
+                                        <div className="card-body p-1">
                                             <div className="text-center mt-2">
                                                 <h5 className="text-primary">
                                                     Inscrivez-vous
@@ -259,7 +259,7 @@ const RegsiterPage = () => {
                                                     <div className="mb-4">
                                                         <p className="mb-0 fs-12 text-muted fst-italic">
                                                             En vous incrivant,
-                                                            vous accepter les
+                                                            vous accepté les
                                                             <a
                                                                 href="#"
                                                                 className="text-primary text-decoration-underline fst-normal fw-medium"
@@ -326,7 +326,7 @@ const RegsiterPage = () => {
 
                                     <div className="mt-4 text-center">
                                         <p className="mb-0">
-                                            J'ai déja un compte
+                                            J'ai déja un compte&nbsp;
                                             <Link
                                                 to="/connexion"
                                                 className="fw-semibold text-primary text-decoration-underline"
