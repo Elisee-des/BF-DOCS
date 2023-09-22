@@ -11,6 +11,7 @@ import "./assets/css/app.min.css";
 import "./assets/css/custom.min.css";
 import './assets/css/_datatables.css';
 import "./assets/css/custom.css";
+import $ from 'jquery';
 import './assets/js/layout.js';
 import './assets/libs/apexcharts/apexcharts.min.js';
 import './assets/libs/swiper/swiper-bundle.min.js';

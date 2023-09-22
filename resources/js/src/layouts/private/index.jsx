@@ -9,7 +9,6 @@ function PrivateLayout() {
     return (
         <>
             <div id="layout-wrapper">
-                <Header/>
                 <Sidebar/>
                 <div className="main-content">
                     <div className="page-content">

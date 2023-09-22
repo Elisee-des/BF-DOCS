@@ -1,7 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Form } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+import { Button, Input } from "reactstrap";
+import AuthService from '../../../services/authService';
+import ApiRoute from '../../../utility/ApiRoute';
 
 const LoginPage = () => {
+    const [formInput, setFormInput] = useState({email:'', password:''});
+    const [message, setMessage]=useState();
+    let navigate = useNavigate();
+
+    const onSave = (e) => {
+        e.preventDefault();
+        console.log(formInput);
+        AuthService.login(formInput.email, formInput.password)
+        .then(
+            (response)=> {
+                navigate("/admin/tableau-de-bord");
+            },
+            error => {
+                const resMessage = ApiRoute?.handlerError(error);
+                setMessage(resMessage)
+                alert('Email ou mot de passe incorrect', resMessage)
+                // errorNotif('Leger souci', resMessage)
+            }
+        )
+    }
+
     return (
         <React.Fragment>
             <div className="page-content">
@@ -61,19 +86,21 @@ const LoginPage = () => {
                                                 </p>
                                             </div>
                                             <div className="p-2 mt-4">
-                                                <form action="index.html">
+                                                <Form onSubmit={onSave} action="index.html">
                                                     <div className="mb-3">
                                                         <label
-                                                            htmlFor="username"
+                                                            htmlFor="email"
                                                             className="form-label"
                                                         >
                                                             Email
                                                         </label>
-                                                        <input
+                                                        <Input
                                                             type="text"
                                                             className="form-control"
-                                                            id="username"
+                                                            onChange={(e) => setFormInput({ ...formInput, email: e.target.value })}
+                                                            id="email"
                                                             placeholder="Entrez votre email"
+                                                            name="email"
                                                         />
                                                     </div>
 
@@ -94,11 +121,13 @@ const LoginPage = () => {
                                                             Mot de passe
                                                         </label>
                                                         <div className="position-relative auth-pass-inputgroup mb-3">
-                                                            <input
+                                                            <Input
                                                                 type="password"
                                                                 className="form-control pe-5 password-input"
                                                                 placeholder="Entrez votre mot de passe"
                                                                 id="password-input"
+                                                                onChange={(e) => setFormInput({ ...formInput, password: e.target.value })}
+                                                                name="password"
                                                             />
                                                             <button
                                                                 className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
@@ -110,32 +139,17 @@ const LoginPage = () => {
                                                         </div>
                                                     </div>
 
-                                                    <div className="form-check">
-                                                        <input
-                                                            className="form-check-input"
-                                                            type="checkbox"
-                                                            value=""
-                                                            id="auth-remember-check"
-                                                        />
-                                                        <label
-                                                            className="form-check-label"
-                                                            htmlFor="auth-remember-check"
-                                                        >
-                                                            Se rappeler de moi
-                                                        </label>
-                                                    </div>
-
                                                     <div className="mt-4">
-                                                        <Link
-                                                        to='/admin/tableau-de-bord'
+                                                        <Button
+                                                        // to='/admin/tableau-de-bord'
                                                             className="btn btn-success w-100"
                                                             type="submit"
 
                                                         >
                                                             Connexion
-                                                        </Link>
+                                                        </Button>
                                                     </div>
-                                                </form>
+                                                </Form>
                                             </div>
                                         </div>
                                     </div>

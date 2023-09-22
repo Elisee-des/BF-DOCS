@@ -1,230 +1,204 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo1 from "../../assets/images/logo-sm.png"
+import React, { useState } from 'react';
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBCollapse,
+  MDBRipple,
+  MDBBadge,
+  MDBInput,
+  MDBListGroup,
+  MDBListGroupItem
+} from 'mdb-react-ui-kit';
+
+import {  Link } from 'react-router-dom';
 
 function Sidebar() {
-    return (
-        <div className="app-menu navbar-menu" id="navbarSupportedContent">
-            <div className="navbar-brand-box">
-                <Link to="/admin/tableau-de-bord" className="logo btn-success text-white">
-                    <span className="logo-sm">
-                        BF-DOCS
-                    </span>
-                    <span className="logo-lg">
-                        <img
-                            src="../../assets/images/logo-dark.png"
-                            alt=""
-                            height="17"
-                        />
-                    </span>
-                    BF-DOCS
-                </Link>
-                {/* <a href="index.html" className="logo logo-light">
-                    <span className="logo-sm">
-                        <img
-                            src="../../assets/images/logo-sm.png"
-                            alt=""
-                            height="22"
-                        />
-                    </span>
-                    <span className="logo-lg">
-                        <img
-                            src="../../assets/images/logo-light.png"
-                            alt=""
-                            height="17"
-                        />
-                    </span>
-                </a> */}
-                <button
-                    type="button"
-                    className="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
-                    id="vertical-hover"
-                    // className="navbar-toggler py-0 fs-20 text-body"
-                    // type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <i className="ri-record-circle-line"></i>
-                </button>
-            </div>
+  const [showShow, setShowShow] = useState(false);
+  const toggleShow = () => setShowShow(!showShow);
 
-            <div id="scrollbar">
-                <div className="container-fluid">
-                    <div id="two-column-menu"></div>
-                    <ul className="navbar-nav" id="navbar-nav">
-                        <li className="menu-title">
-                            <span data-key="t-menu">Menu</span>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link menu-link"
-                                to="/admin/tableau-de-bord"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarDashboards"
-                            >
-                                <i className="ri-home-3-fill"></i>
-                                <span data-key="t-dashboards">Dashboards</span>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebaUniversite"
-                                // href="#sidebaUniversite"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebaUniversite"
-                            >
-                                <i className="ri-hotel-fill"></i>
-                                <span data-key="t-universite">Universités</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebaUniversite"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <Link
-                                            to="/admin/université/accueil"
-                                            className="nav-link"
-                                            data-key="t-accueil"
-                                        >
-                                            Accueil
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a
-                                            href="apps-calendar.html"
-                                            className="nav-link"
-                                            data-key="t-calendar"
-                                        >
-                                            Gestion
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+  return (
+    <>
+      <MDBCollapse show={showShow} tag="nav" className="d-lg-block bg-white sidebar-mb">
+        <div className="sidebar-sticky">
+          <MDBListGroup flush className="mx-3 mt-4">
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded rounded'>
+                <MDBIcon fas icon="tachometer-alt me-3" />
+                Main Dashboard
+              </MDBListGroupItem>
+            </MDBRipple>
 
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebarCaisse"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarCaisse"
-                            >
-                                <i className="las la-donate"></i>
-                                <span data-key="t-caisse">La Caisse</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebarCaisse"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <a
-                                            href="layouts-horizontal.html"
-                                            target="_blank"
-                                            className="nav-link"
-                                            data-key="t-horizontal"
-                                        >
-                                            Horizontal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded' active aria-current='true'>
+                <MDBIcon fas icon="chart-area me-3" />
+                Website traffic
+              </MDBListGroupItem>
+            </MDBRipple>
 
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebarUtilisateur"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarUtilisateur"
-                            >
-                                <i className="ri-group-fill"></i>
-                                <span data-key="t-universite">Utilisateurs</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebarUtilisateur"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <a
-                                            href="layouts-horizontal.html"
-                                            target="_blank"
-                                            className="nav-link"
-                                            data-key="t-horizontal"
-                                        >
-                                            Horizontal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="lock me-3" />
+                Password
+              </MDBListGroupItem>
+            </MDBRipple>
 
-                        <li className="nav-item">
-                            <a
-                                className="nav-link menu-link"
-                                href="#sidebarParametre"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarParametre"
-                            >
-                                <i className="ri-settings-5-fill"></i>
-                                <span data-key="t-parametre">Paramètre</span>
-                            </a>
-                            <div
-                                className="collapse menu-dropdown"
-                                id="sidebarParametre"
-                            >
-                                <ul className="nav nav-sm flex-column">
-                                    <li className="nav-item">
-                                        <a
-                                            href="layouts-horizontal.html"
-                                            target="_blank"
-                                            className="nav-link"
-                                            data-key="t-horizontal"
-                                        >
-                                            Horizontal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="chart-line me-3" />
+                Analitics
+              </MDBListGroupItem>
+            </MDBRipple>
 
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link menu-link"
-                                to="/universités/université-norbert-zongo"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="sidebarParametre"
-                            >
-                                <i className="ri-settings-5-fill"></i>
-                                <span data-key="t-parametre">UNZ</span>
-                            </Link>
-                        </li>
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="chart-pie me-3" />
+                SEO
+              </MDBListGroupItem>
+            </MDBRipple>
 
-                    </ul>
-                </div>
-            </div>
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon far icon="chart-bar me-3" />
+                Orders
+              </MDBListGroupItem>
+            </MDBRipple>
 
-            <div className="sidebar-background"></div>
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="globe me-3" />
+                International
+              </MDBListGroupItem>
+            </MDBRipple>
+
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="building me-3" />
+                Partners
+              </MDBListGroupItem>
+            </MDBRipple>
+
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="calendar me-3" />
+                Calendar
+              </MDBListGroupItem>
+            </MDBRipple>
+
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded'>
+                <MDBIcon fas icon="users me-3" />
+                User
+              </MDBListGroupItem>
+            </MDBRipple>
+
+            <MDBRipple rippleTag='span'>
+              <MDBListGroupItem tag='a' href='#' action className='border-0 rounded'>
+                <MDBIcon fas icon="money-bill me-3" />
+                Sales
+              </MDBListGroupItem>
+            </MDBRipple>
+          </MDBListGroup>
         </div>
-    );
+      </MDBCollapse>
+
+      <MDBNavbar expand='lg' light bgColor='light'>
+        <MDBContainer fluid>
+          <MDBNavbarNav className="d-flex flex-row align-items-center w-auto">
+            <MDBNavbarToggler
+              type='button'
+              aria-label='Toggle navigation'
+              onClick={toggleShow}
+            >
+              <MDBIcon icon='bars' fas />
+            </MDBNavbarToggler>
+            <MDBNavbarBrand href='#'>
+              <img
+                src='https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp'
+                height='30'
+                alt=''
+                loading='lazy'
+              />
+            </MDBNavbarBrand>
+
+            <MDBCollapse navbar>
+              <MDBNavbarItem className="d-flex align-items-center">
+                <MDBInput label='Search (ctrl + "/" to focus)' id='form1' type='text' />
+                <MDBIcon fas icon="search mx-2" />
+              </MDBNavbarItem>
+            </MDBCollapse>
+
+
+          </MDBNavbarNav>
+          <MDBNavbarNav className="d-flex flex-row justify-content-end w-auto">
+            <MDBNavbarItem className='me-3 me-lg-0 d-flex align-items-center'>
+              <MDBDropdown>
+                <MDBDropdownToggle tag="a" href="#!" className="hidden-arrow nav-link">
+                  <MDBIcon fas icon="bell" />
+                  <MDBBadge color='danger' notification pill>
+                    1
+                  </MDBBadge>
+                </MDBDropdownToggle>
+
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link href="#">Some news</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link href="#">Another news</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link href="#">Something else here</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavbarItem>
+
+            <MDBNavbarItem className='me-3 me-lg-0'>
+              <MDBNavbarLink href='#'>
+                <MDBIcon fas icon='fill-drip' />
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem className='me-3 me-lg-0'>
+              <MDBNavbarLink href='#'>
+                <MDBIcon fab icon='github' />
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+
+            <MDBNavbarItem className='me-3 me-lg-0 d-flex align-items-center'>
+              <MDBDropdown>
+
+                <MDBDropdownToggle tag="a" href="#!" className="hidden-arrow nav-link">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" className="rounded-circle" height="22" alt="" loading="lazy" />
+                </MDBDropdownToggle>
+
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link href="#">My profile</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link href="#">Settings</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link href="#">Logout</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+        </MDBContainer>
+      </MDBNavbar>
+    </>
+  );
 }
 
 export default Sidebar;
