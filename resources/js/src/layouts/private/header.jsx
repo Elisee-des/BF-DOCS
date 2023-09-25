@@ -1,121 +1,123 @@
-import photoProfil from "../../assets/images/users/avatar-1.jpg"
-import React, { useState } from 'react';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-  MDBCollapse,
-  MDBRipple,
-  MDBBadge,
-  MDBInput,
-  MDBListGroup,
-  MDBListGroupItem
-} from 'mdb-react-ui-kit';
+import React, { useEffect, useState } from "react"
+import { getUserData } from "../../utility/Utils"
+import { Dropdown } from "react-bootstrap"
+import AuthService from "../../services/authService"
+import profilImage from '../../assets/images/users/avatar-1.jpg'
 
-import {  Link } from 'react-router-dom';
+const Header = () => {
 
-function Header() {
-    const [showShow, setShowShow] = useState(false);
+    const [userProfile, setUserProfile] = useState({})
+    const [url, setUrl] = useState({})
+        const logout=()=> {
+            AuthService.logout();
+        }
+        useEffect(() => {
+            setUrl(window.location.pathname.replace('/admin/', ''))
+            if (getUserData()) {
+                setUserProfile(getUserData().infos_user);
+            }
+        }, [])
 
-    const toggleShow = () => setShowShow(!showShow);
-  
     return (
-        <MDBNavbar expand='lg' light bgColor='light'>
-        <MDBContainer fluid>
-          <MDBNavbarNav className="d-flex flex-row align-items-center w-auto">
-            <MDBNavbarToggler
-              type='button'
-              aria-label='Toggle navigation'
-              onClick={toggleShow}
-            >
-              <MDBIcon icon='bars' fas />
-            </MDBNavbarToggler>
-            <MDBNavbarBrand href='#'>
-              <img
-                src='https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp'
-                height='30'
-                alt=''
-                loading='lazy'
-              />
-            </MDBNavbarBrand>
+        <header id="page-topbar" className="box-shadow">
+            <div className="layout-width box-shadow">
+                <div className="navbar-header">
+                    <div className="d-flex">
+                        <div className="navbar-brand-box horizontal-logo">
+                        {/* <a href="/universités/université-norbert-zongo" class="logo text-success fw-bold fs-23">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="" height="22"/>
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-dark.png" alt="" height="17"/>
+                            </span>
+                            BF-DOCS
+                        </a> */}
+                        <button id="sidenav-toggler" data-mdb-toggle="sidenav" data-mdb-target="#mdb-sidenav" type="button" class="btn shadow-0 p-0 me-3" aria-expanded="false"><i class="fas fa-bars fa-lg"></i></button>
 
-            <MDBCollapse navbar>
-              <MDBNavbarItem className="d-flex align-items-center">
-                <MDBInput label='Search (ctrl + "/" to focus)' id='form1' type='text' />
-                <MDBIcon fas icon="search mx-2" />
-              </MDBNavbarItem>
-            </MDBCollapse>
+                        </div>
+
+                    </div>
+
+                    <div className="d-flex align-items-center">
+
+                        {/* <div className="dropdown d-md-none topbar-head-dropdown header-item">
+                            <button type="button" className="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i className="bx bx-search fs-22"></i>
+                            </button>
+                            <div className="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form className="p-3">
+                                    <div className="form-group m-0">
+                                        <div className="input-group">
+                                            <input type="text" className="form-control" placeholder="Search ..."
+                                                aria-label="Recipient's username" />
+                                            <button className="btn btn-primary" type="submit"><i
+                                                className="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        */}
+                        <div className="dropdown ms-sm-3 header-item topbar-user">
+                            <Dropdown>
+                                <Dropdown.Toggle variant="default">
+                                <span className="d-flex align-items-center">
+                                    <img className="rounded-circle header-profile-user" src={profilImage}
+                                        alt="Header Avatar" />
+                                    <span className="text-start ms-xl-2">
+                                        <span className="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{userProfile?.nom} {userProfile?.prenom}</span>
+                                    </span>
+                                </span>
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="/admin/profile">Profil</Dropdown.Item>
+                                    <Dropdown.Item href="#" onClick={()=>logout()}>Deconnexion</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-          </MDBNavbarNav>
-          <MDBNavbarNav className="d-flex flex-row justify-content-end w-auto">
-            <MDBNavbarItem className='me-3 me-lg-0 d-flex align-items-center'>
-              <MDBDropdown>
-                <MDBDropdownToggle tag="a" href="#!" className="hidden-arrow nav-link">
-                  <MDBIcon fas icon="bell" />
-                  <MDBBadge color='danger' notification pill>
-                    1
-                  </MDBBadge>
-                </MDBDropdownToggle>
+            {/* <div class="layout-width container-fluid d-flex justify-content-between">
+                <button id="sidenav-toggler" data-mdb-toggle="sidenav" data-mdb-target="#mdb-sidenav" type="button" class="btn shadow-0 p-0 me-3" aria-expanded="false"><i class="fas fa-bars fa-lg"></i></button>
+                
+                <div id="mdb-5-search-container">
+                <div id="mdb-5-search-dropdown" class="rounded shadow-5">
+                    <ul id="mdb-5-search-list" class="list-unstyled mb-0 perfect-scrollbar ps"><div class="ps__rail-x" style={{left: "0px", bottom: "0px"}}><div class="ps__thumb-x" tabindex="0" style={{left: "0px", width: "0px"}}></div></div><div class="ps__rail-y" style={{top: "0px", right: "0px"}}><div class="ps__thumb-y" tabindex="0" style={{top: "0px", height: "1px"}}></div></div></ul>
+                    <hr class="my-0"/>
+                    <p class="text-muted small text-end pe-3 mt-3">Recherche rapide: <strong id="mdb-5-search-count"></strong></p>
+                </div>
+                </div>
+                <div className="dropdown ms-sm-3 header-item topbar-user">
+                            <Dropdown>
+                                <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                <span className="d-flex align-items-center">
+                                    <img className="rounded-circle header-profile-user" src={profilImage}
+                                        alt="Header Avatar" />
+                                    <span className="text-start ms-xl-2">
+                                        <span className="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{userProfile?.nom} {userProfile?.prenom}</span>
+                                    </span>
+                                </span>
+                                </Dropdown.Toggle>
 
-                <MDBDropdownMenu>
-                  <MDBDropdownItem>
-                    <Link href="#">Some news</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link href="#">Another news</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link href="#">Something else here</Link>
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
-
-            <MDBNavbarItem className='me-3 me-lg-0'>
-              <MDBNavbarLink href='#'>
-                <MDBIcon fas icon='fill-drip' />
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem className='me-3 me-lg-0'>
-              <MDBNavbarLink href='#'>
-                <MDBIcon fab icon='github' />
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-
-            <MDBNavbarItem className='me-3 me-lg-0 d-flex align-items-center'>
-              <MDBDropdown>
-
-                <MDBDropdownToggle tag="a" href="#!" className="hidden-arrow nav-link">
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" className="rounded-circle" height="22" alt="" loading="lazy" />
-                </MDBDropdownToggle>
-
-                <MDBDropdownMenu>
-                  <MDBDropdownItem>
-                    <Link href="#">My profile</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link href="#">Settings</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link href="#">Logout</Link>
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
-          </MDBNavbarNav>
-        </MDBContainer>
-      </MDBNavbar>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="/admin/profile">Profil</Dropdown.Item>
+                                    <Dropdown.Item href="#" onClick={()=>logout()}>Deconnexion</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </div>
+            </div> */}
+                
+    
+        </header>
     );
 }
 
-export default Header;
+export default Header

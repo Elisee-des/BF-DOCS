@@ -17,7 +17,7 @@ const _handlerError = (error) => {
             return response?.statusText
         }
     } else {
-        return 'Oops !! Légé souci.'
+        return 'Oops !! Léger souci.'
     }
 }
 

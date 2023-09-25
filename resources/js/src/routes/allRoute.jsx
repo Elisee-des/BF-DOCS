@@ -67,12 +67,12 @@ const privateRoutes = [
     {
         path: '/admin/tableau-de-bord',
         component: AdminDashboardPage,
-        permissions: [],
+        permissions: ["all"],
     },
     {
         path: '/admin/université/accueil',
         component: UniversiteAccueilPage,
-        permissions: [],
+        permissions: ["all"],
     },
 ]
 

@@ -5,13 +5,25 @@ import PrivateLayout from "../layouts/private";
 import CommonLayout from "../layouts/common";
 import Loader from "../components/loader";
 import { commonRoutes, publicRoutes, privateRoutes } from "./allRoute";
+import RequireAuth from "./requireAuth";
+import NotFound from "../components/notFound";
+import { getUserRole } from '../utility/Utils';
+
+const NoMatchPage = React.lazy(() => import("../pages/priate/NoMatch"));
+
 
 const MainRoutes = () => {
+
+    const userRole = getUserRole()
+    console.log('log->',userRole);
+
     return (
         <Routes>
             <Route element={<PrivateLayout />}>
                 {privateRoutes.map((route, index) => {
                     const ElementPage = route.component;
+                    const permissions = route.permissions;
+
                     return (
                         <Route
                             path={route.path}
@@ -24,7 +36,13 @@ const MainRoutes = () => {
                                         </>
                                     }
                                 >
-                                    <ElementPage />
+                                    <RequireAuth>
+                                        {(permissions =='all'|| permissions==userRole) ?(
+                                            <ElementPage />
+                                        ):(
+                                            <NoMatchPage/>
+                                        )}
+                                    </RequireAuth>
                                 </React.Suspense>
                             }
                         />
@@ -77,6 +95,7 @@ const MainRoutes = () => {
                     );
                 })}
             </Route>
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 };
