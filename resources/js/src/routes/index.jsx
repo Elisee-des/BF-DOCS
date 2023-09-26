@@ -9,7 +9,7 @@ import RequireAuth from "./requireAuth";
 import NotFound from "../components/notFound";
 import { getUserRole } from '../utility/Utils';
 
-const NoMatchPage = React.lazy(() => import("../pages/priate/NoMatch"));
+const NoMatchPage = React.lazy(() => import("../pages/private/NoMatch"));
 
 
 const MainRoutes = () => {

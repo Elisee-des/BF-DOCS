@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SimpleBar from "simplebar-react";
 //import logo
-import logoSm from "../../assets/images/flags/cordaid-logo.svg";
-import logoDark from "../../assets/images/flags/cordaid-logo.svg";
-import logoLight from "../../assets/images/flags/cordaid-logo.svg";
 import { Container } from "reactstrap";
 import VerticalLayout from "./side";
 const Sidebars = props => {
@@ -32,8 +29,8 @@ const Sidebars = props => {
   return (
     <React.Fragment>
       <div className="app-menu navbar-menu">
-        <div className="navbar-brand-box">
-          <Link to="/admin/dashboard" className="logo logo-dark">
+        <div className="navbar-brand-box mt-4">
+          {/* <Link to="/admin/dashboard" className="logo logo-dark">
             <span className="logo-sm">
               <img src={logoSm} alt="" height="22" />
             </span>
@@ -49,6 +46,9 @@ const Sidebars = props => {
             <span className="logo-lg">
               <img src={logoLight} alt="" height="17" />
             </span>
+          </Link> */}
+          <Link to="/admin/tableau-de-bord" className="fs-20 fw-bold text-success">
+            BF-DOCS
           </Link>
           <button
             onClick={addEventListenerOnSmHoverMenu}
