@@ -17,9 +17,11 @@ return new class extends Migration
             $table->string('abreviation')->nullable();
             $table->string('date_creation')->nullable();
             $table->mediumText('description')->nullable();
-            $table->mediumText('localisation')->nullable();
             $table->mediumText('logo')->nullable();
+            $table->mediumText('telephone')->nullable();
+            $table->string('adresse')->nullable();
             $table->mediumText('logo_cover')->nullable();
+            $table->foreignUuid('ville_id')->references('id')->on('villes');
             $table->timestamps();
         });
     }

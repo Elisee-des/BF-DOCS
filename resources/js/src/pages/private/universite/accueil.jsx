@@ -26,7 +26,7 @@ function AccueilPage() {
             <div className="row g-4 mb-3">
                 <div className="col-sm-auto">
                     <div>
-                        <a href="apps-projects-create.html" className="btn btn-success"><i className="ri-add-line align-bottom me-1"></i> Ajouter une université</a>
+                        <Link to={`/admin/université/ajout`} className="btn btn-success"><i className="ri-add-line align-bottom me-1"></i> Ajouter une université</Link>
                     </div>
                 </div>
                 <div className="col-sm">

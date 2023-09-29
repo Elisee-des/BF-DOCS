@@ -18,8 +18,11 @@ class Universite extends Model
         'abreviation',
         'date_creation',
         'description',
+        'adresse',
         'localisation',
         'logo_cover',
+        'ville_id',
+        'telephone',
     ];
 
     public function departements()
@@ -30,5 +33,10 @@ class Universite extends Model
     public function users()
     {
         return $this->hasMany(User::class);
+    }
+
+    public function presidents()
+    {
+        return $this->hasMany(President::class);
     }
 }

@@ -3,6 +3,7 @@ import React from 'react';
 // private //
 const AdminDashboardPage = React.lazy(() => import("../pages/private/dashbord"));
 const UniversiteAccueilPage = React.lazy(() => import("../pages/private/universite/accueil"));
+const UniversiteAjoutPage = React.lazy(() => import("../pages/private/universite/ajout"));
 
 // public //
 const HomePage = React.lazy(() => import("../pages/public/home/index"));
@@ -72,6 +73,11 @@ const privateRoutes = [
     {
         path: '/admin/université/accueil',
         component: UniversiteAccueilPage,
+        permissions: ["all"],
+    },
+    {
+        path: '/admin/université/ajout',
+        component: UniversiteAjoutPage,
         permissions: ["all"],
     },
 ]

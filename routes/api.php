@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\Private\MasterController;
 use App\Http\Controllers\Api\Private\MatiereController;
 use App\Http\Controllers\Api\Private\ModulesController;
 use App\Http\Controllers\Api\Private\OptionController;
+use App\Http\Controllers\Api\private\PresidentController;
 use App\Http\Controllers\Api\UniversiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,11 @@ Route::middleware(['auth:api'])->group(function () {
     Route::prefix('admin')->group(function () {
         #UNIVERSITES#
         Route::ApiResource('universites', UniversiteController::class);
+        Route::get('universites/users/{idU}', [UniversiteController::class, 'users_universite']);
+
+        #PRESIDENT#
+        Route::post('presidents/ajout/{idU}', [PresidentController::class, 'president_ajout']);
+        Route::put('presidents/edition/{idU}/{idP}', [PresidentController::class, 'president_edition']);
 
         #DEPARTEMENTS# #idU=idUniversite# #idD=idDepartement#
         Route::ApiResource('departements', DepartementController::class);

@@ -1,5 +1,7 @@
 export default {
     connexion:'/connexion',
+    universites:'/universites',
+    users_universite:'/universites/users',
 
     handlerError: (error) => _handlerError(error)
 }

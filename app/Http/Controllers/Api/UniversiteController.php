@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\BaseController;
 use App\Http\Controllers\Controller;
+use App\Models\President;
 use App\Models\Universite;
+use App\Models\User;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -40,10 +43,21 @@ class UniversiteController extends BaseController
             $universite = new Universite();
             $universite->nom = $request->nom;
             $universite->abreviation = $request->abreviation;
-            $universite->logo_cover = $request->logo_cover;
             $universite->description = $request->description;
+            $universite->telephone = $request->telephone;
             $universite->date_creation = $request->date_creation;
+            $universite->ville_id = $request->ville_id;
+            $universite->adresse = $request->adresse;
             $universite->localisation = $request->localisation;
+            $universite->save();
+
+            $president = new President();
+            $president->nom = $request->president_nom;
+            $president->prenom = $request->president_prenom;
+            $president->universite_id = $universite->id;
+            $president->annee = Carbon::now()->year;
+            $president->save();
+
 
             if ($request->logo != null) {
 
@@ -60,6 +74,21 @@ class UniversiteController extends BaseController
                 $universite->logo = $path;
             }
 
+            if ($request->logo_cover != null) {
+
+                $photo_64 = $request->logo_cover; //your base64 encoded data
+                // $extension = explode('/', explode(':', substr($pdf_64, 0, strpos($pdf_64, ';')))[1])[1];   // .jpg .png .pdf
+                $replace = substr($photo_64, 0, strpos($photo_64, ',') + 1);
+                $file = str_replace($replace, '', $photo_64);
+                $myImage = str_replace(' ', '+', $file);
+                $filename = Str::slug($request->nom . $request->abreviation) . '.png';
+
+                Storage::disk('public')->put('uploads/universites/images/' . $filename, base64_decode($myImage));
+                $path = 'uploads/universites/images/' . $filename;
+
+                $universite->logo_cover = $path;
+            }
+
             $universite->save();
 
             return $this->sendResponse(
@@ -71,16 +100,30 @@ class UniversiteController extends BaseController
         }
     }
 
+    public function users_universite($idU)
+    {
+        try {
+            $universite = Universite::where('id', $idU)->with(['users'])->first();
+            if ($universite) {
+                return $this->sendResponse(['universite' => $universite], 'Detail de l\'université');
+            } else {
+                return $this->sendError('Cette université n\'existe pas', 401);
+            }
+        } catch (Exception $e) {
+            return response()->json($e);
+        }
+    }
+
     /**
      * Display the specified resource.
      */
     public function show($idU)
     {
         try {
-            $universite = Universite::with('departements')->findOrFail($idU);
+            $universite = Universite::with(['departements', 'users'])->findOrFail($idU);
 
             if ($universite) {
-                return $this->sendResponse(['region' => $universite], 'Detail de l\'université');
+                return $this->sendResponse(['universite' => $universite], 'Detail de l\'université');
             } else {
                 return $this->sendError('Cette université n\'existe pas', 401);
             }
@@ -111,6 +154,7 @@ class UniversiteController extends BaseController
                 $universite->logo_cover = $request->logo_cover;
                 $universite->description = $request->description;
                 $universite->date_creation = $request->date_creation;
+                $universite->adresse = $request->adresse;
                 $universite->localisation = $request->localisation;
 
                 if ($request->logo != null) {
@@ -126,6 +170,21 @@ class UniversiteController extends BaseController
                     $path = 'uploads/universites/images/' . $filename;
 
                     $universite->logo = $path;
+                }
+
+                if ($request->logo_cover != null) {
+
+                    $photo_64 = $request->logo_cover; //your base64 encoded data
+                    // $extension = explode('/', explode(':', substr($pdf_64, 0, strpos($pdf_64, ';')))[1])[1];   // .jpg .png .pdf
+                    $replace = substr($photo_64, 0, strpos($photo_64, ',') + 1);
+                    $file = str_replace($replace, '', $photo_64);
+                    $myImage = str_replace(' ', '+', $file);
+                    $filename = Str::slug($request->nom . $request->abreviation) . '.png';
+    
+                    Storage::disk('public')->put('uploads/universites/images/' . $filename, base64_decode($myImage));
+                    $path = 'uploads/universites/images/' . $filename;
+    
+                    $universite->logo_cover = $path;
                 }
 
                 $universite->save();
@@ -172,7 +231,7 @@ class UniversiteController extends BaseController
 
     public function universites()
     {
-        $universites = Universite::with('departements')->orderBy('created_at', 'desc')->get();
+        $universites = Universite::with(['departements', 'presidents'])->orderBy('created_at', 'desc')->get();
         return $universites;
     }
 }
