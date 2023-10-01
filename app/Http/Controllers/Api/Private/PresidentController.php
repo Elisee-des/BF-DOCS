@@ -15,10 +15,9 @@ class PresidentController extends BaseController
     /**
      * Display a listing of the resource.
      */
-    public function index($idUniversite)
+    public function liste_presidents($idUniversite)
     {
         $presidents = President::where('universite_id', $idUniversite)->with('universite')->orderBy('created_at', 'desc')->get();
-        
         return $this->sendResponse(['presidents' => $presidents], 'Liste des presidents');
     }
 

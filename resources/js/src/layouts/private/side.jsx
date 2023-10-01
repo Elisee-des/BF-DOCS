@@ -28,7 +28,6 @@ const VerticalLayout = (props) => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       
     }, [ ]);
-    console.log('menu', menuItem);
     function activateParentDropdown(item) {
         item.classList.add("active");
         let parentCollapseDiv = item.closest(".collapse.menu-dropdown");

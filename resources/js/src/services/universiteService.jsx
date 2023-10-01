@@ -7,106 +7,33 @@ class universiteService extends React.Component {
       
         super(props)
     }
-      getUniversite (idUniversite) {
-        return API_BASIC.get(ApiRoute.universites + '/' + idUniversite)
+      getUniversite () {
+        return API_BASIC.get(ApiRoute.universites)
             .then(response => {
                 const data = response?.data
-                return data;
-            });
-    }
-    getUsersUniversite (idUniversite) {
-        return API_BASIC.get(ApiRoute.users_universite + '/' + idUniversite)
-            .then(response => {
-                const data = response?.data
-                return data;
-            });
-    }
-      getUserRci (id) {
-        console.log(id);
-        return API_BASIC.get(ApiRoute.users+'/'+id,{id:id})
-            .then(response => {
-                console.log(response);
-                const data = response?.data?.data?.users
-            
                 return data;
             });
     }
 
-      postUser (data) {
-        return API_BASIC.post(ApiRoute.users, {
+    postUniversite(data) {
+        return API_BASIC.post(ApiRoute.universites, {
             nom: data.nom,
-            prenom: data.prenom,
             telephone: data.telephone,
-            email:data.email,
-            role:data.role,
-            faitiere_id:data.faitiere_id,
-            photo: data.photo,
-            })
-            .then(response => {
-
-                console.log('response', response);
-                const data = response?.data
-                return data;
-            });
+            email: data.email,
+            adresse: data.adresse,
+            abreviation: data.abreviation,
+            date_creation: data.date_creation,
+            ville_id: data.ville_id,
+            president_nom: data.president_nom,
+            president_prenom: data.president_prenom,
+            logo: data.logo,
+            logo_cover: data.logo_cover,
+        }).then((response) => {
+            console.log(response);
+            const data = response?.data;
+            return data;
+        });
     }
-    patchUser(data) {
-        return API_BASIC.patch(ApiRoute.users+'/'+data.id, {
-            id: data?.id,
-            nom: data.nom,
-            prenom: data.prenom,
-            telephone: data.telephone,
-            email:data.email,
-            role:data.role,
-            photo: data.photo,
-            faitiere_id:data?.faitiere_id
-            })
-            .then(response => {
-                console.log('response',response);
-                const data = response?.data
-                return data;
-            });
-    }
-    editPassword(form) {
-        return API_BASIC.patch(ApiRoute.updatepassword+'/'+form?.data?.id, {
-            id:form?.data?.id,
-            current_password: form?.formInputPass?.oldpassword,
-            new_password: form?.formInputPass?.newpassword,
-            new_password_confirmation: form?.formInputPass?.confirmationpassword,
-        
-    
-            })
-            .then(response => {
-                console.log('response',response);
-                const data = response?.data
-                return data;
-            });
-    }
-    deleteUser(id) {
-        return API_BASIC.delete(ApiRoute.users+'/'+id, {
-            id:id,
-            })
-            .then(response => {
-                const data = response?.data
-                console.log(data)
-                return data;
-            });
-    }
-
-    getProfilUpdate(data) {
-        return API_BASIC.patch(ApiRoute.profiltUpdate, {
-            id: data?.id,
-            nom: data?.nom,
-            prenom: data?.prenom,
-            telephone: data?.telephone,
-            email:data?.email,
-            })
-            .then(response => {
-                
-                const data = response?.data
-                return data;
-            });
-    }
-  
 
 }
 

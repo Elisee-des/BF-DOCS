@@ -14,19 +14,9 @@ use App\Http\Controllers\Api\Private\MatiereController;
 use App\Http\Controllers\Api\Private\ModulesController;
 use App\Http\Controllers\Api\Private\OptionController;
 use App\Http\Controllers\Api\private\PresidentController;
+use App\Http\Controllers\Api\Private\VilleConntroller;
 use App\Http\Controllers\Api\UniversiteController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
 Route::post('inscription', [AuthController::class, 'register'])->middleware(['api-login', 'throttle']);
 Route::post('connexion', [AuthController::class, 'login'])->middleware(['api-login', 'throttle']);
@@ -36,9 +26,12 @@ Route::middleware(['auth:api'])->group(function () {
     Route::prefix('admin')->group(function () {
         #UNIVERSITES#
         Route::ApiResource('universites', UniversiteController::class);
-        Route::get('universites/users/{idU}', [UniversiteController::class, 'users_universite']);
 
-        #PRESIDENT#
+        #VILLE#
+        Route::ApiResource('villes', VilleConntroller::class);
+
+        #PRESIDENT# #idU=idUniversite#
+        Route::get('presidents/liste/{idU}', [PresidentController::class, 'liste_presidents']);
         Route::post('presidents/ajout/{idU}', [PresidentController::class, 'president_ajout']);
         Route::put('presidents/edition/{idU}/{idP}', [PresidentController::class, 'president_edition']);
 

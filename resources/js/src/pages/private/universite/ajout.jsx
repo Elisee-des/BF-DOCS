@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Col, FormGroup, Input, Label, Row, Button } from "reactstrap";
 import BreadCrumb from "../../../components/breadcrumb";
 import universiteService from "../../../services/universiteService";
+import villeService from "../../../services/villeService";
+// import { errorNotif, successNotif } from "../../../components/notification";
 
 const AjoutUniverisite = () => {
     const [universite, setUniversite] = useState([]);
@@ -18,8 +20,6 @@ const AjoutUniverisite = () => {
             telephone: "",
             email: "",
             adresse: "",
-            description: "",
-            localisation: "",
             abreviation: "",
             date_creation: "",
             logo: "",
@@ -29,25 +29,34 @@ const AjoutUniverisite = () => {
             president_prenom: "",
         },
     ]);
-    const {idUniversite} = useParams();
 
-    const getUniversite = () => {
-        universiteService.getUniversite(idUniversite)
+    const getVilles = () => {
+        villeService.getVilles()
         .then((response) => {
-            console.log("responseUniversite->", response);
+            setVilles(response.data.villes)
         })
     }
 
-    const getUsers = () => {
-        universiteService.getUsersUniversite(idUniversite)
+    const handSubmit = (e) => {
+        console.log("form->", formInput);
+        e.preventDefault();
+        universiteService.postUniversite(formInput)
         .then((response) => {
             console.log("response->", response);
-        })
+            // successNotif('Success', response.message)
+            navigate("/admin/université/accueil");
+            setUniversite(response.data.universites);
+
+        },
+        error => {
+            // const resMessage = ApiRoute?.handlerError(error);
+            // errorNotif('Leger souci', resMessage)
+        }
+        )
     }
 
     useEffect(() => {
-        getUniversite(idUniversite)
-        getUsers(idUniversite)
+        getVilles();
     }, [])
 
 
@@ -77,17 +86,18 @@ const AjoutUniverisite = () => {
 
             <Form
                 id="createproduct-form"
-                autocomplete="off"
-                class="needs-validation"
-                novalidate
+                // autocomplete="off"
+                className="needs-validation"
+                noValidate
+                onSubmit={handSubmit}
             >
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="tab-content">
+                <div className="row">
+                    <div className="col-lg-8">
+                        <div className="card">
+                            <div className="card-body">
+                                <div className="tab-content">
                                     <div
-                                        class="tab-pane active"
+                                        className="tab-pane active"
                                         id="addproduct-general-info"
                                         role="tabpanel"
                                     >
@@ -98,6 +108,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Control
                                                     type="text"
                                                     id="manufacturer-name-input"
+                                                    onChange={(e) => setFormInput({ ...formInput, nom: e.target.value })}
                                                     placeholder="Entrez le nom"
                                                     name="nom"
                                                 />
@@ -109,6 +120,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Control
                                                     type="text"
                                                     id="manufacturer-brand-input"
+                                                    onChange={(e) => setFormInput({ ...formInput, abreviation: e.target.value })}
                                                     placeholder="Entrez le sigle, une abréviation"
                                                     name="abreviation"
                                                 />
@@ -122,6 +134,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Label htmlFor="manufacturer-name-input">Numéro</Form.Label>
                                                 <Form.Control
                                                     type="text"
+                                                    onChange={(e) => setFormInput({ ...formInput, telephone: e.target.value })}
                                                     id="manufacturer-name-input"
                                                     placeholder="Entrez un numero de telephone"
                                                     name="telephone"
@@ -134,6 +147,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Control
                                                     type="text"
                                                     id="manufacturer-brand-input"
+                                                    onChange={(e) => setFormInput({ ...formInput, email: e.target.value })}
                                                     name="email"
                                                     placeholder="Entrez un email"
                                                 />
@@ -147,6 +161,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Label htmlFor="manufacturer-name-input">Logo</Form.Label>
                                                 <Form.Control
                                                     type="file"
+                                                    onChange={(e) => setFormInput({ ...formInput, logo: e.target.value })}
                                                     name="logo"
                                                     id="manufacturer-name-input"
                                                 />
@@ -157,6 +172,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Label htmlFor="manufacturer-brand-input">Logo de couverture</Form.Label>
                                                 <Form.Control
                                                     type="file"
+                                                    onChange={(e) => setFormInput({ ...formInput, logo_cover: e.target.value })}
                                                     name="logo_cover"
                                                     id="manufacturer-name-input"
                                                 />
@@ -172,6 +188,7 @@ const AjoutUniverisite = () => {
                                                 <Form.Control
                                                     type="text"
                                                     id="manufacturer-name-input"
+                                                    onChange={(e) => setFormInput({ ...formInput, adresse: e.target.value })}
                                                     name="adresse"
                                                     placeholder="Adresse de l'université"
                                                 />
@@ -184,14 +201,14 @@ const AjoutUniverisite = () => {
                             </div>
                         </div>
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">Le president actuel de l'université</h5>
+                        <div className="card">
+                            <div className="card-header">
+                                <h5 className="card-title mb-0">Le president actuel de l'université</h5>
                             </div>
-                            <div class="card-body">
-                                <div class="tab-content">
+                            <div className="card-body">
+                                <div className="tab-content">
                                     <div
-                                        class="tab-pane active"
+                                        className="tab-pane active"
                                         id="addproduct-general-info"
                                         role="tabpanel"
                                     >
@@ -202,8 +219,9 @@ const AjoutUniverisite = () => {
                                                 <Form.Control
                                                     type="text"
                                                     id="manufacturer-name-input"
+                                                    onChange={(e) => setFormInput({ ...formInput, president_nom: e.target.value })}
                                                     name="president_nom"
-                                                    placeholder="Entrez le nom du responsable"
+                                                    placeholder="Entrez le nom du president"
                                                 />
                                                 </div>
                                             </Col>
@@ -212,9 +230,10 @@ const AjoutUniverisite = () => {
                                                 <Form.Label htmlFor="manufacturer-brand-input">Prénom</Form.Label>
                                                 <Form.Control
                                                     type="text"
+                                                    onChange={(e) => setFormInput({ ...formInput, president_prenom: e.target.value })}
                                                     id="manufacturer-brand-input"
                                                     name="president_prenom"
-                                                    placeholder="Entrez le prenom du reponsable"
+                                                    placeholder="Entrez le prenom du president"
                                                 />
                                                 </div>
                                             </Col>
@@ -225,83 +244,45 @@ const AjoutUniverisite = () => {
                             </div>
                         </div>
 
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Les délegués générals actuel de l'université</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="tab-content">
-                                        <div
-                                            class="tab-pane active"
-                                            id="addproduct-general-info"
-                                            role="tabpanel"
-                                        >
-                                           <Row>
-                                                <Col lg={6}>
-                                                    <Form.Select aria-label="Default select example"
-                                                    onChange={(e) => setFormInput({ ...formInput, faitiere_id: e.target.value })}
-                                                        >
-                                                            <option value="Published">selectionnez le DG</option>
-                                                        
-                                                            {/* <option value={faitiere?.id}>{faitiere?.nom} </option> */}
-                                                    </Form.Select>
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <Form.Select aria-label="Default select example"
-                                                    onChange={(e) => setFormInput({ ...formInput, user_id: e.target.value })}
-                                                        >
-                                                            <option value="">selectionnez le DG adjoint</option>
-                                                            { (users || []).map((user) => (
-                                                                <option key={user?.id} value={user?.id}>{user?.nom} {user?.prenom}</option>
-                                                            ))}
-                                                    </Form.Select>
-                                                </Col>
-                                           </Row>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        <div class="text-end mb-3">
-                            <button type="submit" class="btn btn-success w-sm">
+                        <div className="text-end mb-3">
+                            <button type="submit" className="btn btn-success w-sm">
                             Créer l'université
                             </button>
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">Où se trouve l'université</h5>
+                    <div className="col-lg-4">
+                        <div className="card">
+                            <div className="card-header">
+                                <h5 className="card-title mb-0">Où se trouve l'université</h5>
                             </div>
-                            <div class="card-body">
-                                <div class="mb-3">
+                            <div className="card-body">
+                                <div className="mb-3">
                                         <Form.Select aria-label="Default select example"
-                                                onChange={(e) => setFormInput({ ...formInput, faitiere_id: e.target.value })}
+                                                onChange={(e) => setFormInput({ ...formInput, ville_id: e.target.value })}
                                             >
-                                                <option value="Published">selectionnez la ville</option>
-                                              
-                                                {/* <option value={faitiere?.id}>{faitiere?.nom} </option> */}
-                                                     
-
+                                                <option value="villes">selectionnez la ville</option>
+                                                { villes.map((data) => (
+                                                    <option key={data.id} value={data?.id}>{data?.nom}</option>
+                                                ))}
                                         </Form.Select>
                                 </div>
 
                             </div>
                         </div>
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">
+                        <div className="card">
+                            <div className="card-header">
+                                <h5 className="card-title mb-0">
                                     Date de creation de l'université
                                 </h5>
                             </div>
-                            <div class="card-body">
+                            <div className="card-body">
                                 <div>
                                     <Input
                                         type="date"
-                                        class="form-control"
+                                        className="form-control"
+                                        onChange={(e) => setFormInput({ ...formInput, date_creation: e.target.value })}
                                         name="date_creation"
                                     />
                                 </div>

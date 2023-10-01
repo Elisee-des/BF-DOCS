@@ -34,6 +34,9 @@ class UniversiteController extends BaseController
             $validator = Validator::make($request->all(), [
                 'nom' => 'required',
                 'abreviation' => 'required',
+                'ville_id' => 'required',
+                'president_nom' => 'required',
+                'president_prenom' => 'required',
             ]);
 
             if ($validator->fails()) {
@@ -43,12 +46,10 @@ class UniversiteController extends BaseController
             $universite = new Universite();
             $universite->nom = $request->nom;
             $universite->abreviation = $request->abreviation;
-            $universite->description = $request->description;
             $universite->telephone = $request->telephone;
             $universite->date_creation = $request->date_creation;
             $universite->ville_id = $request->ville_id;
             $universite->adresse = $request->adresse;
-            $universite->localisation = $request->localisation;
             $universite->save();
 
             $president = new President();
@@ -100,20 +101,6 @@ class UniversiteController extends BaseController
         }
     }
 
-    public function users_universite($idU)
-    {
-        try {
-            $universite = Universite::where('id', $idU)->with(['users'])->first();
-            if ($universite) {
-                return $this->sendResponse(['universite' => $universite], 'Detail de l\'université');
-            } else {
-                return $this->sendError('Cette université n\'existe pas', 401);
-            }
-        } catch (Exception $e) {
-            return response()->json($e);
-        }
-    }
-
     /**
      * Display the specified resource.
      */
@@ -152,7 +139,6 @@ class UniversiteController extends BaseController
                 $universite->nom = $request->nom;
                 $universite->abreviation = $request->abreviation;
                 $universite->logo_cover = $request->logo_cover;
-                $universite->description = $request->description;
                 $universite->date_creation = $request->date_creation;
                 $universite->adresse = $request->adresse;
                 $universite->localisation = $request->localisation;

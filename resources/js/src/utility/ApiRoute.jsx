@@ -1,7 +1,10 @@
 export default {
+    //PUBLIC
     connexion:'/connexion',
-    universites:'/universites',
-    users_universite:'/universites/users',
+
+    //ADMIN
+    universites:'admin/universites',
+    villes:'/admin/villes',
 
     handlerError: (error) => _handlerError(error)
 }

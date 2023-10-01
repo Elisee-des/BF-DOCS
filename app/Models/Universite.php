@@ -17,12 +17,12 @@ class Universite extends Model
         'logo',
         'abreviation',
         'date_creation',
-        'description',
         'adresse',
-        'localisation',
         'logo_cover',
         'ville_id',
         'telephone',
+        'president_nom',
+        'president_prenom',
     ];
 
     public function departements()
