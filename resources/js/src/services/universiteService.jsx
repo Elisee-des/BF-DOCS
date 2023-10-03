@@ -7,7 +7,7 @@ class universiteService extends React.Component {
       
         super(props)
     }
-      getUniversite () {
+      getUniversites () {
         return API_BASIC.get(ApiRoute.universites)
             .then(response => {
                 const data = response?.data

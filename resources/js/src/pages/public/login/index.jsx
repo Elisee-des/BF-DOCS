@@ -8,20 +8,29 @@ import ApiRoute from '../../../utility/ApiRoute';
 const LoginPage = () => {
     const [formInput, setFormInput] = useState({email:'', password:''});
     const [message, setMessage]=useState();
+    const [isloading, setIsLoading] = useState(false);
     let navigate = useNavigate();
 
+    const isFormEmpty = () => {
+        return Object.values(formInput).every(value => value === '');
+    }
+
     const onSave = (e) => {
+        setIsLoading(true);
         e.preventDefault();
         console.log(formInput);
         AuthService.login(formInput.email, formInput.password)
         .then(
             (response)=> {
+                setIsLoading(false);
                 navigate("/admin/tableau-de-bord");
             },
             error => {
                 const resMessage = ApiRoute?.handlerError(error);
+                setIsLoading(false);
                 setMessage(resMessage)
                 alert('Email ou mot de passe incorrect', resMessage)
+
                 // errorNotif('Leger souci', resMessage)
             }
         )
@@ -95,7 +104,7 @@ const LoginPage = () => {
                                                             Email
                                                         </label>
                                                         <Input
-                                                            type="text"
+                                                            type="email"
                                                             className="form-control"
                                                             onChange={(e) => setFormInput({ ...formInput, email: e.target.value })}
                                                             id="email"
@@ -140,14 +149,19 @@ const LoginPage = () => {
                                                     </div>
 
                                                     <div className="mt-4">
-                                                        <Button
-                                                        // to='/admin/tableau-de-bord'
+                                                        {!isloading ? (<><Button
                                                             className="btn btn-success w-100"
+                                                            disabled={isFormEmpty()}
                                                             type="submit"
-
                                                         >
                                                             Connexion
-                                                        </Button>
+                                                        </Button></>) : (<><Button className="btn btn-success w-100"
+                                                            disabled={isFormEmpty()}
+                                                            type="submit">
+                                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                            <span class="sr-only">Loading...</span>
+                                                            &nbsp;Connexion en cours...
+                                                        </Button></>)}
                                                     </div>
                                                 </Form>
                                             </div>

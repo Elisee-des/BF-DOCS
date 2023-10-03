@@ -18,6 +18,7 @@ class Universite extends Model
         'abreviation',
         'date_creation',
         'adresse',
+        'petit_decription',
         'logo_cover',
         'ville_id',
         'telephone',
@@ -33,6 +34,11 @@ class Universite extends Model
     public function users()
     {
         return $this->hasMany(User::class);
+    }
+
+    public function ville()
+    {
+        return $this->belongsTo(Ville::class);
     }
 
     public function presidents()

@@ -217,7 +217,7 @@ class UniversiteController extends BaseController
 
     public function universites()
     {
-        $universites = Universite::with(['departements', 'presidents'])->orderBy('created_at', 'desc')->get();
+        $universites = Universite::with(['departements', 'presidents', 'ville'])->orderBy('created_at', 'desc')->get();
         return $universites;
     }
 }
