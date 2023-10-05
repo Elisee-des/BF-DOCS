@@ -29,7 +29,7 @@ const Sidebars = props => {
   return (
     <React.Fragment>
       <div className="app-menu navbar-menu">
-        <div className="navbar-brand-box mt-4  mb-4">
+        <div className="navbar-brand-box mt-4 mb-4">
           {/* <Link to="/admin/dashboard" className="logo logo-dark">
             <span className="logo-sm">
               <img src={logoSm} alt="" height="22" />
@@ -47,7 +47,7 @@ const Sidebars = props => {
               <img src={logoLight} alt="" height="17" />
             </span>
           </Link> */}
-          <Link to="/admin/tableau-de-bord" className="fs-20 fw-bold text-success">
+          <Link to="/admin/tableau-de-bord" className="fs-20 fw-bold text-success mb-2">
             BF-DOCS
           </Link>
           <button

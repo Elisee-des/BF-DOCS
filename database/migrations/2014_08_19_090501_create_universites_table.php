@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telephone')->nullable();
             $table->string('adresse')->nullable();
             $table->mediumText('logo_cover')->nullable();
-            $table->mediumText('petit_decription')->nullable();
+            $table->mediumText('petit_description')->nullable();
             $table->string('annee')->nullable();
             $table->string('president_nom')->nullable();
             $table->string('president_prenom')->nullable();

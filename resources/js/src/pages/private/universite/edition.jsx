@@ -7,7 +7,7 @@ import universiteService from "../../../services/universiteService";
 import villeService from "../../../services/villeService";
 // import { errorNotif, successNotif } from "../../../components/notification";
 
-const AjoutUniverisite = () => {
+const EditionUniverisite = () => {
     const [universite, setUniversite] = useState([]);
     const [users, setUsers] = useState([]);
     const [villes, setVilles] = useState([]);
@@ -83,7 +83,7 @@ const AjoutUniverisite = () => {
     // }
     return (
         <>
-            <BreadCrumb title="Création d'une nouvelle universsité" backTitle="Liste des universités" link="/admin/université/accueil" />
+            <BreadCrumb title={`Edition de ${universite?.abreviation}`} backTitle="Liste des universités" link="/admin/université/accueil" />
 
             <Form
                 id="createproduct-form"
@@ -309,4 +309,4 @@ const AjoutUniverisite = () => {
     );
 };
 
-export default AjoutUniverisite;
+export default EditionUniverisite;

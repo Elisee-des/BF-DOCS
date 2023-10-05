@@ -2,16 +2,17 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
-import Sidebar from "./sidebar";
+import Sidebar from "./sidebars";
+import "./index.css"
 
-function CommonLayout() {
+function PrivateLayout() {
     return (
         <>
             <div id="layout-wrapper">
                 <Header/>
                 <Sidebar/>
                 <div className="main-content">
-                    <div className="page-content">
+                    <div className="page-content" style={{ backgroundColor: "#3b71ca; !important" }}>
                         <Outlet />
                         <Footer/>
                     </div>
@@ -21,4 +22,4 @@ function CommonLayout() {
     );
 }
 
-export default CommonLayout;
+export default PrivateLayout;

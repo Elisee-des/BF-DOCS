@@ -12,7 +12,7 @@ function PrivateLayout() {
                 <Header/>
                 <Sidebar/>
                 <div className="main-content">
-                    <div className="page-content" style={{ backgroundColor: "#14a44d !important" }}>
+                    <div className="page-content" style={{ backgroundColor: "#3b71ca; !important" }}>
                         <Outlet />
                         <Footer/>
                     </div>

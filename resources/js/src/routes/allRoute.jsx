@@ -4,6 +4,7 @@ import React from 'react';
 const AdminDashboardPage = React.lazy(() => import("../pages/private/dashbord"));
 const UniversiteAccueilPage = React.lazy(() => import("../pages/private/universite/accueil"));
 const UniversiteAjoutPage = React.lazy(() => import("../pages/private/universite/ajout"));
+const UniversiteEditionPage = React.lazy(() => import("../pages/private/universite/edition"));
 
 // public //
 const HomePage = React.lazy(() => import("../pages/public/home/index"));
@@ -80,6 +81,11 @@ const privateRoutes = [
         component: UniversiteAjoutPage,
         permissions: ["all"],
     },
+    {
+        path: '/admin/université/edition/:idUniversite',
+        component: UniversiteEditionPage,
+        permissions: ["all"],
+    },
 ]
 
 
@@ -88,7 +94,7 @@ const privateRoutes = [
 
 const commonRoutes = [
     {
-        path: '/universités/université-norbert-zongo',
+        path: '/admin/universités/université-norbert-zongo',
         component: CommonDashboardPage,
         permissions: [],
     },

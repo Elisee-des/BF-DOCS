@@ -24,6 +24,7 @@ class universiteService extends React.Component {
             abreviation: data.abreviation,
             date_creation: data.date_creation,
             ville_id: data.ville_id,
+            petit_description: data.petit_description,
             president_nom: data.president_nom,
             president_prenom: data.president_prenom,
             logo: data.logo,

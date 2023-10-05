@@ -3,23 +3,22 @@ import img1 from "../../../assets/images/ujkz.jpeg";
 import img2 from "../../../assets/images/unz1.jpeg";
 import { Link } from "react-router-dom";
 import universiteService from "../../../services/universiteService";
+import { Button } from "reactstrap";
 
 function AccueilPage() {
     const [universites, setUniversite] = useState([]);
-    const maxlength = 100;
 
     const getUniversites = () => {
         universiteService.getUniversites().then((response) => {
-            console.log("universites->", response);
             setUniversite(response.data.universites);
         });
     };
 
-    console.log("uni=>", universites);
-    
     useEffect(() => {
         getUniversites();
     }, []);
+
+    console.log("data->", universites);
     
     const renderListeUniversites = (universites) => {
         return universites.map((universite) => (
@@ -42,14 +41,14 @@ function AccueilPage() {
                             </div>
 
                             <h3 class="ff-secondary fw-bold mt-4">
-                                15292 Etudiants
+                                {universite?.users?.length} Etudiants
                             </h3>
 
                             <h6 className="text-muted">Ville : <strong>{universite?.ville?.nom}</strong></h6>
-                            <h6 className="text-muted mt-2">President actuel : <strong>{universite?.president_nom} {universite?.president_prenom}</strong></h6>
+                            <h6 className="text-muted mt-2">President actuel : <strong>Mr {universite?.president_nom?.length > 10 ? `${universite?.president_prenom.slice(0, 10)}...` : `${universite?.president_nom}`}</strong> </h6>
 
                             <p class="text-muted">
-                                {universite?.petit_decription.length > 100 ? `${universite?.petit_decription.slice(0, 100)}...` : universite?.petit_decription}
+                                {universite?.petit_description?.length > 100 ? `${universite?.petit_description.slice(0, 100)}...` : universite?.petit_description}
                             </p>
 
                             <div class="d-flex align-items-end justify-content-between mt-4">
@@ -74,17 +73,17 @@ function AccueilPage() {
 
                             <div class="row mt-4 pt-2">
                                 <div class="col">
-                                    <a
-                                        href="apps-nft-item-details.html"
+                                    <Link
+                                        to="/admin/universités/université-norbert-zongo"
                                         class="btn btn-success w-100"
                                     >
                                         Voir Details
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div class="col">
-                                    <button class="btn btn-primary w-100">
+                                    <Link to={`/admin/université/edition/${universite?.id}`} class="btn btn-primary w-100">
                                         Editer infos
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

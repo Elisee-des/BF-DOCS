@@ -36,13 +36,13 @@
     font-weight: 700;
 }
 :root {
-  --vz-vertical-menu-bg: #405189;;
+  --vz-vertical-menu-bg: #000;;
   --vz-vertical-menu-item-color: #fff;
-  --vz-vertical-menu-item-hover-color: #0ab39c;
-  --vz-vertical-menu-item-active-color: #0ab39c;
+  --vz-vertical-menu-item-hover-color: #14a44d;;
+  --vz-vertical-menu-item-active-color: #14a44d;;
   --vz-vertical-menu-sub-item-color: #fff;
-  --vz-vertical-menu-sub-item-hover-color: #0ab39c;
-  --vz-vertical-menu-sub-item-active-color: #0ab39c;
+  --vz-vertical-menu-sub-item-hover-color: #14a44d;;
+  --vz-vertical-menu-sub-item-active-color: #14a44d;;
   --vz-vertical-menu-title-color: #919da9;
   --vz-vertical-menu-bg-dark: #405189;
   --vz-vertical-menu-item-color-dark: #abb9e8;

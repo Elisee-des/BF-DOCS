@@ -48,17 +48,12 @@ class UniversiteController extends BaseController
             $universite->abreviation = $request->abreviation;
             $universite->telephone = $request->telephone;
             $universite->date_creation = $request->date_creation;
+            $universite->petit_description = $request->petit_description;
             $universite->ville_id = $request->ville_id;
+            $universite->president_nom = $request->president_nom;
+            $universite->president_prenom = $request->president_prenom;
             $universite->adresse = $request->adresse;
             $universite->save();
-
-            $president = new President();
-            $president->nom = $request->president_nom;
-            $president->prenom = $request->president_prenom;
-            $president->universite_id = $universite->id;
-            $president->annee = Carbon::now()->year;
-            $president->save();
-
 
             if ($request->logo != null) {
 
@@ -141,7 +136,10 @@ class UniversiteController extends BaseController
                 $universite->logo_cover = $request->logo_cover;
                 $universite->date_creation = $request->date_creation;
                 $universite->adresse = $request->adresse;
-                $universite->localisation = $request->localisation;
+                $universite->petit_description = $request->petit_description;
+                $universite->ville_id = $request->ville_id;
+                $universite->president_nom = $request->president_nom;
+                $universite->president_prenom = $request->president_prenom;
 
                 if ($request->logo != null) {
 
@@ -217,7 +215,7 @@ class UniversiteController extends BaseController
 
     public function universites()
     {
-        $universites = Universite::with(['departements', 'presidents', 'ville'])->orderBy('created_at', 'desc')->get();
+        $universites = Universite::with(['departements', 'presidents', 'ville', 'users'])->orderBy('created_at', 'desc')->get();
         return $universites;
     }
 }

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->foreignUuid('universite_id')->references('id')->on('universites');
+            $table->foreignUuid('universite_id')->nullable()->references('id')->on('universites');
             $table->timestamps();
         });
     }
