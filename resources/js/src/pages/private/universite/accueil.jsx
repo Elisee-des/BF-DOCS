@@ -74,7 +74,7 @@ function AccueilPage() {
                             <div class="row mt-4 pt-2">
                                 <div class="col">
                                     <Link
-                                        to="/admin/universités/université-norbert-zongo"
+                                        to={`/admin/universités/${universite?.id}/dashboard`}
                                         class="btn btn-success w-100"
                                     >
                                         Voir Details

@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../assets/images/error.svg";
+import { Link } from "react-router-dom";
 
 function index() {
   return (

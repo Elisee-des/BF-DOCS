@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import constant from "../../utility/constant"
 
 const Navdata = () => {
@@ -7,12 +7,15 @@ const Navdata = () => {
 
     const appConstant = {...constant}
     const role = {...appConstant?.appRole}
+    const {idUniversite} = useParams();
+    console.log("id-->", idUniversite);
     const menuItems = [
         {
             id: "dashboard",
             label: "Tableau de bord",
             icon: "bx bxs-dashboard",
-            link: "/admin/tableau-de-bord",
+            link: `/admin/universités/${idUniversite}/dashboard`,
+            // link:`/admin/universités/${universite?.id}/dashboard`,
             permissions:['all']
         },
         {
@@ -231,7 +234,7 @@ const Navdata = () => {
             id:'Parametre',
             icon :'ri-settings-2-fill ',
             label:'Paramètre',
-            link:'#',
+            link:`/admin/université/${idUniversite}/parametre`,
             permissions:['all']
         },
     ];

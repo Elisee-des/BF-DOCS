@@ -16,6 +16,7 @@ const MotDePasseOublier = React.lazy(() => import("../pages/public/resetPassword
 
 // common //
 const CommonDashboardPage = React.lazy(() => import("../pages/common/dashbord"));
+const CommonSettingPage = React.lazy(() => import("../pages/common/setting"));
 
 
 // ------ PUBLIC PAGE/ROUTE ------- //
@@ -94,8 +95,18 @@ const privateRoutes = [
 
 const commonRoutes = [
     {
-        path: '/admin/universités/université-norbert-zongo',
+        path:"/admin/universités/:idUniversite/dashboard",
         component: CommonDashboardPage,
+        permissions: [],
+    },
+    {
+        path:"/admin/université/dashboard",
+        component: CommonSettingPage,
+        permissions: [],
+    },
+    {
+        path:"/admin/université/:idUniversite/parametre",
+        component: CommonSettingPage,
         permissions: [],
     },
 ]
